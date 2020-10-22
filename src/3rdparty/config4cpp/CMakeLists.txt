@@ -1,0 +1,99 @@
+project(config4cpp)
+
+set(PUB_INC_FILES
+    ${CMAKE_CURRENT_SOURCE_DIR}/Configuration.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/ConfigurationException.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/StringBuffer.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/StringVector.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/SchemaValidator.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/namespace.h
+)
+
+set(LIB_HDR_FILES
+    ${CMAKE_CURRENT_SOURCE_DIR}/SchemaLex.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/SchemaParser.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/SchemaRuleInfo.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/MBChar.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/platform.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/ConfigurationImpl.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/UidIdentifierProcessor.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/UidIdentifierDummyProcessor.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/util.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/ConfigParser.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/ConfigScope.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/ConfigScopeEntry.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/ConfigItem.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/LexToken.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/LexBase.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/ConfigLex.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/SchemaTypeBoolean.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/SchemaTypeDummy.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/SchemaTypeDurationMicroseconds.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/SchemaTypeDurationMilliseconds.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/SchemaTypeDurationSeconds.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/SchemaTypeEnum.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/SchemaTypeFloat.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/SchemaTypeFloatWithUnits.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/SchemaTypeInt.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/SchemaTypeIntWithUnits.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/SchemaTypeList.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/SchemaTypeMemorySizeBytes.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/SchemaTypeMemorySizeKB.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/SchemaTypeMemorySizeMB.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/SchemaTypeScope.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/SchemaTypeString.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/SchemaTypeTable.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/SchemaTypeTuple.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/SchemaTypeTypedef.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/SchemaTypeUnitsWithFloat.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/SchemaTypeUnitsWithInt.h
+)
+
+set(LIB_SRC_FILES
+    ${CMAKE_CURRENT_SOURCE_DIR}/SchemaLex.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/SchemaParser.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/MBChar.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/SchemaValidator.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/platform.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/util.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/Configuration.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/DefaultSecurity.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/DefaultSecurityConfiguration.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/ConfigurationException.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/ConfigurationImpl.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/ConfigParser.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/UidIdentifierProcessor.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/ConfigScope.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/ConfigScopeEntry.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/ConfigItem.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/LexToken.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/LexBase.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/ConfigLex.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/StringBuffer.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/StringVector.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/SchemaType.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/SchemaTypeBoolean.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/SchemaTypeDurationMicroseconds.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/SchemaTypeDurationMilliseconds.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/SchemaTypeDurationSeconds.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/SchemaTypeEnum.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/SchemaTypeFloat.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/SchemaTypeFloatWithUnits.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/SchemaTypeInt.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/SchemaTypeIntWithUnits.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/SchemaTypeMemorySizeBytes.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/SchemaTypeMemorySizeKB.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/SchemaTypeMemorySizeMB.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/SchemaTypeScope.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/SchemaTypeString.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/SchemaTypeUnitsWithFloat.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/SchemaTypeUnitsWithInt.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/SchemaTypeList.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/SchemaTypeTable.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/SchemaTypeTuple.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/SchemaTypeTypedef.cpp
+)
+
+add_definitions(-Wno-unused-parameter -Wno-unused-but-set-variable -Wno-ignored-qualifiers -Wno-deprecated)
+
+add_library(config4cpp STATIC ${LIB_SRC_FILES} ${LIB_HDR_FILES} ${PUB_INC_FILES})

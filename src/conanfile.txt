@@ -1,0 +1,17 @@
+[requires]
+boost/1.66.0@conan/stable
+bzip2/1.0.6@conan/stable
+libcurl/7.52.1@bincrafters/stable
+
+[generators]
+cmake
+visual_studio
+
+[options]
+Botan:shared=True
+
+[imports]
+bin, protoc* -> ./bin
+bin, *.dll -> ./bin
+bin, *.so -> ./bin
+bin, *.so.* -> ./bin
