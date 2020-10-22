@@ -1,13 +1,8 @@
 #include "common.h"
 
-#ifdef HAS_BOTAN
-#include "botan_wrapper.h"
-#endif
-
-#ifndef __ANDROID__
 #include <boost/tokenizer.hpp>
 #include <boost/algorithm/string/predicate.hpp>
-#endif
+#include <boost/algorithm/string.hpp>
 
 #include <fpaq0.h>
 
@@ -669,4 +664,9 @@ std::string unafrog::utils::sanitize_hostname_web(std::string hn)
     }
 
     return hn;
+}
+
+void remove_quotes(std::string &s)
+{
+    boost::trim_if(s, boost::is_any_of("\""));
 }

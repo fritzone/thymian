@@ -15,26 +15,26 @@ std::string cppdb::crypt_db_name(const std::string &in)
     return in;
 }
 
-std::string cppdb::crypt_db_value(const std::string &in, bool do_crypt)
+std::string cppdb::crypt_db_value(const std::string &in, bool /*do_crypt*/)
 {
 
     return in;
 }
 
-std::string cppdb::decrypt_db_value(const std::string &in, bool do_decrypt)
+std::string cppdb::decrypt_db_value(const std::string &in, bool /*do_decrypt*/)
 {
 
     return in;
 }
 
 
-unsigned long cppdb::crypt_number(unsigned long in, bool do_crypt)
+unsigned long cppdb::crypt_number(unsigned long in, bool /*do_crypt*/)
 {
 
         return in;
 }
 
-unsigned long cppdb::decrypt_number(unsigned long in, bool do_crypt)
+unsigned long cppdb::decrypt_number(unsigned long in, bool /*do_crypt*/)
 {
 
     return in;

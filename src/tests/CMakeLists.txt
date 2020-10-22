@@ -57,7 +57,7 @@ endif()
 
 add_executable(templ_test
     ${CMAKE_CURRENT_SOURCE_DIR}/test.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/gtest/src/gtest_main.cc
+    ${CMAKE_CURRENT_SOURCE_DIR}/gtest/googletest/src/gtest_main.cc
 )
 
 

@@ -21,36 +21,37 @@ target_architecture(TARGET_CPU)
 message("Targeting: ${TARGET_CPU}")
 
 # Options
-option(BUILD_WEB "Build the webserver component" ON)
-
-OPTION(ENABLE_TESTS "Enable some unit tests" ON)
-
-OPTION(BUILD_MAILER "Build the mail sender application" OFF)
-
-OPTION(CLANG_SANITIZE "Use specific clang sanitizer compilation, development only" OFF)
+option(ENABLE_TESTS "Enable some unit tests" ON)
+option(CLANG_SANITIZE "Use specific clang sanitizer compilation, development only" OFF)
+option(coverage-build "gcov/lcov test coverage analysis (make coverage_test)" OFF)
 
 # Python
 find_package(PythonInterp)
 
-set(COMMON_COMPILER_FLAGS "-std=c++1y -ggdb -pedantic -Wno-old-style-cast")
-  
-  # C++11 for linux common for both gcc and clang
-if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
-    SET(BUILD_CLIENT OFF CACHE INTERNAL "Building the client component is not possible with clang" FORCE)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+set(COMMON_COMPILER_FLAGS "-pedantic")
+  
+if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
     if(CLANG_SANITIZE)
         set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${COMMON_COMPILER_FLAGS} -fsanitize=address -fno-omit-frame-pointer -O1 -fno-optimize-sibling-calls")
     else()
         set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${COMMON_COMPILER_FLAGS} -fPIC -fsanitize=address -fno-omit-frame-pointer -O1 -fno-optimize-sibling-calls")
     endif()
-
 else()
-    if(COVERAGE_BUILD)
-      set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${COMMON_COMPILER_FLAGS} -ftest-coverage -fprofile-arcs -fpermissive -finline-functions -Wno-long-long -fvisibility-inlines-hidden")
-    else()
-      set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${COMMON_COMPILER_FLAGS} -fpermissive -finline-functions -Wno-long-long -fvisibility-inlines-hidden")
-    endif()
-  endif()
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${COMMON_COMPILER_FLAGS} -fpermissive -finline-functions -Wno-long-long -fvisibility-inlines-hidden")
+endif()
+
+# Coverage build?
+if(coverage-build)
+     set(CMAKE_BUILD_TYPE Debug)
+     message("building for coverage ...")
+     SET(CMAKE_CXX_FLAGS "-g -O0 -fprofile-arcs -ftest-coverage -rdynamic -ftest-coverage -fprofile-arcs -fpermissive -finline-functions -Wno-long-long -fvisibility-inlines-hidden -fno-omit-frame-pointer -fsanitize=address")
+     SET(CMAKE_C_FLAGS "-g -O0 -fprofile-arcs -ftest-coverage -rdynamic -ftest-coverage -fprofile-arcs -fpermissive -finline-functions -Wno-long-long -fvisibility-inlines-hidden -fno-omit-frame-pointer -fsanitize=address")
+     include(cmake/CodeCoverage.cmake)
+     SETUP_TARGET_FOR_COVERAGE(templater_test ctest coverage)
+endif()
 
 MESSAGE("CMAKE FLAGS: ${CMAKE_CXX_FLAGS}")
 add_definitions("-D_GLIBCXX_USE_CXX11_ABI")
@@ -98,14 +99,12 @@ include_directories(
   ${CMAKE_CURRENT_SOURCE_DIR}/templates
   ${CMAKE_CURRENT_SOURCE_DIR}/3rdparty/compressor
   ${CMAKE_CURRENT_SOURCE_DIR}/3rdparty/tinyxml
-  ${CMAKE_CURRENT_SOURCE_DIR}/3rdparty/config4cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/common
   ${CMAKE_CURRENT_SOURCE_DIR}/cppdb
 )
 
 add_subdirectory(cppdb)
 add_subdirectory(common)
-add_subdirectory(3rdparty/config4cpp)
 add_subdirectory(3rdparty/tinyxml)
 add_subdirectory(3rdparty/compressor)
 add_subdirectory(mailer)

@@ -265,6 +265,8 @@ unsigned internalServerError();
 /* remove the duplicates from a string */
 std::string remove_duplicates(std::string s, char to_remove);
 
+/* removes the quotes from the string */
+void remove_quotes(std::string &s);
 
 #endif
 

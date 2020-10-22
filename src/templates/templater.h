@@ -3,7 +3,7 @@
 
 #include <common.h>
 #include <named_operator.hpp>
-
+#include <json.h>
 #include <boost/noncopyable.hpp>
 
 #include <string>
@@ -26,63 +26,52 @@
 
 static const std::string TEMPLATES_DIRECTORY    = "templates/";
 
-class TemplateBase
+/**
+ * @brief The template_base class is the basic class for all the templates
+ */
+class template_base
 {
 public:
-    virtual ~TemplateBase();
+    virtual ~template_base() = default;
     virtual std::string content() const = 0;
     virtual bool check() const = 0;
 
 };
 
-class FileTemplate : public TemplateBase
+/**
+ * @brief The file_template class is a class for a template that resides in a file
+ */
+class file_template : public template_base
 {
 public:
 
-    FileTemplate() = default;
+    file_template() = default;
 
     virtual std::string fileName() const  = 0;
 
-    virtual std::string content() const
-    {
-        std::string fn = TEMPLATES_DIRECTORY + fileName();
-        std::ifstream ifs(fn);
-        std::string s( (std::istreambuf_iterator<char>(ifs) ),
-                     (std::istreambuf_iterator<char>()) );
-        return s;
-    }
-
+    virtual std::string content() const;
     virtual bool check() const;
 };
 
-
-class TemplateWarehouse;
-struct TwhDestroyer
-{
-    TwhDestroyer() = default;
-
-    void operator() (TemplateWarehouse* twh);
-};
-
-class TemplateWarehouse : public boost::noncopyable
+/**
+ * @brief The template_warehouse class is the class that keeps track of the templates that were regisdtered
+ */
+class template_warehouse : public boost::noncopyable
 {
 public:
-    static TemplateWarehouse& instance();
-    virtual ~TemplateWarehouse() = default;
+    static template_warehouse& instance();
 
     std::string getTemplateContent(const std::string& templateName);
-
-    bool registerTemplate(const std::string& name, TemplateBase *templateClass);
-    void freeTemplates();
+    bool registerTemplate(const std::string& name, template_base *templateClass);
     bool checkTemplates();
+
 private:
-    TemplateWarehouse();
-    std::map <std::string, TemplateBase*> templates;
-    TwhDestroyer destroyer;
+    template_warehouse() = default;
+    std::map <std::string, std::shared_ptr<template_base>> templates;
 };
 
 #define GENERIC_TEMPLATE(Class, Type)                                                       \
-class Class : public FileTemplate                                                           \
+class Class : public file_template                                                          \
 {                                                                                           \
 public:                                                                                     \
     Class() = default;                                                                      \
@@ -97,13 +86,13 @@ static bool dummy##Class##Type = TemplateWarehouse::instance().registerTemplate(
 #define HTML_TEMPLATE(Class)    GENERIC_TEMPLATE(Class, html)
 
 #if (defined(__GNUC__) || defined(__GNUG__)) && !(defined(__clang__))
-    #define REG_VAR(Class) static bool dummy##Class##Type __attribute__((unused)) = TemplateWarehouse::instance().registerTemplate(#Class, new Class)
+    #define REG_VAR(Class) [[maybe_unused]] static bool dummy##Class##Type __attribute__((unused)) = template_warehouse::instance().registerTemplate(#Class, new Class)
 #else
-    #define REG_VAR(Class) static bool dummy##Class##Type = TemplateWarehouse::instance().registerTemplate(#Class, new Class)
+    #define REG_VAR(Class) [[gnu::unused]] static bool dummy##Class##Type = template_warehouse::instance().registerTemplate(#Class, new Class)
 #endif
 
 #define STRING_TEMPLATE(Class, s)                                                          \
-class Class : public TemplateBase                                                          \
+class Class : public template_base                                                         \
 {                                                                                          \
 public:                                                                                    \
     Class() : m_content(s) {}                                                              \
@@ -121,7 +110,7 @@ REG_VAR(Class)
 
 #define STRING_VAR_TEMPLATE(Class, s)                                                      \
 static std::string _TS_ ## _Class = s; \
-class Class : public TemplateBase                                                          \
+class Class : public template_base                                                          \
 {                                                                                          \
 public:                                                                                    \
     Class() : m_content(_TS_ ## _Class) {}                                                 \
@@ -140,20 +129,21 @@ REG_VAR(Class)
 class template_pair_base
 {
 public:
-    virtual ~template_pair_base();
+    virtual ~template_pair_base() = default;
 };
 
 class template_special_parameter
 {
 public:
     template_special_parameter() = default;
-    virtual ~template_special_parameter();
+    virtual ~template_special_parameter() = default;
 
     template_special_parameter(const std::string& pname,
                                const std::string& ptype,
                                bool piterable) :
         iterable(piterable), name(pname), type(ptype) {}
 
+private:
     bool iterable;
     std::string name;
     std::string type;
@@ -167,7 +157,7 @@ public:
     explicit template_struct(const std::string& t) : name("name"), type(t) {}
     template_struct(const std::string& n, const std::string& t) : name(n), type(t) {}
 
-    virtual ~template_struct();
+    virtual ~template_struct() = default;
 
     std::string& operator[] (const char* p)
     {
@@ -234,47 +224,38 @@ private:
     std::string str;
 };
 
-template<class T>
-std::string stringify(const T& t)
-{
-    std::stringstream ss;
-    ss << t;
-    return ss.str();
-}
-
 template <class T>
 class template_par : public template_pair_base
 {
 public:
 
-
-    template_par(const char* name, const T& value) : mname(name), moth(stringify(value))
+    template_par(const std::string& name, const T& value) : m_key(name), m_value(unafrog::utils::to_string(value))
     {
     }
 
-    template_par(const std::string& name, const T& value) : mname(name), moth(stringify(value))
+    template_par(const char* name, const T& value) : template_par(std::string(name), value)
     {
     }
 
     std::string value() const
     {
-        return moth;
+        return m_value;
     }
 
     std::string key() const
     {
-        return mname;
+        return m_key;
     }
 
     void set_value(const std::string& v)
     {
-        moth = v;
+        m_value = v;
     }
 
 private:
     template_pair_base* child;
-    std::string mname;
-    std::string moth;
+    std::string m_key;
+    std::string m_value;
 };
 
 class template_vector_par : public template_pair_base
@@ -317,7 +298,7 @@ namespace op
 
     };
 }
-static auto is = base::make_named_operator(op::is());
+[[maybe_unused]] static auto is = base::make_named_operator(op::is());
 
 class templater_base
 {
@@ -369,10 +350,8 @@ protected:
     std::string resolve_ifs(size_t if_pos, std::string templatized);
     std::string resolve_ifeq(size_t if_pos, std::string templatized);
     std::string resolve_defines(std::string content);
-#ifdef HAVE_SCRIPTED_TEMPLATES
     std::string resolve_script(size_t pos, std::string content);
     std::string resolve_scripts(std::string templatized);
-#endif
     std::string resolve_loops(std::string templatized, const template_vector_par &v);
     std::string resolve_ifeqs(std::string templatized);
     std::string resolve_dynamic_section(std::string templatized, const template_vector_par &v);
@@ -426,6 +405,21 @@ public:
         return *this;
     }
 
+    templater& templatize(const nlohmann::json& j)
+    {
+        precalculated = "";
+        for (auto& [k, v] : j.items())
+        {
+            if(v.is_string())
+            {
+                std::string s = unafrog::utils::to_string(v);
+                remove_quotes(s);
+                kps.insert(make_pair(unafrog::utils::to_string(k), s));
+            }
+        }
+        return *this;
+    }
+
     templater& templatize(const template_struct& s)
     {
         return dynamic_cast<templater&>(templater_base::templatize(s));
@@ -465,9 +459,7 @@ public:
             if(resolve_in_get)
             {
                 templatized = resolve_ifeqs(templatized);
-                #ifdef HAVE_SCRIPTED_TEMPLATES
-                    templatized = resolve_scripts(templatized);
-                #endif
+                templatized = resolve_scripts(templatized);
                 precalculated = templatized;
             }
             else
@@ -489,56 +481,5 @@ std::ostream& operator << (std::ostream& os, const templater<T>& t)
     os << t.get();
     return os;
 }
-
-HTML_TEMPLATE(HomepageRedirect);
-HTML_TEMPLATE(AjaxPaneJs);
-HTML_TEMPLATE(GenericHeader);
-HTML_TEMPLATE(HostsTableHeader);
-HTML_TEMPLATE(HostTableRow);
-HTML_TEMPLATE(HostTableRowNoHosts);
-HTML_TEMPLATE(HostsTableFooter);
-HTML_TEMPLATE(PaneContainer);
-HTML_TEMPLATE(AlbumList);
-HTML_TEMPLATE(AlbumsPage);
-HTML_TEMPLATE(FmTableHeader);
-HTML_TEMPLATE(FmTableFooter);
-HTML_TEMPLATE(RegisterForm);
-HTML_TEMPLATE(AlbumContent);
-HTML_TEMPLATE(AlbumNotFound);
-HTML_TEMPLATE(Captcha);
-HTML_TEMPLATE(Failure);
-HTML_TEMPLATE(ThankYouHuman);
-HTML_TEMPLATE(RegEmail);
-HTML_TEMPLATE(LicenseKey);
-HTML_TEMPLATE(AlreadyRegistered);
-HTML_TEMPLATE(Login);
-HTML_TEMPLATE(ThankYouConfirmation);
-HTML_TEMPLATE(Dashboard);
-HTML_TEMPLATE(HostListCombo);
-HTML_TEMPLATE(DrivesListCombo);
-HTML_TEMPLATE(FmTableRow);
-HTML_TEMPLATE(WarningBox);
-HTML_TEMPLATE(OneAlbumImage);
-HTML_TEMPLATE(UpperHeader);
-HTML_TEMPLATE(LowerHeader);
-HTML_TEMPLATE(ShFolderList);
-HTML_TEMPLATE(ShfDirContentTable);
-HTML_TEMPLATE(DashboardMenu);
-HTML_TEMPLATE(ShfPassword);
-HTML_TEMPLATE(Styles);
-HTML_TEMPLATE(ShfComputerList);
-HTML_TEMPLATE(PasswordResetEmail);
-HTML_TEMPLATE(Message);
-HTML_TEMPLATE(JsInclude);
-HTML_TEMPLATE(CssInclude);
-HTML_TEMPLATE(Account);
-HTML_TEMPLATE(TwoFacConfirmation);
-HTML_TEMPLATE(TwoFactorAuthEmail);
-HTML_TEMPLATE(NoBackButton);
-HTML_TEMPLATE(RefreshSfPage);
-CSS_TEMPLATE(AlbPic);
-JS_TEMPLATE(login);
-JS_TEMPLATE(logout);
-TXT_TEMPLATE(user_props);
 
 #endif // TEMPLATER_H

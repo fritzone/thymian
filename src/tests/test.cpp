@@ -343,6 +343,17 @@ TEST(StringTemplate, IteratorTwoStructs)
     ASSERT_STREQ(s.c_str(), "Testing1234");
 }
 
+TEST(StringTemplate, JsonSource)
+{
+    STRING_TEMPLATE(RequiredJsonTest, "Testing {str}");
+    std::string s = templater<RequiredJsonTest>().templatize(nlohmann::json{
+        {"str", "BLaaaaa"}
+    }).get();
+    std::cout << s << std::endl;
+}
+
+/********************************************************************************************************************/
+
 TABLE(Address)
     COLUMN(Id, INTEGER);
     COLUMN(StreetName, VARCHAR(256));
@@ -454,3 +465,4 @@ TEST(Common, DuplicateRemover)
     ASSERT_EQ("ABCC/DEF", remove_duplicates("ABCC/DEF", '/'));
     ASSERT_EQ("/", remove_duplicates("//", '/'));
 }
+

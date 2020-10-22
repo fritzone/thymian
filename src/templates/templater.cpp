@@ -5,14 +5,10 @@
 #include <log.h>
 #include <cwctype>
 
-#ifdef HAVE_SCRIPTED_TEMPLATES
-    #include <nap_runtime.h>
-#endif
-
 std::string templater_base::get(const std::string &template_name)
 {
     // Getting the content
-    std::string content = TemplateWarehouse::instance().getTemplateContent(template_name);
+    std::string content = template_warehouse::instance().getTemplateContent(template_name);
 
     // Resolve the #define's. This will update the extra_kp's
     std::string content_without_vars = resolve_defines(content);
@@ -275,7 +271,7 @@ std::string templater_base::resolve_includes(size_t inc_pos, std::string templat
 
     // and now read in the template from inc_template
     // and replace everything that is supposed to be replaced
-    std::string inc_content = TemplateWarehouse::instance().getTemplateContent( inc_template );
+    std::string inc_content = template_warehouse::instance().getTemplateContent( inc_template );
     std::string inc_templatized = stringholder(inc_content).templatize(local_pairs).get();
 
     templatized.erase(include_tag_start_position, include_tag_end_position - include_tag_start_position);
@@ -366,16 +362,14 @@ templater_base &templater_base::templatize(const template_struct &s)
                 for(auto x : s.struct_members)
                 {
                     std::string fullname = s.name + "." + x.first;
-                    kps.insert(make_pair(fullname, stringify(x.second)));
+                    kps.insert(make_pair(fullname, unafrog::utils::to_string(x.second)));
                 }
             }
         }
     }
     templatized = stringholder(templatized).templatize(kps).get();
     templatized = resolve_ifeqs(templatized);
-#ifdef HAVE_SCRIPTED_TEMPLATES
     templatized = resolve_scripts(templatized);
-#endif
     precalculated = templatized;
 
     return *this;
@@ -454,7 +448,7 @@ std::string templater_base::resolve_loops(std::string templatized, const templat
                                 std::string fullname = v.name() + "." + x.first;
                                 std::string fullname_to_replace_with = v.name() + "." + x.first + ":" + std::to_string(c);
 
-                                kps.insert(make_pair(fullname_to_replace_with, stringify(x.second)));
+                                kps.insert(make_pair(fullname_to_replace_with, unafrog::utils::to_string(x.second)));
                                 sh.replaceAll("{" + fullname + "}", "{" + fullname_to_replace_with + "}");
                             }
                         }
@@ -519,9 +513,7 @@ templater_base &templater_base::templatize(const template_vector_par &v)
 
     templatized = resolve_loops(templatized, v);
     templatized = resolve_ifeqs(templatized);
-#ifdef HAVE_SCRIPTED_TEMPLATES
     templatized = resolve_scripts(templatized);
-#endif
     precalculated = templatized;
 
     return *this;
@@ -844,8 +836,6 @@ std::string templater_base::resolve_defines(std::string content)
     return content;
 }
 
-#ifdef HAVE_SCRIPTED_TEMPLATES
-
 std::string templater_base::resolve_scripts(std::string templatized)
 {
     bool done = false;
@@ -875,30 +865,11 @@ std::string templater_base::resolve_script(size_t pos, std::string content)
     std::string between = std::string(content.begin() + pos + script_tag.length() + 4, content.begin() + endscript_start_pos);
     std::string after_script = content.substr(endscript_start_pos + endscript_tag.length() + 4);
 
-    nap_runtime* runtime = nap_runtime_create("a");
-    if(runtime == nullptr)
-    {
-        return "";
-    }
-
-    nap_bytecode_chunk* bytecode = nap_runtime_compile(runtime, between.c_str(), 0);
-    if(bytecode == nullptr)
-    {
-        nap_runtime_shutdown(&runtime);
-        return "";
-    }
+    // run the code in <<between>> depending on the requested interpreter
 
     std::string script_result = "";
-    nap_runtime_redirect(runtime, [&](const char* what){
-        script_result += what;
-    });
-
-    nap_runtime_execute(runtime, bytecode);
-    nap_runtime_shutdown(&runtime);
-
     return before_script + script_result + after_script;
 }
-#endif
 
 void stringholder::replaceAll(const std::string &from, const std::string &to)
 {
@@ -923,22 +894,13 @@ stringholder &stringholder::templatize(const std::map<std::string, std::string> 
     return *this;
 }
 
-TemplateWarehouse &TemplateWarehouse::instance()
+template_warehouse &template_warehouse::instance()
 {
-    static TemplateWarehouse twh;
+    static template_warehouse twh;
     return twh;
 }
 
-void TemplateWarehouse::freeTemplates()
-{
-    for(auto it = templates.begin(); it != templates.end(); ++it)
-    {
-        delete it->second;
-    }
-    templates.clear();
-}
-
-bool TemplateWarehouse::checkTemplates()
+bool template_warehouse::checkTemplates()
 {
     for(auto it = templates.begin(); it != templates.end(); ++it)
     {
@@ -951,11 +913,11 @@ bool TemplateWarehouse::checkTemplates()
     return true;
 }
 
-std::string TemplateWarehouse::getTemplateContent(const std::string &templateName)
+std::string template_warehouse::getTemplateContent(const std::string &templateName)
 {
     if(templates.count(templateName))
     {
-        TemplateBase* tb = templates[templateName];
+        std::shared_ptr<template_base> tb = templates[templateName];
         std::string c = tb->content();
         return c;
     }
@@ -965,7 +927,7 @@ std::string TemplateWarehouse::getTemplateContent(const std::string &templateNam
     }
 }
 
-bool TemplateWarehouse::registerTemplate(const std::string &name, TemplateBase *templateClass)
+bool template_warehouse::registerTemplate(const std::string &name, template_base *templateClass)
 {
     // although this code seems stupid, it is due to the fact that every inclusion of the
     // templater.h will cause a new object to be created, but we want only one
@@ -976,28 +938,21 @@ bool TemplateWarehouse::registerTemplate(const std::string &name, TemplateBase *
         return false;
     }
     debug() << "Registering template class:" << name;
-    templates[name] = templateClass;
+    templates[name] = std::shared_ptr<template_base>(templateClass);
     return true;
 }
 
-std::unique_ptr<TemplateWarehouse, TwhDestroyer> twh_deleter;
 
-TemplateWarehouse::TemplateWarehouse()
+std::string file_template::content() const
 {
-    static bool init = false;
-    if(!init)
-    {
-        init = true;
-        twh_deleter = std::unique_ptr<TemplateWarehouse, TwhDestroyer>(this, destroyer);
-    }
+    std::string fn = TEMPLATES_DIRECTORY + fileName();
+    std::ifstream ifs(fn);
+    std::string s( (std::istreambuf_iterator<char>(ifs) ),
+                   (std::istreambuf_iterator<char>()) );
+    return s;
 }
 
-void TwhDestroyer::operator()(TemplateWarehouse *twh)
-{
-    twh->freeTemplates();
-}
-
-bool FileTemplate::check() const
+bool file_template::check() const
 {
     struct stat buffer;
     bool res = (stat ( (TEMPLATES_DIRECTORY +  fileName()).c_str(), &buffer) == 0);
@@ -1006,20 +961,4 @@ bool FileTemplate::check() const
         debug() << "Check for "<< fileName() << " failed";
     }
     return res;
-}
-
-TemplateBase::~TemplateBase()
-{
-}
-
-template_pair_base::~template_pair_base()
-{
-}
-
-template_struct::~template_struct()
-{
-}
-
-template_special_parameter::~template_special_parameter()
-{
 }
