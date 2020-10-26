@@ -14,11 +14,7 @@ set(common_src
 
 add_library(${PROJECT} STATIC ${common_src})
 
-if(SCRIPTED_TEMPLATES)
-    target_link_libraries(${PROJECT} cxxtools common)
-else()
-    target_link_libraries(${PROJECT} cxxtools common)
-endif()
+target_link_libraries(${PROJECT} cxxtools common ${Python3_LIBRARIES})
 
 find_package(Boost 1.66.0 REQUIRED)
 message("Boost is in:" ${Boost_INCLUDE_DIRS})

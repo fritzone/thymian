@@ -26,7 +26,8 @@ option(CLANG_SANITIZE "Use specific clang sanitizer compilation, development onl
 option(coverage-build "gcov/lcov test coverage analysis (make coverage_test)" OFF)
 
 # Python
-find_package(PythonInterp)
+find_package (Python3
+    COMPONENTS Interpreter Development Compiler)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -101,7 +102,10 @@ include_directories(
   ${CMAKE_CURRENT_SOURCE_DIR}/3rdparty/tinyxml
   ${CMAKE_CURRENT_SOURCE_DIR}/common
   ${CMAKE_CURRENT_SOURCE_DIR}/cppdb
+  ${Python3_INCLUDE_DIRS}
 )
+
+add_definitions("-DPYTHON_SCRIPTING")
 
 add_subdirectory(cppdb)
 add_subdirectory(common)

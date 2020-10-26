@@ -28,6 +28,23 @@ std::string server();
 
 namespace utils {
 
+// trim from start
+static inline std::string &sltrim(std::string &s) {
+        s.erase(s.begin(), std::find_if(s.begin(), s.end(), std::not1(std::ptr_fun<int, int>(std::isspace))));
+        return s;
+}
+
+// trim from end
+static inline std::string &srtrim(std::string &s) {
+        s.erase(std::find_if(s.rbegin(), s.rend(), std::not1(std::ptr_fun<int, int>(std::isspace))).base(), s.end());
+        return s;
+}
+
+// trim from both ends
+static inline std::string &trim(std::string &s) {
+        return sltrim(srtrim(s));
+}
+
 /**
  * Converts the given hex string to a number
  **/
@@ -185,6 +202,22 @@ C random_element(const std::vector<C>& v)
 
 
 std::string to_upper(const std::string& s);
+
+template <typename Arg, typename... Args>
+void redirect_stream(std::ostream& out, char sep,
+               Arg&& arg, Args&&... args)
+{
+    out << std::forward<Arg>(arg);
+    ((out << sep << std::forward<Args>(args)), ...);
+}
+
+template <typename... Args>
+std::string join_string(char sep, Args&&... args)
+{
+    std::stringstream ss;
+    redirect_stream(ss, sep, std::forward<Args>(args)...);
+    return ss.str();
+}
 
 }} // unafrog::utils
 

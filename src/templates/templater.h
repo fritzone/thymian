@@ -300,6 +300,9 @@ namespace op
 }
 [[maybe_unused]] static auto is = base::make_named_operator(op::is());
 
+/**
+ * @brief The templater_base class is the basic class for a templater engine
+ */
 class templater_base
 {
 
@@ -323,7 +326,7 @@ public:
 
     void add_parameter(const std::string& name, const std::string& type, bool iterable = false)
     {
-        parameters[name] = {name, type, iterable};
+        m_parameters[name] = {name, type, iterable};
     }
 
     templater_base& templatize(const template_struct& s);
@@ -337,8 +340,24 @@ public:
     void skip_whitespace(const std::string &templatized, size_t &i);
     std::string extract_identifier_word(const std::string &input, size_t &i, std::vector<char> separators = {},
                                         std::set<char> extra_allowed_chars = {}, char &&c = 0);
-    bool check_opening_parenthesis(std::string input, size_t &i);
+    bool check_opening_parenthesis(const std::string &input, size_t &i);
     bool check_closing_comment(const std::string &templatized, size_t &i, std::size_t &include_tag_end_position);
+
+    template <typename... Args>
+    void set_error(Args&&... args)
+    {
+        std::string terr = unafrog::utils::join_string(' ', std::forward<Args>(args)...);
+        error += unafrog::utils::trim(terr) + "\n";
+
+    }
+
+    std::string get_error() const;
+
+    /**
+     * @brief variables will return all the variables that can be replaced in the template
+     * @return
+     */
+    std::vector<std::string> variables();
 
 protected:
 
@@ -350,7 +369,7 @@ protected:
     std::string resolve_ifs(size_t if_pos, std::string templatized);
     std::string resolve_ifeq(size_t if_pos, std::string templatized);
     std::string resolve_defines(std::string content);
-    std::string resolve_script(size_t pos, std::string content);
+    std::string resolve_script(size_t pos, const std::string &content);
     std::string resolve_scripts(std::string templatized);
     std::string resolve_loops(std::string templatized, const template_vector_par &v);
     std::string resolve_ifeqs(std::string templatized);
@@ -373,10 +392,11 @@ protected:
     std::string endscript_tag = "<!--#endscript";
 
     std::map<std::string, template_struct> structures;
-    std::map<std::string, template_special_parameter> parameters;
+    std::map<std::string, template_special_parameter> m_parameters;
 
     std::string precalculated = "";
 
+    std::string error = "";
 };
 
 template<class T>
@@ -408,7 +428,7 @@ public:
     templater& templatize(const nlohmann::json& j)
     {
         precalculated = "";
-        for (auto& [k, v] : j.items())
+        for (const auto& [k, v] : j.items())
         {
             if(v.is_string())
             {
@@ -416,6 +436,10 @@ public:
                 remove_quotes(s);
                 kps.insert(make_pair(unafrog::utils::to_string(k), s));
             }
+/*            else if(v.is_object())
+            {
+                for()
+            }*/
         }
         return *this;
     }

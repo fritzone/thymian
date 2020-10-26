@@ -1,5 +1,9 @@
 #include "templater.h"
 
+#ifdef PYTHON_SCRIPTING
+#include "pyembed.h"
+#endif
+
 #include <algorithm>
 
 #include <log.h>
@@ -116,7 +120,7 @@ std::string templater_base::extract_identifier_word(const std::string& input, si
     return result;
 }
 
-bool templater_base::check_opening_parenthesis(std::string input, size_t& i)
+bool templater_base::check_opening_parenthesis(const std::string& input, size_t& i)
 {
     bool opening_parentheses = false;
     // skip the parenthesis if any
@@ -141,6 +145,23 @@ bool templater_base::check_closing_comment(const std::string& templatized, size_
         }
     }
     return false;
+}
+
+std::string templater_base::get_error() const
+{
+    return error;
+}
+
+std::vector<std::string> templater_base::variables()
+{
+    std::vector<std::string> result;
+
+    /*std::string content = template_warehouse::instance().getTemplateContent(template_name);
+
+    while((start_pos = str.find(from, start_pos)) != std::string::npos)
+    {*/
+
+    return result;
 }
 
 std::string templater_base::resolve_includes(size_t inc_pos, std::string templatized)
@@ -230,10 +251,10 @@ std::string templater_base::resolve_includes(size_t inc_pos, std::string templat
                     closing_comment_found = var_value_read = check_closing_comment(templatized, i, include_tag_end_position);
                 }
 
-                if(templatized[i] == '{') // The substitution of a variable with another one from this level
+                if(templatized[i] == '{' && i<templatized.length() && templatized[i + 1] == '#') // The substitution of a variable with another one from this level
                 {
                     // Read in the entire variable and simply change the var_value to the one in our objects' map
-                    i++; // skip {
+                    i+=2; // skip {#
                     std::string upperlevel_var_name = extract_identifier_word(templatized, i, {'}'});
 
                     if(i == templatized.length() || upperlevel_var_name.empty())
@@ -353,9 +374,9 @@ templater_base &templater_base::templatize(const template_struct &s)
 {
     precalculated = "";
     std::string templatized = get(); // will initialize the parameters
-    if(!parameters.empty())
+    if(!m_parameters.empty())
     {
-        for(auto p : parameters)
+        for(auto p : m_parameters)
         {
             if(p.first == s.name)
             {
@@ -429,13 +450,13 @@ std::string templater_base::resolve_loops(std::string templatized, const templat
         std::string final_loop_content = "";
 
         // and now insert a bunch of kps for the elements in v
-        if(!parameters.empty())
+        if(!m_parameters.empty())
         {
             size_t c = 0;
             for(auto ts : v.value())
             {
                 c++;
-                for(auto p : parameters)
+                for(const auto& p : m_parameters)
                 {
                     if(p.first == v.name())
                     {
@@ -449,7 +470,7 @@ std::string templater_base::resolve_loops(std::string templatized, const templat
                                 std::string fullname_to_replace_with = v.name() + "." + x.first + ":" + std::to_string(c);
 
                                 kps.insert(make_pair(fullname_to_replace_with, unafrog::utils::to_string(x.second)));
-                                sh.replaceAll("{" + fullname + "}", "{" + fullname_to_replace_with + "}");
+                                sh.replaceAll("{#" + fullname + "}", "{#" + fullname_to_replace_with + "}");
                             }
                         }
 
@@ -847,7 +868,7 @@ std::string templater_base::resolve_scripts(std::string templatized)
             while(script_tag_pos != std::string::npos)
             {
                 templatized = resolve_script(script_tag_pos, templatized);
-                script_tag_pos = templatized.find(ifeq_tag);
+                script_tag_pos = templatized.find(script_tag);
             }
         }
         else
@@ -858,17 +879,70 @@ std::string templater_base::resolve_scripts(std::string templatized)
     return templatized;
 }
 
-std::string templater_base::resolve_script(size_t pos, std::string content)
+std::string templater_base::resolve_script(size_t pos, const std::string& content)
 {
     size_t endscript_start_pos = content.find(endscript_tag);
-    std::string before_script = content.substr(0, pos);
-    std::string between = std::string(content.begin() + pos + script_tag.length() + 4, content.begin() + endscript_start_pos);
+    size_t old_pos = pos;
+
+    // skip the tag
+    pos += script_tag.length();
+    // skip the space(s) followwing the "script"
+    while(isspace(content[pos])) pos += 1;
+
+    std::string script_type = "";
+    while(content[pos] != '#' && pos < content.length())
+    {
+        script_type += content[pos++];
+    }
+
+    if(pos == content.length())
+    {
+        set_error("Script tag at", old_pos, "is not closed");
+        return content.substr(0, old_pos);
+    }
+
+    static const auto script_types = {"python"};
+
+    bool found = false;
+    for(const auto& st : script_types)
+    {
+        if(st == script_type) found = true;
+    }
+
+    if(!found)
+    {
+        set_error("Unsupported scripting language", script_type);
+        return content.substr(0, old_pos);
+    }
+
+    // pos points to the script closing tag
+    std::string before_script = content.substr(0, old_pos);
+    std::string between = std::string(content.begin() + pos + 4,  // #--> is the 4
+                                      content.begin() + endscript_start_pos);
     std::string after_script = content.substr(endscript_start_pos + endscript_tag.length() + 4);
+
+    std::cerr << "Trying to run:" << std::endl<< between << std::endl;
 
     // run the code in <<between>> depending on the requested interpreter
 
-    std::string script_result = "";
-    return before_script + script_result + after_script;
+    PyImport_AppendInittab("emb", emb::PyInit_emb);
+    Py_Initialize();
+    PyImport_ImportModule("emb");
+
+    // here comes the ***magic***
+    std::string buffer;
+    {
+        // switch sys.stdout to custom handler
+        emb::stdout_write_type write = [&buffer] (std::string s) { buffer += s; };
+        emb::set_stdout(write);
+        PyRun_SimpleString(between.c_str());
+        emb::reset_stdout();
+    }
+
+    Py_Finalize();
+
+
+    return before_script + unafrog::utils::trim(buffer) + after_script;
 }
 
 void stringholder::replaceAll(const std::string &from, const std::string &to)
@@ -889,7 +963,7 @@ stringholder &stringholder::templatize(const std::map<std::string, std::string> 
 {
     for(auto it = m.begin(); it != m.end(); ++ it)
     {
-        replaceAll(std::string("{") + it->first + std::string("}"), it->second );
+        replaceAll(std::string("{#") + it->first + std::string("}"), it->second );
     }
     return *this;
 }

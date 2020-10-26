@@ -12,17 +12,10 @@
 
 #include <string>
 
-TEST(StringTemplate, DISABLED_SetKeyword)
-{
-    STRING_TEMPLATE(SetStuff, "<!--#set some_var ABCD#-->ThisIs{some_var}");
-    std::string sst = templater<SetStuff>().templatize().get();
-    ASSERT_STREQ(sst.c_str(), "ThisIsABCD");
-}
-
-TEST(StringTemplate, IncludeRootData)
+TEST(StringTemplate, /*DISABLED_*/IncludeRootData)
 {
 
-    STRING_TEMPLATE(RootRequiredIncluded, "Testing {str}");
+    STRING_TEMPLATE(RootRequiredIncluded, "Testing {#str}");
     STRING_TEMPLATE(RootProviderIncTestStuff, "Testing <!--#include RootRequiredIncluded#-->");
 
     std::string tf = templater<RootProviderIncTestStuff>().templatize("str" <is> 123 ).get();
@@ -30,66 +23,76 @@ TEST(StringTemplate, IncludeRootData)
     ASSERT_STREQ(tf.c_str(), "Testing Testing 123");
 }
 
-TEST(StringTemplate, IfEq)
+TEST(StringTemplate, /*DISABLED_*/IfEq)
 {
-    STRING_TEMPLATE(IfElseStuff, "Testing<!--#eq {str},blabla#-->blaa<!--#endeq#-->123");
+    STRING_TEMPLATE(IfElseStuff, "Testing<!--#eq {#str},blabla#-->blaa<!--#endeq#-->123");
     template_par<std::string> a("str", "blabla");
     std::string tf = templater<IfElseStuff>().templatize(a).get();
 
     ASSERT_STREQ(tf.c_str(), "Testingblaa123");
 }
 
-TEST(StringTemplate, DISABLED_Script)
+TEST(StringTemplate, /*DISABLED_*/ErrorSetter)
 {
-    STRING_TEMPLATE(ScriptStuff, "Testing<!--#script#-->"
-                                 "int i;"
-                                 "for(i=0; i<10; i++) print(\"{str}\");"
-                                 "<!--#endscript#-->123");
+    STRING_TEMPLATE(ErrorSetterTemplateTest, "Testing {#str}");
+    auto t = templater<ErrorSetterTemplateTest>();
+    t.set_error("Error", 123, ".");
+    std::string err = t.get_error();
+    ASSERT_STREQ("Error 123 .\n", err.c_str());
+}
+
+TEST(StringTemplate, Script)
+{
+    STRING_TEMPLATE(ScriptStuff, "Testing<!--#script python#-->"
+                    "def fun(s, c):\n"
+                    "\treturn s * c\n\n"
+                    "print(fun(\"{#str}\", 3))\n"
+                    "<!--#endscript#-->");
     template_par<std::string> a("str", "A");
     std::string tf = templater<ScriptStuff>().templatize(a).get();
 
-    ASSERT_STREQ(tf.c_str(), "TestingAAAAAAAAAA123");
+    ASSERT_STREQ(tf.c_str(), "TestingAAA");
 }
 
-TEST(StringTemplate, IfElse)
+TEST(StringTemplate, /*DISABLED_*/IfElse)
 {
-    STRING_TEMPLATE(IfElseStuff, "<!--#define blaa#-->Testing<!--#if blaa#-->blaa<!--#else#-->{str}<!--#endif blaa#-->123");
+    STRING_TEMPLATE(IfElseStuff, "<!--#define blaa#-->Testing<!--#if blaa#-->blaa<!--#else#-->{#str}<!--#endif blaa#-->123");
     template_par<std::string> a("str", "blabla");
     std::string tf = templater<IfElseStuff>().templatize(a).get();
 
     ASSERT_STREQ(tf.c_str(), "Testingblaa123");
 }
 
-TEST(StringTemplate, Defines)
+TEST(StringTemplate, /*DISABLED_*/Defines)
 {
-    STRING_TEMPLATE(DefineStuff, "<!--#define blaa#--><!--#if blaa#-->Testing {str}<!--#endif blaa#-->");
+    STRING_TEMPLATE(DefineStuff, "<!--#define blaa#--><!--#if blaa#-->Testing {#str}<!--#endif blaa#-->");
     template_par<std::string> a("str", "blabla");
     std::string tf = templater<DefineStuff>().templatize(a).get();
 
     ASSERT_STREQ(tf.c_str(), "Testing blabla");
 }
 
-TEST(StringTemplate, NotSoDefines)
+TEST(StringTemplate, /*DISABLED_*/NotSoDefines)
 {
-    STRING_TEMPLATE(NotSoDefines, "<!--#define not_blaa#--><!--#if blaa#-->Testing {str}<!--#endif blaa#-->");
+    STRING_TEMPLATE(NotSoDefines, "<!--#define not_blaa#--><!--#if blaa#-->Testing {#str}<!--#endif blaa#-->");
     template_par<std::string> a("str", "blabla");
     std::string tf = templater<NotSoDefines>().templatize(a).get();
 
     ASSERT_STREQ(tf.c_str(), "");
 }
 
-TEST(StringTemplate, ValueDefines)
+TEST(StringTemplate, /*DISABLED_*/ValueDefines)
 {
-    STRING_TEMPLATE(ValueDefines, "<!--#define blaa=bluu#-->Testing {blaa}{str}");
+    STRING_TEMPLATE(ValueDefines, "<!--#define blaa=bluu#-->Testing {#blaa}{#str}");
     template_par<std::string> a("str", "blabla");
     std::string tf = templater<ValueDefines>().templatize(a).get();
 
     ASSERT_STREQ(tf.c_str(), "Testing bluublabla");
 }
 
-TEST(StringTemplate, IfTest)
+TEST(StringTemplate, /*DISABLED_*/IfTest)
 {
-    STRING_TEMPLATE(IfTestStuff, "Testing<!--#if str#-->:This is {str}<!--#endif str#-->");
+    STRING_TEMPLATE(IfTestStuff, "Testing<!--#if str#-->:This is {#str}<!--#endif str#-->");
     template_par<std::string> a("str", "blabla");
     std::string tf = templater<IfTestStuff>().templatize(a).get();
     ASSERT_STREQ(tf.c_str(), "Testing:This is blabla");
@@ -99,9 +102,9 @@ TEST(StringTemplate, IfTest)
     ASSERT_STREQ(no_par.c_str(), "Testing");
 }
 
-TEST(StringTemplate, SimpleString)
+TEST(StringTemplate, /*DISABLED_*/SimpleString)
 {
-    STRING_TEMPLATE(TestStuff, "Testing {str}");
+    STRING_TEMPLATE(TestStuff, "Testing {#str}");
 
     template_par<std::string> a("str", "blabla");
     std::string tf = templater<TestStuff>().templatize(a).get();
@@ -109,9 +112,9 @@ TEST(StringTemplate, SimpleString)
     ASSERT_STREQ(tf.c_str(), "Testing blabla");
 }
 
-TEST(StringTemplate, SimpleNumber)
+TEST(StringTemplate, /*DISABLED_*/SimpleNumber)
 {
-    STRING_TEMPLATE(NumberTestStuff, "Testing {str}");
+    STRING_TEMPLATE(NumberTestStuff, "Testing {#str}");
 
     auto x = "str" <is> 42;
 
@@ -120,9 +123,9 @@ TEST(StringTemplate, SimpleNumber)
     ASSERT_STREQ(tf.c_str(), "Testing 42");
 }
 
-TEST(StringTemplate, SimpleInclusion)
+TEST(StringTemplate, /*DISABLED_*/SimpleInclusion)
 {
-    STRING_TEMPLATE(TestIncluded, "Testing {str}");
+    STRING_TEMPLATE(TestIncluded, "Testing {#str}");
     STRING_TEMPLATE(IncTestStuff, "Testing <!--#include TestIncluded(str=\"blaa\")#-->");
 
     std::string tf = templater<IncTestStuff>().templatize().get();
@@ -130,9 +133,9 @@ TEST(StringTemplate, SimpleInclusion)
     ASSERT_STREQ(tf.c_str(), "Testing Testing blaa");
 }
 
-TEST(StringTemplate, SimpleInclusionErroneous)
+TEST(StringTemplate, /*DISABLED_*/SimpleInclusionErroneous)
 {
-    STRING_TEMPLATE(TestIncluded1, "Testing {str}");
+    STRING_TEMPLATE(TestIncluded1, "Testing {#str}");
     STRING_TEMPLATE(IncTestStuff1, "Testing <!--#include TestIncluded(str=\"blaa)#-->");
 
     std::string tf = templater<IncTestStuff1>().templatize().get();
@@ -140,7 +143,7 @@ TEST(StringTemplate, SimpleInclusionErroneous)
     ASSERT_STREQ(tf.c_str(), "Testing Testing blaa)#-->");
 }
 
-TEST(StringTemplate, SimpleInclusion2)
+TEST(StringTemplate, /*DISABLED_*/SimpleInclusion2)
 {
     STRING_TEMPLATE(TestIncluded2, "Testing");
     STRING_TEMPLATE(IncTestStuff2, "Testing <!--#include TestIncluded2#-->More");
@@ -150,9 +153,9 @@ TEST(StringTemplate, SimpleInclusion2)
     ASSERT_STREQ(tf.c_str(), "Testing TestingMore");
 }
 
-TEST(StringTemplate, DoubleInclusion)
+TEST(StringTemplate, /*DISABLED_*/DoubleInclusion)
 {
-    STRING_TEMPLATE(DoubleTestIncluded, "Testing {str}");
+    STRING_TEMPLATE(DoubleTestIncluded, "Testing {#str}");
     STRING_TEMPLATE(DoubleIncTestStuff, "Testing <!--#include TestIncluded(str=\"blaa\")#--><!--#include TestIncluded(str=\"blee\")#-->");
 
     std::string tf = templater<DoubleIncTestStuff>().templatize().get();
@@ -160,10 +163,10 @@ TEST(StringTemplate, DoubleInclusion)
     ASSERT_STREQ(tf.c_str(), "Testing Testing blaaTesting blee");
 }
 
-TEST(StringTemplate, SimpleInclusionWithVariable)
+TEST(StringTemplate, /*DISABLED_*/SimpleInclusionWithVariable)
 {
-    STRING_TEMPLATE(VarTestIncluded, "<!--#parameters st#-->Testing {str}");
-    STRING_TEMPLATE(VarTestStuff, "Testing <!--#include TestIncluded(str:{more_str})#-->");
+    STRING_TEMPLATE(VarTestIncluded, "<!--#parameters st#-->Testing {#str}");
+    STRING_TEMPLATE(VarTestStuff, "Testing <!--#include TestIncluded(str:{#more_str})#-->");
 
     template_par<std::string> a("more_str", "blabla");
     std::string tf = templater<VarTestStuff>().templatize(a).get();
@@ -171,11 +174,11 @@ TEST(StringTemplate, SimpleInclusionWithVariable)
     ASSERT_STREQ(tf.c_str(), "Testing Testing blabla");
 }
 
-TEST(StringTemplate, SimpleStruct)
+TEST(StringTemplate, /*DISABLED_*/SimpleStruct)
 {
     STRING_TEMPLATE(SimpleStructTemplate, "<!--#struct simple_pair(a,b)#-->"
                                           "<!--#parameters st:simple_pair#-->"
-                                          "Testing {st.a}{st.b}");
+                                          "Testing {#st.a}{#st.b}");
     template_struct st("st", "simple_pair");
     st["a"] = "A";
     st["b"] = "B";
@@ -185,11 +188,11 @@ TEST(StringTemplate, SimpleStruct)
 }
 
 
-TEST(StringTemplate, SimpleStructAndVar)
+TEST(StringTemplate, /*DISABLED_*/SimpleStructAndVar)
 {
     STRING_TEMPLATE(VarSimpleStructTemplate, "<!--#struct simple_pair(a,b)#-->"
                                           "<!--#parameters st:simple_pair#-->"
-                                          "Testing {st.a}{st.b}{x}");
+                                          "Testing {#st.a}{#st.b}{#x}");
     template_struct st("st", "simple_pair");
     st["a"] = "A";
     st["b"] = "B";
@@ -202,11 +205,11 @@ TEST(StringTemplate, SimpleStructAndVar)
 }
 
 
-TEST(StringTemplate, VarAndSimpleStruct)
+TEST(StringTemplate, /*DISABLED_*/VarAndSimpleStruct)
 {
     STRING_TEMPLATE(VarAndSimpleStructTemplate, "<!--#struct simple_pair(a,b)#-->"
                                           "<!--#parameters st:simple_pair#-->"
-                                          "Testing {x}{st.a}{st.b}");
+                                          "Testing {#x}{#st.a}{#st.b}");
     template_struct st("st", "simple_pair");
     st["a"] = "A";
     st["b"] = "B";
@@ -218,12 +221,12 @@ TEST(StringTemplate, VarAndSimpleStruct)
     ASSERT_STREQ(s.c_str(), "Testing 42AB");
 }
 
-TEST(StringTemplate, SimpleStruct2)
+TEST(StringTemplate, /*DISABLED_*/SimpleStruct2)
 {
     STRING_TEMPLATE(SecondSimpleStructTemplate, "<!--#struct simple(c)#-->"
                                           "<!--#struct simple_pair(a,b)#-->"
                                           "<!--#parameters st:simple_pair, x:simple#-->"
-                                          "Testing {x.c}{st.a}{st.b}");
+                                          "Testing {#x.c}{#st.a}{#st.b}");
 
     template_struct st("st", "simple_pair");
     st["a"] = "A";
@@ -240,13 +243,13 @@ TEST(StringTemplate, SimpleStruct2)
     ASSERT_STREQ(s.c_str(), "Testing CAB");
 }
 
-TEST(StringTemplate, Iterator)
+TEST(StringTemplate, /*DISABLED_*/Iterator)
 {
     STRING_TEMPLATE(ItSimpleStructTemplate, "<!--#struct simple(c)#-->"
                                           "<!--#parameters v:simple[]#-->"
                                           "Testing"
                                           "<!--#loop v#-->"
-                                          "{v.c}"
+                                          "{#v.c}"
                                           "<!--#endloop v#-->");
 
     std::vector<template_struct> structs;
@@ -269,20 +272,20 @@ TEST(StringTemplate, Iterator)
 }
 
 
-TEST(StringTemplate, IteratorTwoStructsIfEq)
+TEST(StringTemplate, /*DISABLED_*/IteratorTwoStructsIfEq)
 {
-    STRING_TEMPLATE(IteratorTwoStructsIfEq,   "<!--#struct simple(c)#-->"
-                                          "<!--#struct complex(d)#-->"
-                                          "<!--#parameters v:simple[],w:complex[]#-->"
-                                          "Testing"
-                                          "<!--#loop v#-->"
-                                          "{v.c}"
-                                          "<!--#endloop v#-->"
-                                          "<!--#loop w#-->"
-                                          "<!--#eq {stg},{w.d}#-->"
-                                          "{w.d}"
-                                          "<!--#endeq#-->"
-                                          "<!--#endloop w#-->"
+    STRING_TEMPLATE(IteratorTwoStructsIfEq,"<!--#struct simple(c)#-->"
+                                           "<!--#struct complex(d)#-->"
+                                           "<!--#parameters v:simple[],w:complex[]#-->"
+                                           "Testing"
+                                           "<!--#loop v#-->"
+                                           "{#v.c}"
+                                           "<!--#endloop v#-->"
+                                           "<!--#loop w#-->"
+                                           "<!--#eq {#stg},{#w.d}#-->"
+                                           "{#w.d}"
+                                           "<!--#endeq#-->"
+                                           "<!--#endloop w#-->"
                     );
 
     std::vector<template_struct> structs;
@@ -309,17 +312,17 @@ TEST(StringTemplate, IteratorTwoStructsIfEq)
 }
 
 
-TEST(StringTemplate, IteratorTwoStructs)
+TEST(StringTemplate, /*DISABLED_*/IteratorTwoStructs)
 {
     STRING_TEMPLATE(IteratorTwoStructs,   "<!--#struct simple(c)#-->"
                                           "<!--#struct complex(d)#-->"
                                           "<!--#parameters v:simple[],w:complex[]#-->"
                                           "Testing"
                                           "<!--#loop v#-->"
-                                          "{v.c}"
+                                          "{#v.c}"
                                           "<!--#endloop v#-->"
                                           "<!--#loop w#-->"
-                                          "{w.d}"
+                                          "{#w.d}"
                                           "<!--#endloop w#-->"
                     );
 
@@ -343,7 +346,7 @@ TEST(StringTemplate, IteratorTwoStructs)
     ASSERT_STREQ(s.c_str(), "Testing1234");
 }
 
-TEST(StringTemplate, JsonSource)
+TEST(StringTemplate, /*DISABLED_*/JsonSource)
 {
     STRING_TEMPLATE(RequiredJsonTest, "Testing {str}");
     std::string s = templater<RequiredJsonTest>().templatize(nlohmann::json{
@@ -369,7 +372,7 @@ TABLE(Person)
     FOREIGN_KEY(AddressId -> Address.Id);
 ENDTABLE(Person)
 
-TEST(CppDb, BasicOperations)
+TEST(CppDb, /*DISABLED_*/BasicOperations)
 {
 
     std::string combined_select = SELECT(Person.Id, Person.Name, Person.Age, Address.StreetName) +
@@ -397,14 +400,14 @@ TEST(CppDb, BasicOperations)
     std::cout << ordered_select2;
 }
 
-TEST(CppDb, Delete)
+TEST(CppDb, DISABLED_Delete)
 {
     std::string s = DELETE + FROM (Person) + WHERE (Person.Id == 23);
     std::cout << s;
 }
 
 
-TEST(XSSSanitizer, RemoveIp)
+TEST(XSSSanitizer, DISABLED_RemoveIp)
 {
     std::string s = "THIS HAS AN IP192.168.1.1ABC";
     std::string s2 = "THIS HAS AN IP 192.168.1.1.ABC";
@@ -414,7 +417,7 @@ TEST(XSSSanitizer, RemoveIp)
     ASSERT_STREQ(sanit2.c_str(), "THIS HAS AN IP 192.168.1.1.ABC");
 }
 
-TEST(ComponentBreaker, cb1)
+TEST(ComponentBreaker, DISABLED_cb1)
 {
     url_breaker a("/A/B/C", "/alpha/beta/gamma");
     ASSERT_EQ( (a["A"] == "alpha"), true);
@@ -423,7 +426,7 @@ TEST(ComponentBreaker, cb1)
 }
 
 
-TEST(B62, b62_enc)
+TEST(B62, DISABLED_b62_enc)
 {
     std::string s = "5zn2cg3h";
 
@@ -433,7 +436,7 @@ TEST(B62, b62_enc)
     ASSERT_EQ(s, g);
 }
 
-TEST(Convert, HexStringToNr)
+TEST(Convert, DISABLED_HexStringToNr)
 {
     ASSERT_EQ(9, unafrog::utils::hex_string_to_nr<int>("09"));
     ASSERT_EQ(0, unafrog::utils::hex_string_to_nr<int>("00"));
@@ -442,7 +445,7 @@ TEST(Convert, HexStringToNr)
 }
 
 
-TEST(UrlMaker, args)
+TEST(UrlMaker, DISABLED_args)
 {
     std::string s = unafrog::utils::make_url("a", "b", "c");
     std::string s1 = unafrog::utils::make_url("a");
@@ -453,13 +456,13 @@ TEST(UrlMaker, args)
     ASSERT_EQ(s2, "a/b");
 }
 
-TEST(Conversion, IntToHex)
+TEST(Conversion, DISABLED_IntToHex)
 {
     ASSERT_EQ("0f", unafrog::utils::int_to_hex<char>(15));
 }
 
 
-TEST(Common, DuplicateRemover)
+TEST(Common, DISABLED_DuplicateRemover)
 {
     ASSERT_EQ("ABC/DEF", remove_duplicates("ABC//DEF", '/'));
     ASSERT_EQ("ABCC/DEF", remove_duplicates("ABCC/DEF", '/'));

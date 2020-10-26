@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.13.2, 2020-10-22T14:03:11. -->
+<!-- Written by QtCreator 4.13.2, 2020-10-26T15:08:05. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -72,23 +72,28 @@
     <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:Conversion">Checked</value>
     <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:Convert">Checked</value>
     <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:CppDb">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_Script">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_SetKeyword">Checked</value>
+    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_Delete">Checked</value>
+    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_DuplicateRemover">Checked</value>
+    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_HexStringToNr">Checked</value>
+    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_IntToHex">Checked</value>
+    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_RemoveIp">Checked</value>
+    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_args">Checked</value>
+    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_b62_enc">Checked</value>
+    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_cb1">Checked</value>
     <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:Defines">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:Delete">Checked</value>
     <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DoubleInclusion">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DuplicateRemover">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:HexStringToNr">Checked</value>
+    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:ErrorSetter">Checked</value>
     <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:IfElse">Checked</value>
     <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:IfEq">Checked</value>
     <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:IfTest">Checked</value>
     <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:IncludeRootData">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:IntToHex">Checked</value>
     <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:Iterator">Checked</value>
     <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:IteratorTwoStructs">Checked</value>
     <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:IteratorTwoStructsIfEq">Checked</value>
+    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:JsonSource">Checked</value>
     <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:NotSoDefines">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:RemoveIp">Checked</value>
+    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:Script">Checked</value>
+    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:SetKeyword">Checked</value>
     <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:SimpleInclusion">Checked</value>
     <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:SimpleInclusion2">Checked</value>
     <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:SimpleInclusionErroneous">Checked</value>
@@ -103,9 +108,6 @@
     <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:ValueDefines">Checked</value>
     <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:VarAndSimpleStruct">Checked</value>
     <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:XSSSanitizer">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:args">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:b62_enc">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:cb1">Checked</value>
    </valuemap>
    <value type="int" key="AutoTest.RunAfterBuild">0</value>
    <value type="bool" key="AutoTest.UseGlobal">true</value>
@@ -343,6 +345,7 @@
     <value type="bool" key="RunConfiguration.UseMultiProcess">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
+    <value type="bool" key="RunConfiguration.UseTerminal">false</value>
     <value type="QString" key="RunConfiguration.WorkingDirectory"></value>
     <value type="QString" key="RunConfiguration.WorkingDirectory.default">/home/fld/work/p/thymian/build/tests</value>
    </valuemap>
