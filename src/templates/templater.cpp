@@ -9,6 +9,44 @@
 #include <log.h>
 #include <cwctype>
 
+std::string TEMPLATE_VARIABLE_START_DELIMITER = "{#";
+std::string TEMPLATE_VARIABLE_END_DELIMITER = "}";
+
+std::string INCLUDE_TAG = "<!--#include";
+std::string IF_TAG = "<!--#if";
+std::string IFEQ_TAG = "<!--#eq";
+std::string ELSE_TAG = "<!--#else";
+std::string ENDIF_TAG = "<!--#endif";
+std::string ENDEQ_TAG = "<!--#endeq";
+std::string STRUCT_TAG = "<!--#struct";
+std::string PARAMETERS_TAG = "<!--#parameters";
+std::string LOOP_TAG = "<!--#loop";
+std::string ENDLOOP_TAG = "<!--#endloop";
+std::string DEFINE_TAG = "<!--#define";
+
+// difference between script and inline script: inline-script is execute BEFORE the variable replacements, thus
+// it has the chance to modify the variables
+std::string SCRIPT_TAG = "<!--#script";
+std::string INLINESCRIPT_TAG = "<!--#inline-script";
+std::string ENDSCRIPT_TAG = "<!--#endscript";
+
+void templater_base::resolve_all_includes(std::string& templatized, bool do_replace)
+{
+    size_t inc_pos = templatized.find(INCLUDE_TAG);
+    while(inc_pos != std::string::npos)
+    {
+        templatized = resolve_includes(templatized, inc_pos, do_replace);
+
+        // see if we have pulled in some extra vars
+        if(do_replace)
+        {
+            templatized = stringholder(templatized).templatize(kps).get();
+        }
+
+        inc_pos = templatized.find(INCLUDE_TAG);
+    }
+}
+
 std::string templater_base::get(const std::string &template_name)
 {
     // Getting the content
@@ -17,8 +55,11 @@ std::string templater_base::get(const std::string &template_name)
     // Resolve the #define's. This will update the extra_kp's
     std::string content_without_vars = resolve_defines(content);
 
+    // resolve the scripts, since they may modify the kps
+    std::string scripts_resolved = resolve_scripts(content_without_vars);
+
     // resolve all the top level template arguments
-    std::string templatized = stringholder(content_without_vars).templatize(kps).get();
+    std::string templatized = stringholder(scripts_resolved).templatize(kps).get();
 
     // then search for all the {#include 's and: templatize those with the given variable: Value pairs
     // and include them here
@@ -26,40 +67,31 @@ std::string templater_base::get(const std::string &template_name)
     while(!done)
     {
         // search for structure definitions, there can be more than one
-        size_t struct_pos = templatized.find(struct_tag);
+        size_t struct_pos = templatized.find(STRUCT_TAG);
         while(struct_pos != std::string::npos)
         {
             templatized = resolve_structure_declaration(struct_pos, templatized);
-            struct_pos = templatized.find(struct_tag);
+            struct_pos = templatized.find(STRUCT_TAG);
         }
 
         // search for input data definition hints
-        size_t parameters_pos = templatized.find(in_tag);
+        size_t parameters_pos = templatized.find(PARAMETERS_TAG);
         if(parameters_pos != std::string::npos)
         {
             templatized = resolve_parameters(parameters_pos, templatized);
         }
 
         // search for the "include"'s
-        size_t inc_pos = templatized.find(include_tag);
-        while(inc_pos != std::string::npos)
-        {
-            templatized = resolve_includes(inc_pos, templatized);
-
-            // see if we have pulled in some extra vars
-            templatized = stringholder(templatized).templatize(kps).get();
-
-            inc_pos = templatized.find(include_tag);
-        }
+        resolve_all_includes(templatized);
 
         // now search for the "if"'s. Remember, ifs cannot have ifs in their body
-        size_t if_pos = templatized.find(if_tag);
+        size_t if_pos = templatized.find(IF_TAG);
         if(if_pos != std::string::npos)
         {
             while(if_pos != std::string::npos)
             {
                 templatized = resolve_ifs(if_pos, templatized);
-                if_pos = templatized.find(if_tag);
+                if_pos = templatized.find(IF_TAG);
             }
         }
         else
@@ -152,25 +184,45 @@ std::string templater_base::get_error() const
     return error;
 }
 
-std::vector<std::string> templater_base::variables()
+std::vector<std::string> templater_base::variables(bool resolve_includes_too)
 {
     std::vector<std::string> result;
 
-    /*std::string content = template_warehouse::instance().getTemplateContent(template_name);
+    std::string content = template_warehouse::instance().getTemplateContent(name());
+    std::string::size_type start_pos = 0;
 
-    while((start_pos = str.find(from, start_pos)) != std::string::npos)
-    {*/
+    if(resolve_includes_too)
+    {
+        resolve_all_includes(content, false);
+    }
+
+    while((start_pos = content.find(TEMPLATE_VARIABLE_START_DELIMITER, start_pos)) != std::string::npos)
+    {
+        std::string current_varname = "";
+        start_pos += TEMPLATE_VARIABLE_START_DELIMITER.length();
+        while(start_pos < content.length() && content[start_pos] != '}')
+        {
+            current_varname += content[start_pos++];
+        }
+        if(start_pos == content.length())
+        {
+            set_error("Unterminated variable name");
+            return result;
+        }
+        result.push_back(current_varname);
+        start_pos ++; // to skip the closing '}'
+    }
 
     return result;
 }
 
-std::string templater_base::resolve_includes(size_t inc_pos, std::string templatized)
+std::string templater_base::resolve_includes(std::string templatized, size_t inc_pos, bool do_variable_replacement)
 {
     std::map<std::string, std::string> local_pairs;
     std::size_t include_tag_end_position = std::string::npos;
     std::size_t include_tag_start_position = inc_pos;
 
-    inc_pos += include_tag.length();
+    inc_pos += INCLUDE_TAG.length();
 
     std::string inc_template = extract_identifier_word(templatized, inc_pos);
     bool opening_parentheses = check_opening_parenthesis(templatized, inc_pos);
@@ -211,6 +263,7 @@ std::string templater_base::resolve_includes(size_t inc_pos, std::string templat
 
                     if(i == templatized.length())
                     {
+                        set_error("String literal is not finished");
                         break;
                     }
 
@@ -222,6 +275,7 @@ std::string templater_base::resolve_includes(size_t inc_pos, std::string templat
 
                 if(i == templatized.length()) // invalid syntax
                 {
+                    set_error("Invalid syntax, could not resolve an include");
                     break;
                 }
 
@@ -293,7 +347,7 @@ std::string templater_base::resolve_includes(size_t inc_pos, std::string templat
     // and now read in the template from inc_template
     // and replace everything that is supposed to be replaced
     std::string inc_content = template_warehouse::instance().getTemplateContent( inc_template );
-    std::string inc_templatized = stringholder(inc_content).templatize(local_pairs).get();
+    std::string inc_templatized = do_variable_replacement ? stringholder(inc_content).templatize(local_pairs).get() : inc_content;
 
     templatized.erase(include_tag_start_position, include_tag_end_position - include_tag_start_position);
     templatized.insert(include_tag_start_position, inc_templatized);
@@ -304,7 +358,7 @@ std::string templater_base::resolve_structure_declaration(size_t struct_pos, std
 {
     std::size_t include_tag_start_position = struct_pos;
 
-    struct_pos += struct_tag.length();
+    struct_pos += STRUCT_TAG.length();
 
     std::string struct_name = extract_identifier_word(templatized, struct_pos);
     bool opening_parentheses = check_opening_parenthesis(templatized, struct_pos);
@@ -325,6 +379,7 @@ std::string templater_base::resolve_structure_declaration(size_t struct_pos, std
         }
         if(member_name.empty()) // syntax error, just give back what came out
         {
+            set_error("Invalid syntax, could not resolve a structure declaration");
             return templatized;
         }
 
@@ -398,14 +453,14 @@ templater_base &templater_base::templatize(const template_struct &s)
 
 std::string templater_base::resolve_loops(std::string templatized, const template_vector_par &v)
 {
-    size_t loop_pos = templatized.find(loop_tag);
+    size_t loop_pos = templatized.find(LOOP_TAG);
     while(loop_pos != std::string::npos)
     {
         // find the stuff between the iterate and end iterate tags
         std::size_t loop_tag_end_position = std::string::npos;
         std::size_t loop_tag_start_position = loop_pos;
 
-        loop_pos += loop_tag.length();
+        loop_pos += LOOP_TAG.length();
 
         // see on what are we iterating through
         std::string loop_target = extract_identifier_word(templatized, loop_pos);
@@ -417,9 +472,9 @@ std::string templater_base::resolve_loops(std::string templatized, const templat
         }
 
         // now find the end iterate tag
-        size_t end_loop_pos = templatized.find(endloop_tag, loop_tag_end_position);
+        size_t end_loop_pos = templatized.find(ENDLOOP_TAG, loop_tag_end_position);
         size_t save_endpos = end_loop_pos;
-        end_loop_pos += endloop_tag.length();
+        end_loop_pos += ENDLOOP_TAG.length();
         size_t endloop_endpos = std::string::npos;
 
         size_t temp = end_loop_pos;
@@ -439,9 +494,9 @@ std::string templater_base::resolve_loops(std::string templatized, const templat
                 break;
             }
 
-            temp = templatized.find(endloop_tag, temp);
+            temp = templatized.find(ENDLOOP_TAG, temp);
             save_endpos = temp;
-            temp += endloop_tag.length();
+            temp += ENDLOOP_TAG.length();
         }
 
         // now between loop_tag_end_position and save_endpos there is the strign we need
@@ -470,7 +525,8 @@ std::string templater_base::resolve_loops(std::string templatized, const templat
                                 std::string fullname_to_replace_with = v.name() + "." + x.first + ":" + std::to_string(c);
 
                                 kps.insert(make_pair(fullname_to_replace_with, unafrog::utils::to_string(x.second)));
-                                sh.replaceAll("{#" + fullname + "}", "{#" + fullname_to_replace_with + "}");
+                                sh.replaceAll(TEMPLATE_VARIABLE_START_DELIMITER + fullname +TEMPLATE_VARIABLE_END_DELIMITER,
+                                              TEMPLATE_VARIABLE_START_DELIMITER + fullname_to_replace_with + TEMPLATE_VARIABLE_END_DELIMITER);
                             }
                         }
 
@@ -491,11 +547,11 @@ std::string templater_base::resolve_loops(std::string templatized, const templat
             part1 += templatized.substr(endloop_endpos);
 
             templatized = part1;
-            loop_pos = templatized.find(loop_tag);
+            loop_pos = templatized.find(LOOP_TAG);
         }
         else
         {
-            loop_pos = templatized.find(loop_tag, endloop_endpos);
+            loop_pos = templatized.find(LOOP_TAG, endloop_endpos);
         }
     }
 
@@ -509,13 +565,13 @@ std::string templater_base::resolve_ifeqs(std::string templatized)
     bool done = false;
     while(!done)
     {
-        size_t ifeq_pos = templatized.find(ifeq_tag);
+        size_t ifeq_pos = templatized.find(IFEQ_TAG);
         if(ifeq_pos != std::string::npos)
         {
             while(ifeq_pos != std::string::npos)
             {
                 templatized = resolve_ifeq(ifeq_pos, templatized);
-                ifeq_pos = templatized.find(ifeq_tag);
+                ifeq_pos = templatized.find(IFEQ_TAG);
             }
         }
         else
@@ -553,7 +609,7 @@ std::string templater_base::resolve_parameters(size_t parameters_pos, std::strin
     std::size_t include_tag_end_position = std::string::npos;
     std::size_t include_tag_start_position = parameters_pos;
 
-    parameters_pos += in_tag.length();
+    parameters_pos += PARAMETERS_TAG.length();
     skip_whitespace(templatized, parameters_pos);
 
     size_t i = parameters_pos;
@@ -562,7 +618,7 @@ std::string templater_base::resolve_parameters(size_t parameters_pos, std::strin
     {
         // first: read in the variable name
         char c_sep = 32;
-        std::string var_name = extract_identifier_word(templatized, i, {':', ' '}, {}, std::move(c_sep));
+        std::string var_name = extract_identifier_word(templatized, i, {':', ' '}, {}, static_cast<char&&>(c_sep));
 
         if(i == templatized.length() || var_name.empty())
         {
@@ -615,7 +671,7 @@ std::string templater_base::resolve_ifs(size_t if_pos, std::string templatized)
     size_t i = if_pos;
 
     // skip the <!--#if
-    i += if_tag.length();
+    i += IF_TAG.length();
 
     // and any whitespace that might follow
     skip_whitespace(templatized, i);
@@ -634,8 +690,8 @@ std::string templater_base::resolve_ifs(size_t if_pos, std::string templatized)
             var_value = kps[var_name];
         }
 
-        std::string closing_endif_tag = endif_tag + " " + var_name;
-        std::string closing_else_tag = else_tag + " " + var_name;
+        std::string closing_endif_tag = ENDIF_TAG + " " + var_name;
+        std::string closing_else_tag = ELSE_TAG + " " + var_name;
 
         if(var_value.empty())
         {
@@ -709,7 +765,7 @@ std::string templater_base::resolve_ifeq(size_t if_pos, std::string templatized)
     size_t i = if_pos;
 
     // skip the <!--#ifeq
-    i += ifeq_tag.length();
+    i += IFEQ_TAG.length();
 
     // and any whitespace that might follow
     skip_whitespace(templatized, i);
@@ -739,22 +795,22 @@ std::string templater_base::resolve_ifeq(size_t if_pos, std::string templatized)
         if(!are_eq)
         {
             // search for the first <!--#endifeq
-            size_t endif_pos = templatized.find(endifeq_tag);
+            size_t endif_pos = templatized.find(ENDEQ_TAG);
             if(endif_pos != std::string::npos)
             {
-                templatized = templatized.substr(0, if_pos) + templatized.substr(endif_pos + endifeq_tag.length() + 4);
+                templatized = templatized.substr(0, if_pos) + templatized.substr(endif_pos + ENDEQ_TAG.length() + 4);
             }
         }
         else // remove the comments :)
         {
-            size_t endif_pos = templatized.find(endifeq_tag);
+            size_t endif_pos = templatized.find(ENDEQ_TAG);
 
             if(endif_pos != std::string::npos)
             {
                 size_t remove_start_pos = endif_pos;
                 std::string before_if = templatized.substr(0, if_pos);
                 std::string between = templatized.substr(i + 3, remove_start_pos - i - 3);
-                std::string after_endif = templatized.substr(remove_start_pos + endifeq_tag.length() + 4);
+                std::string after_endif = templatized.substr(remove_start_pos + ENDEQ_TAG.length() + 4);
 
                 templatized =  before_if + between + after_endif;
             }
@@ -767,7 +823,7 @@ std::string templater_base::resolve_ifeq(size_t if_pos, std::string templatized)
 
 std::string templater_base::resolve_defines(std::string content)
 {
-    size_t define_pos = content.find(define_tag);
+    size_t define_pos = content.find(DEFINE_TAG);
 
     std::vector<std::pair<size_t, size_t>> strings_to_remove; // we will remove the define tags from in here
     if(define_pos != std::string::npos)
@@ -776,7 +832,7 @@ std::string templater_base::resolve_defines(std::string content)
         {
             bool define_read = false;
             // skipping the tag
-            size_t i = define_pos + define_tag.length();
+            size_t i = define_pos + DEFINE_TAG.length();
             // skipping the whitespace after the tag
             skip_whitespace(content, i);
             while(!define_read)
@@ -824,7 +880,7 @@ std::string templater_base::resolve_defines(std::string content)
                 if(content[i] == '#')
                 {
                     i++;
-                    if(i +2 < content.length() && content[i] == '-' && content[i+1] == '-' && content[i+2]=='>')
+                    if(i + 2 < content.length() && content[i] == '-' && content[i+1] == '-' && content[i+2]=='>')
                     {
                         i += 3; // skip the closing comment
                         define_read = true;
@@ -845,7 +901,7 @@ std::string templater_base::resolve_defines(std::string content)
             }
 
             strings_to_remove.insert(strings_to_remove.begin(), {define_pos, i});
-            define_pos = content.find(define_tag, i);
+            define_pos = content.find(DEFINE_TAG, i);
         }
     }
     // now walk through the strings_to_remove and delete from the content everything from there
@@ -862,13 +918,13 @@ std::string templater_base::resolve_scripts(std::string templatized)
     bool done = false;
     while(!done)
     {
-        size_t script_tag_pos = templatized.find(script_tag);
+        size_t script_tag_pos = templatized.find(SCRIPT_TAG);
         if(script_tag_pos != std::string::npos)
         {
             while(script_tag_pos != std::string::npos)
             {
                 templatized = resolve_script(script_tag_pos, templatized);
-                script_tag_pos = templatized.find(script_tag);
+                script_tag_pos = templatized.find(SCRIPT_TAG);
             }
         }
         else
@@ -881,16 +937,16 @@ std::string templater_base::resolve_scripts(std::string templatized)
 
 std::string templater_base::resolve_script(size_t pos, const std::string& content)
 {
-    size_t endscript_start_pos = content.find(endscript_tag);
+    size_t endscript_start_pos = content.find(ENDSCRIPT_TAG);
     size_t old_pos = pos;
 
     // skip the tag
-    pos += script_tag.length();
+    pos += SCRIPT_TAG.length();
     // skip the space(s) followwing the "script"
     while(isspace(content[pos])) pos += 1;
 
     std::string script_type = "";
-    while(content[pos] != '#' && pos < content.length())
+    while(pos < content.length() && content[pos] != '#')
     {
         script_type += content[pos++];
     }
@@ -919,25 +975,68 @@ std::string templater_base::resolve_script(size_t pos, const std::string& conten
     std::string before_script = content.substr(0, old_pos);
     std::string between = std::string(content.begin() + pos + 4,  // #--> is the 4
                                       content.begin() + endscript_start_pos);
-    std::string after_script = content.substr(endscript_start_pos + endscript_tag.length() + 4);
+    std::string after_script = content.substr(endscript_start_pos + ENDSCRIPT_TAG.length() + 4);
 
-    std::cerr << "Trying to run:" << std::endl<< between << std::endl;
-
-    // run the code in <<between>> depending on the requested interpreter
 
     PyImport_AppendInittab("emb", emb::PyInit_emb);
     Py_Initialize();
-    PyImport_ImportModule("emb");
+    PyObject* pymodule = PyImport_ImportModule("emb");
+    PyObject *main = PyImport_AddModule("__main__");
 
-    // here comes the ***magic***
     std::string buffer;
     {
-        // switch sys.stdout to custom handler
         emb::stdout_write_type write = [&buffer] (std::string s) { buffer += s; };
         emb::set_stdout(write);
+
+        std::set<std::string> set_variables;
+        for(const auto& [kp, kv] : kps)
+        {
+            std::string cmd = kp + "='" + kv + "'\n";
+            between = cmd + between;
+            set_variables.insert(kp);
+        }
+
+        const auto& all_variables = variables(true);
+        for(const auto& v : all_variables)
+        {
+            if(set_variables.count(v) == 0)
+            {
+                std::string cmd = v + "=''\n";
+                between = cmd + between;
+                set_variables.insert(v);
+            }
+        }
+
+        //std::cerr << "Trying to run:" << std::endl<< between << std::endl;
+
         PyRun_SimpleString(between.c_str());
         emb::reset_stdout();
+
+        PyObject *globals = PyModule_GetDict(main);
+        if(globals)
+        {
+            for(const auto& v : set_variables)
+            {
+                PyObject *a = PyDict_GetItemString(globals, v.c_str());
+                if(a)
+                {
+                    PyObject* temp_bytes = PyUnicode_AsEncodedString( a, "UTF-8", "strict" );
+                    if (temp_bytes)
+                    {
+                        std::string r = PyBytes_AS_STRING( temp_bytes );
+                        kps[v] = r;
+
+                        Py_DECREF( temp_bytes );
+                    }
+                    Py_DECREF(a);
+                }
+            }
+
+            Py_DECREF(globals);
+        }
     }
+    Py_DECREF(main);
+    Py_DECREF(pymodule);
 
     Py_Finalize();
 
@@ -963,7 +1062,7 @@ stringholder &stringholder::templatize(const std::map<std::string, std::string> 
 {
     for(auto it = m.begin(); it != m.end(); ++ it)
     {
-        replaceAll(std::string("{#") + it->first + std::string("}"), it->second );
+        replaceAll(TEMPLATE_VARIABLE_START_DELIMITER + it->first + TEMPLATE_VARIABLE_END_DELIMITER, it->second );
     }
     return *this;
 }

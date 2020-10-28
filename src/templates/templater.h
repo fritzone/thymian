@@ -336,6 +336,7 @@ public:
     virtual std::string get() = 0;
     virtual void do_not_resolve_in_get() = 0;
     virtual void do_resolve_in_get() = 0;
+    virtual std::string name() const = 0;
 
     void skip_whitespace(const std::string &templatized, size_t &i);
     std::string extract_identifier_word(const std::string &input, size_t &i, std::vector<char> separators = {},
@@ -357,13 +358,29 @@ public:
      * @brief variables will return all the variables that can be replaced in the template
      * @return
      */
-    std::vector<std::string> variables();
+    std::vector<std::string> variables(bool resolve_includes_too);
+
 
 protected:
 
     std::string get(const std::string& template_name);
+    void resolve_all_includes(std::string &templatized, bool do_replace = true);
 
-    std::string resolve_includes(size_t inc_pos, std::string templatized);
+    /**
+     * @brief resolve_includes Resolves the template including other templates.
+     *
+     * The included template name can have parameters too: <!--#include IncludeableTemplate(str="blaa")#-->" meaning
+     * that when the IncludeableTemplate is included its variables (specified in the list only) are exchhanged to the
+     * ones with values from the parameters.
+     *
+     * @param templatized - the actual content of the template string
+     * @param inc_pos - the start position
+     * @param do_variable_replacement - whether wer should replace the variables after including
+     *
+     * @return the templated string, where the includes were resolved and eventually the variables were replaced
+     */
+    std::string resolve_includes(std::string templatized, size_t inc_pos, bool do_variable_replacement = true);
+
     std::string resolve_structure_declaration(size_t struct_pos, std::string templatized);
     std::string resolve_parameters(size_t parameters_pos, std::string templatized);
     std::string resolve_ifs(size_t if_pos, std::string templatized);
@@ -376,20 +393,6 @@ protected:
     std::string resolve_dynamic_section(std::string templatized, const template_vector_par &v);
 
     std::map<std::string, std::string> kps;
-
-    std::string include_tag = "<!--#include";
-    std::string if_tag = "<!--#if";
-    std::string ifeq_tag = "<!--#eq";
-    std::string else_tag = "<!--#else";
-    std::string endif_tag = "<!--#endif";
-    std::string endifeq_tag = "<!--#endeq";
-    std::string struct_tag = "<!--#struct";
-    std::string in_tag = "<!--#parameters";
-    std::string loop_tag = "<!--#loop";
-    std::string endloop_tag = "<!--#endloop";
-    std::string define_tag = "<!--#define";
-    std::string script_tag = "<!--#script";
-    std::string endscript_tag = "<!--#endscript";
 
     std::map<std::string, template_struct> structures;
     std::map<std::string, template_special_parameter> m_parameters;
@@ -474,12 +477,11 @@ public:
         resolve_in_get = true;
     }
 
-    std::string get()
+    std::string get() override
     {
         if(precalculated.empty())
         {
-            std::string tname = T::name();
-            std::string templatized = templater_base::get(tname);
+            std::string templatized = templater_base::get(name());
             if(resolve_in_get)
             {
                 templatized = resolve_ifeqs(templatized);
@@ -497,6 +499,13 @@ public:
             return precalculated;
         }
     }
+
+    std::string name() const override
+    {
+        return T::name();
+    }
+
+
 };
 
 template <class T>

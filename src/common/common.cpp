@@ -464,7 +464,7 @@ again:
 static int get_number(const std::string& s, size_t& i)
 {
     std::string ip1 = "";
-    while(isdigit(s[i]) && i < s.length())
+    while(i < s.length() && isdigit(s[i]))
     {
         ip1 += s[i++];
     }

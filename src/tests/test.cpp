@@ -46,12 +46,23 @@ TEST(StringTemplate, Script)
     STRING_TEMPLATE(ScriptStuff, "Testing<!--#script python#-->"
                     "def fun(s, c):\n"
                     "\treturn s * c\n\n"
-                    "print(fun(\"{#str}\", 3))\n"
+                    "print(fun(str, 3))\n"
                     "<!--#endscript#-->");
     template_par<std::string> a("str", "A");
     std::string tf = templater<ScriptStuff>().templatize(a).get();
 
     ASSERT_STREQ(tf.c_str(), "TestingAAA");
+}
+
+TEST(StringTemplate, ScriptSetsVariables)
+{
+    STRING_TEMPLATE(ScriptStuffSetsVar, "Testing{#str}<!--#script python#-->"
+                    "str='B'\n"
+                    "<!--#endscript#-->");
+    template_par<std::string> a("str", "A");
+    std::string tf = templater<ScriptStuffSetsVar>().templatize(a).get();
+
+    ASSERT_STREQ(tf.c_str(), "TestingB");
 }
 
 TEST(StringTemplate, /*DISABLED_*/IfElse)
@@ -131,6 +142,27 @@ TEST(StringTemplate, /*DISABLED_*/SimpleInclusion)
     std::string tf = templater<IncTestStuff>().templatize().get();
 
     ASSERT_STREQ(tf.c_str(), "Testing Testing blaa");
+}
+
+TEST(StringTemplate, /*DISABLED_*/SimpleVariables)
+{
+    STRING_TEMPLATE(TestVariables, "Testing {#str}{#str2}");
+
+    auto vars = templater<TestVariables>().variables(false);
+
+    ASSERT_STREQ(vars[0].c_str(), "str");
+    ASSERT_STREQ(vars[1].c_str(), "str2");
+}
+
+TEST(StringTemplate, /*DISABLED_*/IncludedVariables)
+{
+    STRING_TEMPLATE(TestIncludedVariables, "Testing {#str}");
+    STRING_TEMPLATE(TestVariableIncluder, "Testing <!--#include TestIncludedVariables#-->{#str2}");
+
+    auto vars = templater<TestVariableIncluder>().variables(true);
+
+    ASSERT_STREQ(vars[0].c_str(), "str");
+    ASSERT_STREQ(vars[1].c_str(), "str2");
 }
 
 TEST(StringTemplate, /*DISABLED_*/SimpleInclusionErroneous)
@@ -372,7 +404,7 @@ TABLE(Person)
     FOREIGN_KEY(AddressId -> Address.Id);
 ENDTABLE(Person)
 
-TEST(CppDb, /*DISABLED_*/BasicOperations)
+TEST(CppDb, DISABLED_BasicOperations)
 {
 
     std::string combined_select = SELECT(Person.Id, Person.Name, Person.Age, Address.StreetName) +
