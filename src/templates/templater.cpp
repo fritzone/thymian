@@ -1,34 +1,16 @@
 #include "templater.h"
+#include "dictionary.h"
 
 #ifdef PYTHON_SCRIPTING
-#include "pyembed.h"
+#include "python_runner.h"
 #endif
 
 #include <algorithm>
+#include <filesystem>
 
 #include <log.h>
 #include <cwctype>
 
-std::string TEMPLATE_VARIABLE_START_DELIMITER = "{#";
-std::string TEMPLATE_VARIABLE_END_DELIMITER = "}";
-
-std::string INCLUDE_TAG = "<!--#include";
-std::string IF_TAG = "<!--#if";
-std::string IFEQ_TAG = "<!--#eq";
-std::string ELSE_TAG = "<!--#else";
-std::string ENDIF_TAG = "<!--#endif";
-std::string ENDEQ_TAG = "<!--#endeq";
-std::string STRUCT_TAG = "<!--#struct";
-std::string PARAMETERS_TAG = "<!--#parameters";
-std::string LOOP_TAG = "<!--#loop";
-std::string ENDLOOP_TAG = "<!--#endloop";
-std::string DEFINE_TAG = "<!--#define";
-
-// difference between script and inline script: inline-script is execute BEFORE the variable replacements, thus
-// it has the chance to modify the variables
-std::string SCRIPT_TAG = "<!--#script";
-std::string INLINESCRIPT_TAG = "<!--#inline-script";
-std::string ENDSCRIPT_TAG = "<!--#endscript";
 
 void templater_base::resolve_all_includes(std::string& templatized, bool do_replace)
 {
@@ -55,8 +37,8 @@ std::string templater_base::get(const std::string &template_name)
     // Resolve the #define's. This will update the extra_kp's
     std::string content_without_vars = resolve_defines(content);
 
-    // resolve the scripts, since they may modify the kps
-    std::string scripts_resolved = resolve_scripts(content_without_vars);
+    // resolve the initializer scripts, since they may modify the kps
+    std::string scripts_resolved = resolve_scripts(content_without_vars, INIT_SCRIPT_TAG);
 
     // resolve all the top level template arguments
     std::string templatized = stringholder(scripts_resolved).templatize(kps).get();
@@ -109,7 +91,9 @@ std::string templater_base::extract_identifier_word(const std::string& input, si
     skip_whitespace(input, i);
 
     std::string result = "";
-    while(i < input.length() && (input.at(i) == '_' || extra_allowed_chars.count(input.at(i)) || isalnum(input.at(i))) )
+    while(i < input.length() && (input.at(i) == '_' ||
+          extra_allowed_chars.count(input.at(i)) ||
+          isalnum(input.at(i))) )
     {
         if(separators.empty())
         {
@@ -445,7 +429,7 @@ templater_base &templater_base::templatize(const template_struct &s)
     }
     templatized = stringholder(templatized).templatize(kps).get();
     templatized = resolve_ifeqs(templatized);
-    templatized = resolve_scripts(templatized);
+    templatized = resolve_scripts(templatized, SCRIPT_TAG);
     precalculated = templatized;
 
     return *this;
@@ -525,7 +509,7 @@ std::string templater_base::resolve_loops(std::string templatized, const templat
                                 std::string fullname_to_replace_with = v.name() + "." + x.first + ":" + std::to_string(c);
 
                                 kps.insert(make_pair(fullname_to_replace_with, unafrog::utils::to_string(x.second)));
-                                sh.replaceAll(TEMPLATE_VARIABLE_START_DELIMITER + fullname +TEMPLATE_VARIABLE_END_DELIMITER,
+                                sh.replace_all(TEMPLATE_VARIABLE_START_DELIMITER + fullname +TEMPLATE_VARIABLE_END_DELIMITER,
                                               TEMPLATE_VARIABLE_START_DELIMITER + fullname_to_replace_with + TEMPLATE_VARIABLE_END_DELIMITER);
                             }
                         }
@@ -582,6 +566,59 @@ std::string templater_base::resolve_ifeqs(std::string templatized)
     return templatized;
 }
 
+std::string templater_base::resolve_translations(std::string templatized, const std::string &target_language)
+{
+    bool done = false;
+    while(!done)
+    {
+        size_t ifeq_pos = templatized.find(TRANSLATE_TAG);
+        if(ifeq_pos != std::string::npos)
+        {
+            while(ifeq_pos != std::string::npos)
+            {
+                templatized = resolve_translation(ifeq_pos, templatized, target_language);
+                ifeq_pos = templatized.find(TRANSLATE_TAG);
+            }
+        }
+        else
+        {
+            done = true;
+        }
+    }
+    return templatized;
+
+}
+
+std::string templater_base::resolve_translation(size_t tr_pos, std::string templatized, const std::string &target_language)
+{
+    size_t i = tr_pos;
+
+    // skip the <!--#translate
+    i += TRANSLATE_TAG.length();
+
+    // and any whitespace that might follow
+    skip_whitespace(templatized, i);
+    size_t translateable_start = i;
+
+    // now extract the word to translate
+    if(i < templatized.length())
+    {
+        char c_sep = 32;
+        std::string what_to = extract_identifier_word(templatized, i, {'#'}, {' ', ',', '.', '!', '?', ':', ':'}, std::move(c_sep));
+        skip_whitespace(templatized, i);
+
+        std::string before_translate = templatized.substr(0, tr_pos);
+        std::string between = templatized.substr(translateable_start, what_to.length());
+        std::string after_translate = templatized.substr(translateable_start + what_to.length() + 4);
+
+        templatized =  before_translate + dictionary::translate(between, target_language) + after_translate;
+    }
+
+
+    return templatized;
+
+}
+
 templater_base &templater_base::templatize(const template_vector_par &v)
 {
     do_not_resolve_in_get();
@@ -590,7 +627,7 @@ templater_base &templater_base::templatize(const template_vector_par &v)
 
     templatized = resolve_loops(templatized, v);
     templatized = resolve_ifeqs(templatized);
-    templatized = resolve_scripts(templatized);
+    templatized = resolve_scripts(templatized, SCRIPT_TAG);
     precalculated = templatized;
 
     return *this;
@@ -814,7 +851,6 @@ std::string templater_base::resolve_ifeq(size_t if_pos, std::string templatized)
 
                 templatized =  before_if + between + after_endif;
             }
-
         }
     }
 
@@ -913,18 +949,18 @@ std::string templater_base::resolve_defines(std::string content)
     return content;
 }
 
-std::string templater_base::resolve_scripts(std::string templatized)
+std::string templater_base::resolve_scripts(std::string templatized, const std::string& tag)
 {
     bool done = false;
     while(!done)
     {
-        size_t script_tag_pos = templatized.find(SCRIPT_TAG);
+        size_t script_tag_pos = templatized.find(tag);
         if(script_tag_pos != std::string::npos)
         {
             while(script_tag_pos != std::string::npos)
             {
-                templatized = resolve_script(script_tag_pos, templatized);
-                script_tag_pos = templatized.find(SCRIPT_TAG);
+                templatized = resolve_script(script_tag_pos, templatized, tag);
+                script_tag_pos = templatized.find(tag);
             }
         }
         else
@@ -935,18 +971,18 @@ std::string templater_base::resolve_scripts(std::string templatized)
     return templatized;
 }
 
-std::string templater_base::resolve_script(size_t pos, const std::string& content)
+std::string templater_base::resolve_script(size_t pos, const std::string& content, const std::string &tag)
 {
     size_t endscript_start_pos = content.find(ENDSCRIPT_TAG);
     size_t old_pos = pos;
 
     // skip the tag
-    pos += SCRIPT_TAG.length();
+    pos += tag.length();
     // skip the space(s) followwing the "script"
     while(isspace(content[pos])) pos += 1;
 
     std::string script_type = "";
-    while(pos < content.length() && content[pos] != '#')
+    while(pos < content.length() && content[pos] != '#' && content[pos] != ':')
     {
         script_type += content[pos++];
     }
@@ -977,74 +1013,13 @@ std::string templater_base::resolve_script(size_t pos, const std::string& conten
                                       content.begin() + endscript_start_pos);
     std::string after_script = content.substr(endscript_start_pos + ENDSCRIPT_TAG.length() + 4);
 
-
-    PyImport_AppendInittab("emb", emb::PyInit_emb);
-    Py_Initialize();
-    PyObject* pymodule = PyImport_ImportModule("emb");
-    PyObject *main = PyImport_AddModule("__main__");
-
-    std::string buffer;
-    {
-        emb::stdout_write_type write = [&buffer] (std::string s) { buffer += s; };
-        emb::set_stdout(write);
-
-        std::set<std::string> set_variables;
-        for(const auto& [kp, kv] : kps)
-        {
-            std::string cmd = kp + "='" + kv + "'\n";
-            between = cmd + between;
-            set_variables.insert(kp);
-        }
-
-        const auto& all_variables = variables(true);
-        for(const auto& v : all_variables)
-        {
-            if(set_variables.count(v) == 0)
-            {
-                std::string cmd = v + "=''\n";
-                between = cmd + between;
-                set_variables.insert(v);
-            }
-        }
-
-        //std::cerr << "Trying to run:" << std::endl<< between << std::endl;
-
-        PyRun_SimpleString(between.c_str());
-        emb::reset_stdout();
-
-        PyObject *globals = PyModule_GetDict(main);
-        if(globals)
-        {
-            for(const auto& v : set_variables)
-            {
-                PyObject *a = PyDict_GetItemString(globals, v.c_str());
-                if(a)
-                {
-                    PyObject* temp_bytes = PyUnicode_AsEncodedString( a, "UTF-8", "strict" );
-                    if (temp_bytes)
-                    {
-                        std::string r = PyBytes_AS_STRING( temp_bytes );
-                        kps[v] = r;
-
-                        Py_DECREF( temp_bytes );
-                    }
-                    Py_DECREF(a);
-                }
-            }
-
-            Py_DECREF(globals);
-        }
-    }
-    Py_DECREF(main);
-    Py_DECREF(pymodule);
-
-    Py_Finalize();
+    std::string result = python_runner().run(kps, between, variables(true));
 
 
-    return before_script + unafrog::utils::trim(buffer) + after_script;
+    return before_script + unafrog::utils::trim(result) + after_script;
 }
 
-void stringholder::replaceAll(const std::string &from, const std::string &to)
+void stringholder::replace_all(const std::string &from, const std::string &to)
 {
     if(from.empty())
     {
@@ -1062,7 +1037,7 @@ stringholder &stringholder::templatize(const std::map<std::string, std::string> 
 {
     for(auto it = m.begin(); it != m.end(); ++ it)
     {
-        replaceAll(TEMPLATE_VARIABLE_START_DELIMITER + it->first + TEMPLATE_VARIABLE_END_DELIMITER, it->second );
+        replace_all(TEMPLATE_VARIABLE_START_DELIMITER + it->first + TEMPLATE_VARIABLE_END_DELIMITER, it->second );
     }
     return *this;
 }
@@ -1116,9 +1091,23 @@ bool template_warehouse::registerTemplate(const std::string &name, template_base
 }
 
 
+std::string file_template::base_dir() const
+{
+    namespace fs = std::filesystem;
+    if(fs::is_regular_file(fileName()))
+    {
+        return "";
+    }
+    else
+    {
+        return TEMPLATES_DIRECTORY;
+    }
+
+}
+
 std::string file_template::content() const
 {
-    std::string fn = TEMPLATES_DIRECTORY + fileName();
+    std::string fn = base_dir() + fileName();
     std::ifstream ifs(fn);
     std::string s( (std::istreambuf_iterator<char>(ifs) ),
                    (std::istreambuf_iterator<char>()) );
@@ -1128,10 +1117,13 @@ std::string file_template::content() const
 bool file_template::check() const
 {
     struct stat buffer;
-    bool res = (stat ( (TEMPLATES_DIRECTORY +  fileName()).c_str(), &buffer) == 0);
+    bool res = (stat ( (base_dir() +  fileName()).c_str(), &buffer) == 0);
     if(!res)
     {
         debug() << "Check for "<< fileName() << " failed";
     }
     return res;
 }
+
+
+

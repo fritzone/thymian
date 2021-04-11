@@ -1,0 +1,13 @@
+<%pre>
+#include "main_sender.h"
+</%pre>
+<%cpp>
+try
+{
+    return main_sender(request, reply, request.getPathInfo()).send();
+}
+catch(...)
+{
+    return 418;
+}
+</%cpp>

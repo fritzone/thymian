@@ -42,7 +42,7 @@ PyObject* Stdout_write(PyObject* self, PyObject* args)
     return PyLong_FromSize_t(written);
 }
 
-PyObject* Stdout_flush(PyObject* self, PyObject* args)
+PyObject* Stdout_flush(PyObject* /*self*/, PyObject* /*args*/)
 {
     // no-op
     return Py_BuildValue("");

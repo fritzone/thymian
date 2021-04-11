@@ -301,5 +301,25 @@ std::string remove_duplicates(std::string s, char to_remove);
 /* removes the quotes from the string */
 void remove_quotes(std::string &s);
 
+
+template<std::size_t I = 0, typename FuncT, typename... Tp>
+inline typename std::enable_if< I == sizeof...(Tp), void>::type
+for_index(std::size_t, std::tuple<Tp...> &, FuncT)
+{}
+
+template<std::size_t I = 0, typename FuncT, typename... Tp>
+inline typename std::enable_if< I < sizeof...(Tp), void>::type
+for_index(int index, std::tuple<Tp...>& t, FuncT f)
+{
+    if (index == 0) f(std::get<I>(t));
+    for_index<I + 1, FuncT, Tp...>(index-1, t, f);
+}
+
+template <class ...Vals>
+std::tuple<Vals...> valset(Vals... v)
+{
+    return std::make_tuple(v...);
+}
+
 #endif
 

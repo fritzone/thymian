@@ -18,7 +18,7 @@ logstream::~logstream()
     arguments << mFile.substr(mFile.find_last_of('/') + 1) << ":"
               << mLine << " (" << mFunc << ") [" << tid << "] " << mOutputStream.str();
 
-    logger::instance().propagate_log(mLevel, arguments.str());
+    unafrog::logger::instance().propagate_log(mLevel, arguments.str());
 }
 
 logstream &logstream::appendSpace()

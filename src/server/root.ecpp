@@ -1,0 +1,15 @@
+<%pre>
+#include "file_sender.h"
+</%pre>
+<%cpp>
+try
+{
+    std::string path = theme_path + "index.html";
+    return file_sender(request, reply, path).templatize().send();
+}
+catch(...)
+{
+    reply.out() << "I'm a teapot";
+    return 418;
+}
+</%cpp>

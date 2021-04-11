@@ -8,6 +8,8 @@
 #include <memory>
 #include <string>
 
+namespace unafrog
+{
 class logger final
 {
 public:
@@ -29,5 +31,5 @@ private:
 
     std::vector<std::shared_ptr<unafrog::log::log_machine>> log_machines;
 };
-
+}
 #endif // LOGGER_H

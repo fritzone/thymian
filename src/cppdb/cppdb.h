@@ -118,30 +118,10 @@ struct GetNameFunctor
     }
 };
 
-template<std::size_t I = 0, typename FuncT, typename... Tp>
-inline typename std::enable_if< I == sizeof...(Tp), void>::type
-for_index(std::size_t, std::tuple<Tp...> &, FuncT)
-{}
-
-template<std::size_t I = 0, typename FuncT, typename... Tp>
-inline typename std::enable_if< I < sizeof...(Tp), void>::type
-for_index(int index, std::tuple<Tp...>& t, FuncT f)
-{
-    if (index == 0) f(std::get<I>(t));
-    for_index<I + 1, FuncT, Tp...>(index-1, t, f);
-}
-
-
-template <class ...Vals>
-std::tuple<Vals...> valset(Vals... v)
-{
-	return std::make_tuple(v...);
-}
 
 static const char* insert_into = "INSERT OR IGNORE INTO ";
 
 // columnset stuff for insert operations
-#include <iostream>
 class Columnset
 {	
     size_t colcount;
@@ -267,14 +247,11 @@ private:
 };
 
 std::string operator && (const Condition& c1, const Condition& c2);
-
 std::string operator || (const Condition& c1, const Condition& c2);
-
 typedef std::string (*PT)(const Condition& c1, const Condition& c2);
 
 #define AND &&
 #define OR ||
-
 
 template<typename TF>
 std::string write_debug_output( TF const& f) {
@@ -529,7 +506,6 @@ std::string SELECT(all... a)
 
 std::string UPDATE(const Table& tab);
 
-
 std::string set_helper(int total_size, const Column& c);
 
 template <class C = Column, class... args>
@@ -694,7 +670,6 @@ static const modifier_templ<not_null> nn;
 #define NOT_NULL nn
 #define CURRENT_TIMESTAMP _O("CURRENT_TIMESTAMP")
 #define DEFAULT(X) defaults<decltype(X)>(X)
-
 
 /* The actual warehouse keeping all the tables, columns and other elements */
 class cppdb_warehouse

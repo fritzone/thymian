@@ -3,18 +3,15 @@ set(PROJECT templater)
 
 include_directories (${CMAKE_CURRENT_SOURCE_DIR}/include)
 
-if(SCRIPTED_TEMPLATES)
-    include_directories(${DRV2WEB_ROOT_DIR}/script/inc)
-endif()
-
 set(common_src
     templater.cpp
+    dictionary.cpp
     templater.h
 )
 
 add_library(${PROJECT} STATIC ${common_src})
 
-target_link_libraries(${PROJECT} cxxtools common ${Python3_LIBRARIES})
+target_link_libraries(${PROJECT} cxxtools common tntdb ${Python3_LIBRARIES})
 
 find_package(Boost 1.66.0 REQUIRED)
 message("Boost is in:" ${Boost_INCLUDE_DIRS})
