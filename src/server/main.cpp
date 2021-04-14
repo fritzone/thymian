@@ -137,6 +137,9 @@ int main(int argc, char* argv[])
         auto langRo = app.mapUrl("^/ro$", "main_root_sender"); // / (ie: homepage in romanian)
         auto langHu = app.mapUrl("^/hu$", "main_root_sender"); // / (ie: homepage in hungarian)
 
+		auto categoryLister = app.mapUrl("^/l/(.*)", "category_root_sender"); // / (ie: lists of various food categories)
+
+
 
         app.run();
     }

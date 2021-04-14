@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.13.2, 2021-03-24T08:35:16. -->
+<!-- Written by QtCreator 4.14.2, 2021-04-14T08:29:39. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -28,7 +28,13 @@
      <value type="QByteArray" key="CurrentPreferences">QmlJSGlobal</value>
     </valuemap>
    </valuemap>
-   <value type="int" key="EditorConfiguration.CodeStyle.Count">2</value>
+   <valuemap type="QVariantMap" key="EditorConfiguration.CodeStyle.2">
+    <value type="QString" key="language">Ruby.Settings</value>
+    <valuemap type="QVariantMap" key="value">
+     <value type="QByteArray" key="CurrentPreferences">RubyGlobal</value>
+    </valuemap>
+   </valuemap>
+   <value type="int" key="EditorConfiguration.CodeStyle.Count">3</value>
    <value type="QByteArray" key="EditorConfiguration.Codec">UTF-8</value>
    <value type="bool" key="EditorConfiguration.ConstrainTooltips">false</value>
    <value type="int" key="EditorConfiguration.IndentSize">4</value>
@@ -72,44 +78,47 @@
     <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:Convert">Checked</value>
     <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:CppDb">Checked</value>
     <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_BasicOperations">Checked</value>
+    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_Defines">Checked</value>
     <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_Delete">Checked</value>
+    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_DoubleInclusion">Checked</value>
     <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_DuplicateRemover">Checked</value>
+    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_ErrorSetter">Checked</value>
     <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_HexStringToNr">Checked</value>
+    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_IfElse">Checked</value>
+    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_IfEq">Checked</value>
+    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_IfTest">Checked</value>
+    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_IncludeRootData">Checked</value>
+    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_IncludedVariables">Checked</value>
+    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_InitScript">Checked</value>
+    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_InitScriptAndStandardScript">Checked</value>
+    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_InitScriptSetsVariables">Checked</value>
     <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_IntToHex">Checked</value>
+    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_Iterator">Checked</value>
+    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_IteratorTwoStructs">Checked</value>
+    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_IteratorTwoStructsIfEq">Checked</value>
+    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_JsonSource">Checked</value>
+    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_NotSoDefines">Checked</value>
     <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_RemoveIp">Checked</value>
+    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_SimpleInclusion">Checked</value>
+    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_SimpleInclusion2">Checked</value>
+    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_SimpleInclusionErroneous">Checked</value>
+    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_SimpleInclusionWithVariable">Checked</value>
+    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_SimpleNumber">Checked</value>
+    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_SimpleString">Checked</value>
+    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_SimpleStruct">Checked</value>
+    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_SimpleStruct2">Checked</value>
+    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_SimpleStructAndVar">Checked</value>
+    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_SimpleVariables">Checked</value>
+    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_ValueDefines">Checked</value>
+    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_VarAndSimpleStruct">Checked</value>
     <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_args">Checked</value>
     <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_b62_enc">Checked</value>
     <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_cb1">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:Defines">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DoubleInclusion">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:ErrorSetter">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:IfElse">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:IfEq">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:IfTest">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:IncludeRootData">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:IncludedVariables">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:InitScript">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:InitScriptAndStandardScript">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:InitScriptSetsVariables">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:Iterator">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:IteratorTwoStructs">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:IteratorTwoStructsIfEq">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:JsonSource">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:NotSoDefines">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:SimpleInclusion">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:SimpleInclusion2">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:SimpleInclusionErroneous">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:SimpleInclusionWithVariable">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:SimpleNumber">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:SimpleString">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:SimpleStruct">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:SimpleStruct2">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:SimpleStructAndVar">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:SimpleVariables">Checked</value>
     <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:StringTemplate">Checked</value>
+    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:Translate">Checked</value>
+    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:TranslatePythonOutput">Checked</value>
+    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:TranslateVar">Checked</value>
     <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:UrlMaker">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:ValueDefines">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:VarAndSimpleStruct">Checked</value>
     <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:XSSSanitizer">Checked</value>
    </valuemap>
    <value type="int" key="AutoTest.RunAfterBuild">0</value>
@@ -118,6 +127,7 @@
    <value type="bool" key="ClangCodeModel.UseGlobalConfig">true</value>
    <value type="QString" key="ClangCodeModel.WarningConfigId">Builtin.Questionable</value>
    <valuemap type="QVariantMap" key="ClangTools">
+    <value type="bool" key="ClangTools.AnalyzeOpenFiles">false</value>
     <value type="bool" key="ClangTools.BuildBeforeAnalysis">true</value>
     <value type="QString" key="ClangTools.DiagnosticConfig">Builtin.DefaultTidyAndClazy</value>
     <value type="int" key="ClangTools.ParallelJobs">4</value>
@@ -145,16 +155,14 @@
 -DCMAKE_PREFIX_PATH:STRING=%{Qt:QT_INSTALL_PREFIX}
 -DCMAKE_C_COMPILER:STRING=%{Compiler:Executable:C}
 -DCMAKE_CXX_COMPILER:STRING=%{Compiler:Executable:Cxx}</value>
-    <value type="int" key="EnableQmlDebugging">2</value>
     <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/fld/work/p/thymian/build</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
-      <value type="QString" key="CMakeProjectManager.MakeStep.AdditionalArguments"></value>
       <valuelist type="QVariantList" key="CMakeProjectManager.MakeStep.BuildTargets">
        <value type="QString">all</value>
       </valuelist>
-      <value type="QString" key="CMakeProjectManager.MakeStep.CMakeArguments"></value>
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Build</value>
       <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">CMakeProjectManager.MakeStep</value>
      </valuemap>
      <value type="int" key="ProjectExplorer.BuildStepList.StepsCount">1</value>
@@ -164,12 +172,11 @@
     </valuemap>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.1">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
-      <value type="QString" key="CMakeProjectManager.MakeStep.AdditionalArguments"></value>
       <valuelist type="QVariantList" key="CMakeProjectManager.MakeStep.BuildTargets">
        <value type="QString">clean</value>
       </valuelist>
-      <value type="QString" key="CMakeProjectManager.MakeStep.CMakeArguments"></value>
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Build</value>
       <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">CMakeProjectManager.MakeStep</value>
      </valuemap>
      <value type="int" key="ProjectExplorer.BuildStepList.StepsCount">1</value>
@@ -198,7 +205,6 @@
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.DefaultDeployConfiguration</value>
    </valuemap>
    <value type="int" key="ProjectExplorer.Target.DeployConfigurationCount">1</value>
-   <valuemap type="QVariantMap" key="ProjectExplorer.Target.PluginSettings"/>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.RunConfiguration.0">
     <value type="QString" key="Analyzer.Perf.CallgraphMode">dwarf</value>
     <valuelist type="QVariantList" key="Analyzer.Perf.Events">
@@ -263,16 +269,11 @@
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">mailer</value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">CMakeProjectManager.CMakeRunConfiguration.mailer</value>
     <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">mailer</value>
-    <value type="QString" key="RunConfiguration.Arguments"></value>
-    <value type="bool" key="RunConfiguration.Arguments.multi">false</value>
-    <value type="QString" key="RunConfiguration.OverrideDebuggerStartup"></value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseLibrarySearchPath">true</value>
-    <value type="bool" key="RunConfiguration.UseMultiProcess">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
-    <value type="QString" key="RunConfiguration.WorkingDirectory"></value>
     <value type="QString" key="RunConfiguration.WorkingDirectory.default">/home/fld/work/p/thymian/build/mailer</value>
    </valuemap>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.RunConfiguration.1">
@@ -339,17 +340,12 @@
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">templ_test</value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">CMakeProjectManager.CMakeRunConfiguration.templ_test</value>
     <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">templ_test</value>
-    <value type="QString" key="RunConfiguration.Arguments"></value>
-    <value type="bool" key="RunConfiguration.Arguments.multi">false</value>
-    <value type="QString" key="RunConfiguration.OverrideDebuggerStartup"></value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseLibrarySearchPath">true</value>
-    <value type="bool" key="RunConfiguration.UseMultiProcess">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseTerminal">false</value>
-    <value type="QString" key="RunConfiguration.WorkingDirectory"></value>
     <value type="QString" key="RunConfiguration.WorkingDirectory.default">/home/fld/work/p/thymian/build/tests</value>
    </valuemap>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.RunConfiguration.2">
@@ -416,16 +412,11 @@
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">template_compiler</value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">CMakeProjectManager.CMakeRunConfiguration.template_compiler</value>
     <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">template_compiler</value>
-    <value type="QString" key="RunConfiguration.Arguments"></value>
-    <value type="bool" key="RunConfiguration.Arguments.multi">false</value>
-    <value type="QString" key="RunConfiguration.OverrideDebuggerStartup"></value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseLibrarySearchPath">true</value>
-    <value type="bool" key="RunConfiguration.UseMultiProcess">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
-    <value type="QString" key="RunConfiguration.WorkingDirectory"></value>
     <value type="QString" key="RunConfiguration.WorkingDirectory.default">/home/fld/work/p/thymian/build/templates</value>
    </valuemap>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.RunConfiguration.3">
@@ -492,17 +483,11 @@
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">drv2web_exe</value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">CMakeProjectManager.CMakeRunConfiguration.drv2web_exe</value>
     <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">drv2web_exe</value>
-    <value type="QString" key="RunConfiguration.Arguments"></value>
-    <value type="bool" key="RunConfiguration.Arguments.multi">false</value>
-    <value type="QString" key="RunConfiguration.OverrideDebuggerStartup"></value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseLibrarySearchPath">true</value>
-    <value type="bool" key="RunConfiguration.UseMultiProcess">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
-    <value type="QString" key="RunConfiguration.WorkingDirectory"></value>
-    <value type="QString" key="RunConfiguration.WorkingDirectory.default"></value>
    </valuemap>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.RunConfiguration.4">
     <value type="QString" key="Analyzer.Perf.CallgraphMode">dwarf</value>
@@ -568,17 +553,12 @@
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">thymian_exe</value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">CMakeProjectManager.CMakeRunConfiguration.thymian_exe</value>
     <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">thymian_exe</value>
-    <value type="QString" key="RunConfiguration.Arguments"></value>
-    <value type="bool" key="RunConfiguration.Arguments.multi">false</value>
-    <value type="QString" key="RunConfiguration.OverrideDebuggerStartup"></value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseLibrarySearchPath">true</value>
-    <value type="bool" key="RunConfiguration.UseMultiProcess">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseTerminal">false</value>
-    <value type="QString" key="RunConfiguration.WorkingDirectory"></value>
     <value type="QString" key="RunConfiguration.WorkingDirectory.default">/home/fld/work/p/thymian/build/server</value>
    </valuemap>
    <value type="int" key="ProjectExplorer.Target.RunConfigurationCount">5</value>

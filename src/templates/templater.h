@@ -458,8 +458,28 @@ protected:
     std::string resolve_scripts(std::string templatized, const std::string& tag);
     std::string resolve_loops(std::string templatized, const template_vector_par &v);
     std::string resolve_ifeqs(std::string templatized);
-    std::string resolve_translations(std::string templatized, const std::string& target_language);
-    std::string resolve_translation(size_t if_pos, std::string templatized, const std::string& target_language);
+
+    /**
+     * @brief resolve_translations resolves all the translations
+     * @param templatized
+     * @param target_language
+     * @param generate_span - whether to generate HTML spans for the translated elements
+     * @param translations - a map with the span ID's and their corresponding translations
+     * @return
+     */
+    std::string resolve_translations(std::string templatized, const std::string& target_language, bool generate_span, std::map<std::string, std::map<std::string, std::string> > &translations);
+
+    /**
+     * @brief resolve_translation resolves one translation
+     * @param if_pos
+     * @param templatized
+     * @param target_language
+     * @param generate_span - whether to generate a span HTML element for this translation
+     * @param span_id - this will be the ID of the span, generated for this translation, used by the javascript at a later stage to set the language upon change
+     * @param translations - a map of translations for this given translation, for each language (key) the corresponding translated text (value)
+     * @return
+     */
+    std::string resolve_translation(size_t if_pos, std::string templatized, const std::string& target_language, bool generate_span, std::string& span_id, std::map<std::string, std::string> &translations);
     std::string resolve_dynamic_section(std::string templatized, const template_vector_par &v);
 
 protected:
@@ -485,7 +505,13 @@ protected:
     bool resolve_in_get = true;
     bool external_content_set = false;
     std::string external_content = "";
+    std::map<std::string, std::map<std::string, std::string> > m_translation_map;
 public:
+
+    const std::map<std::string, std::map<std::string, std::string> >& get_translations()
+    {
+        return m_translation_map;
+    }
 
     templater& templatize()
     {
@@ -576,7 +602,7 @@ public:
 
             if(kps.count("target_language"))
             {
-                precalculated = resolve_translations(precalculated, kps["target_language"]);
+                precalculated = resolve_translations(precalculated, kps["target_language"], true, m_translation_map);
             }
 
             return precalculated;
@@ -674,24 +700,27 @@ struct translator : public templater<T>
     {
         if(templater<T>::external_content_set && templater<T>::external_content.length() > 0)
         {
-            return translate(templater<T>::external_content, target_language);
+            return translate(templater<T>::external_content, target_language, this->m_translation_map);
         }
         else
         {
             std::string s = templater<T>().templatize().get();
-            return translate(s, target_language);
+            return translate(s, target_language, this->m_translation_map);
         }
     }
 
-    static std::string translate(const std::string& in, const std::string& target_language)
+    static std::string translate(const std::string& in, const std::string& target_language, std::map<std::string, std::map<std::string, std::string> >& translation_map)
     {
         //TODO mutex
         GENERIC_STRING_TEMPLATE(Translateable);
-        std::string res = templater<Translateable>().set(in).templatize("target_language" <is> target_language).get();
+        auto t = templater<Translateable>();
+        std::string res = t.set(in).templatize("target_language" <is> target_language).get();
+        translation_map = t.get_translations();
         return res;
     }
 };
 
 HTML_TEMPLATE(mainpage);
+HTML_TEMPLATE(category_list);
 
 #endif // TEMPLATER_H

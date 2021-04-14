@@ -1,16 +1,21 @@
+<!--#struct fooditem(name,desc,img)#-->
+<!--#parameters foods:fooditem[]#-->
+
 <!DOCTYPE html>
 <html style="font-size: 16px;">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Food,Recipes,Soups,Transylvania">
-    <meta name="description" content="A short selection of the widely available soups in Transylvania">
+    <meta name="keywords" content="Food,Recipes,Soups,Entrees,Appetizers,Sweets,Cakes,Transylvania">
+    <meta name="description" content="A short selection of the widely available recipes in Transylvania">
     <meta name="page_type" content="np-template-header-footer-from-plugin">
-    <title>Soups</title>
-    <link rel="stylesheet" href="nicepage.css" media="screen">
-<link rel="stylesheet" href="Soups.css" media="screen">
-    <script class="u-script" type="text/javascript" src="jquery-1.9.1.min.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <title>
+      {#category}
+    </title>
+    <link rel="stylesheet" href="/nicepage.css" media="screen">
+<link rel="stylesheet" href="/Soups.css" media="screen">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script class="u-script" type="text/javascript" src="/nicepage.js" defer=""></script>
     <link rel="canonical" href="Soups of Transylvania">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
     
@@ -20,19 +25,19 @@
 		"@type": "Organization",
 		"name": "WebSite312238",
 		"url": "index.html",
-		"logo": "images/bird.png",
+		"logo": "/images/bird.png",
 		"sameAs": []
 }</script>
-    <meta property="og:title" content="Soups">
+    <meta property="og:title" content="{category}">
     <meta property="og:type" content="website">
-    <meta property="og:description" content="A short selection of the widely available soups in Transylvania">
+    <meta property="og:description" content="A short selection of the widely available recipes in Transylvania">
     <meta name="theme-color" content="#478ac9">
-    <link rel="canonical" href="Soups of Transylvania">
+    <link rel="canonical" href="Recipes of Transylvania">
     <meta property="og:url" content="index.html">
   </head>
   <body class="u-body u-stick-footer"><header class="u-border-2 u-border-grey-75 u-clearfix u-header u-image u-shading u-sticky u-header" id="sec-2046" data-image-width="1920" data-image-height="1080"><div class="u-align-left u-clearfix u-sheet u-sheet-1">
         <h1 class="u-align-left u-headline u-text u-text-1">
-          <a href="/">Transylvanian recipes / Soups</a>
+          <a href="/">Transylvanian recipes / {#category}</a>
         </h1>
       </div></header>
     <section class="u-align-center u-clearfix u-section-1" id="sec-6c40">
@@ -56,12 +61,19 @@
                       <col width="20.25%">
                     </colgroup>
                     <tbody class="u-table-body">
+                      <!--#loop foods#-->
+
                       <tr style="height: 150px;">
-                        <td class="u-table-cell">Clear chicken soup<br>
+                        <td class="u-table-cell">{#foods.name}<br>
                           <br>
+                          {#foods.desc}
                         </td>
-                        <td class="u-table-cell"></td>
+                        <td class="u-table-cell">
+                          <img src="{#foods.img}" width="150" height="150">
+                        </td>
                       </tr>
+                      <!--#endloop foods#-->
+
                     </tbody>
                   </table>
                 </div>
@@ -75,7 +87,7 @@
     
     <footer class="u-align-center-md u-align-center-sm u-align-center-xs u-clearfix u-footer u-grey-80" id="sec-d5df"><div class="u-clearfix u-sheet u-sheet-1">
         <a href="https://nicepage.com" class="u-image u-image-circle u-logo u-image-1" data-image-width="230" data-image-height="322">
-          <img src="images/bird.png" class="u-logo-image u-logo-image-1" data-image-width="80">
+          <img src="/images/bird.png" class="u-logo-image u-logo-image-1" data-image-width="80">
         </a>
         <div class="u-align-left u-social-icons u-spacing-10 u-social-icons-1">
           <a class="u-social-url" title="facebook" target="_blank" href=""><span class="u-icon u-icon-circle u-social-facebook u-social-icon u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xlink:href="#svg-41ef"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-41ef"><circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M73.5,31.6h-9.1c-1.4,0-3.6,0.8-3.6,3.9v8.5h12.6L72,58.3H60.8v40.8H43.9V58.3h-8V43.9h8v-9.2

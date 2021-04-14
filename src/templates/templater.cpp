@@ -566,7 +566,7 @@ std::string templater_base::resolve_ifeqs(std::string templatized)
     return templatized;
 }
 
-std::string templater_base::resolve_translations(std::string templatized, const std::string &target_language)
+std::string templater_base::resolve_translations(std::string templatized, const std::string &target_language, bool generate_span, std::map<std::string, std::map<std::string, std::string> >& translations)
 {
     bool done = false;
     while(!done)
@@ -576,7 +576,13 @@ std::string templater_base::resolve_translations(std::string templatized, const 
         {
             while(ifeq_pos != std::string::npos)
             {
-                templatized = resolve_translation(ifeq_pos, templatized, target_language);
+                std::map<std::string, std::string> local_translations;
+                std::string span_id;
+
+                templatized = resolve_translation(ifeq_pos, templatized, target_language, generate_span, span_id, local_translations);
+
+                translations[span_id] = local_translations;
+
                 ifeq_pos = templatized.find(TRANSLATE_TAG);
             }
         }
@@ -589,7 +595,13 @@ std::string templater_base::resolve_translations(std::string templatized, const 
 
 }
 
-std::string templater_base::resolve_translation(size_t tr_pos, std::string templatized, const std::string &target_language)
+static std::string span_name(std::string str)
+{
+    str.erase(std::remove_if(str.begin(), str.end(), isspace), str.end());
+    return "span_" + str;
+}
+
+std::string templater_base::resolve_translation(size_t tr_pos, std::string templatized, const std::string &target_language, bool generate_span, std::string& span_id, std::map<std::string, std::string> &translations)
 {
     size_t i = tr_pos;
 
@@ -611,7 +623,9 @@ std::string templater_base::resolve_translation(size_t tr_pos, std::string templ
         std::string between = templatized.substr(translateable_start, what_to.length());
         std::string after_translate = templatized.substr(translateable_start + what_to.length() + 4);
 
-        templatized =  before_translate + dictionary::translate(between, target_language) + after_translate;
+        span_id = span_name(between);
+
+        templatized =  before_translate + (generate_span ? "<span id='" + span_id + "'>" : "") + dictionary::translate(between, target_language, true, translations) +(generate_span ? "</span>" : "")  + after_translate;
     }
 
 

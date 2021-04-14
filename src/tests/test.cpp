@@ -41,25 +41,87 @@ TEST(StringTemplate,DISABLED_ErrorSetter)
     ASSERT_STREQ("Error 123 .\n", err.c_str());
 }
 
-TEST(StringTemplate, Translate)
+TEST(StringTemplate, DISABLED_Translate)
 {
     STRING_TEMPLATE(ToTranslateTest, "he<!--#translate language#-->oh");
     std::string translated = translator<ToTranslateTest>().translate("hu");
     ASSERT_STREQ("henyelvoh", translated.c_str());
 }
 
-TEST(StringTemplate, TranslateVar)
+TEST(StringTemplate, DISABLED_TranslateVar)
 {
     STRING_TEMPLATE(ToTranslateVarTest, "he<!--#translate {#str}#-->oh");
     std::string translated = translator<ToTranslateVarTest>().templatize("str" <is> "language").set().translate("hu");
     ASSERT_STREQ("henyelvoh", translated.c_str());
 }
 
-TEST(StringTemplate, TranslatePythonOutput)
+TEST(StringTemplate, DISABLED_TranslatePythonOutput)
 {
     STRING_TEMPLATE(ToTranslateVarTest, "he<!--#translate <!--#init-script python#-->print('language')<!--#endscript#-->#-->oh");
     std::string translated = translator<ToTranslateVarTest>().templatize("str" <is> "language").set().translate("hu");
     ASSERT_STREQ("henyelvoh", translated.c_str());
+}
+
+#include <tntdb.h>
+
+TEST(StringTemplate, FoodFromDb)
+{
+
+	std::vector<template_struct> structs;
+
+	try {
+		tntdb::Connection conn = tntdb::connect("sqlite:lang.db");
+
+		// TODO: prepared statement
+
+		std::string v = std::string("select * from food where type='") + "0" + "'";
+		tntdb::Result result = conn.select(v);
+		for (tntdb::Result::const_iterator it = result.begin(); it != result.end(); ++it)
+		{
+			std::string name_src = "";
+			std::string img = "";
+			std::string desc = "";
+			int food_idx = -1;
+			std::string type;
+
+			tntdb::Row row = *it;
+
+			row[0].get(food_idx);
+			row[1].get(name_src);
+			row[2].get(type);
+			row[3].get(img);
+			row[4].get(desc);
+
+			template_struct food("foods", "fooditem");
+
+			food["name"] = name_src;
+			food["img"] = img;
+			food["desc"] = desc;
+
+			structs.push_back(food);
+		}
+	}
+	catch (std::exception& ex)
+	{
+		std::cerr << ex.what();
+	}
+
+	STRING_TEMPLATE(ItSimpleStructTemplate, "<!--#struct fooditem(name,desc,img)#-->"
+											"<!--#parameters foods:fooditem[]#-->"
+										  "Testing"
+										  "<!--#loop foods#-->"
+										  "{#foods.name}/{#foods.desc}/{#foods.img}"
+										  "<!--#endloop foods#-->");
+
+	template_vector_par tvp("foods", structs);
+
+	std::string s = templater<ItSimpleStructTemplate>().templatize(
+				tvp
+				).get();
+
+	ASSERT_STREQ(s.c_str(), "Testing12");
+
+
 }
 
 
