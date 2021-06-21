@@ -1,0 +1,1 @@
+If you want to make this dish, do not let the meat dry out while you are frying. Cover the onion properly and make sure it has enough, but not too much water. Otherwise you will invent a soup.

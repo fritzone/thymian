@@ -1,0 +1,13 @@
+<%pre>
+#include "r_impl.h"
+</%pre>
+<%cpp>
+try
+{
+    return r_impl(request, reply, request.getPathInfo()).send();
+}
+catch(...)
+{
+    return 418;
+}
+</%cpp>

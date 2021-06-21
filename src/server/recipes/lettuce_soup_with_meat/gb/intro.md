@@ -1,0 +1,1 @@
+In ancient times, during cold winter days, it was common to make this soup from cooked salted lettuce leaves that were kept in a jar during the winter with the scope of preservation. Today, of course, fresh lettuce is available all the time, and we actually recommend using it.

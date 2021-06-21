@@ -1,0 +1,1 @@
+Lettuce in Transylvania is frequently used in soups, and is not as often eaten raw as in the Western European taste connoisseurs are used to. It actually surprises visitors to Transylvania how tasty a never heard of lettuce soup can be.

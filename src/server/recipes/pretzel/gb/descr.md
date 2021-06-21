@@ -1,0 +1,1 @@
+Pretzel is a part of everyday life in Transylvania, and all ages favour it either as a small snack, as breakfast or both.

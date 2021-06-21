@@ -1,0 +1,1 @@
+“Tokány” is very similar to the dish “paprikás”, presented in the previous recipe, except that it must not have such a thick sauce, so you have to use less onions and water, and cook the dish until the water evaporates. Sometimes you can completely skip the peppers, and as in our case, you use black pepper.

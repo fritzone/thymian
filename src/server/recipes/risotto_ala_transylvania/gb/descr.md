@@ -1,0 +1,1 @@
+Well, it's actually not risotto, but a very generic recipe for oriental pilaf (which is just plain meat with rice) that you can make with your favourite meat, whether it's pork, chicken or lamb.

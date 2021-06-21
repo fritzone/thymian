@@ -1,0 +1,1 @@
+If we have managed to make a soup of onions, we can also make a soup with garlic. There are two known varieties of this soup, and a third which is a combination of the other two. The main difference is whether you eat meat or not. Please tame the recipe to suit your needs. The first variant is made with eggs, the second with chicken, and the third with both.

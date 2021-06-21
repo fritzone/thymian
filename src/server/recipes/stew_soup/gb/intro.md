@@ -1,0 +1,1 @@
+The dish called “tokány” is a typical Hungarian dish made with meat fried in oil with onions, and is the basis of this tasty soup and other dishes. It can be translated as stew, but this would be a very bad translation for this food that is not stew because it does not contain a large amount of gravy. A “tokány” is actually more dry and meaty than saucy.

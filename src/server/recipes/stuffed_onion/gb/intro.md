@@ -1,0 +1,1 @@
+One of the strangest combinations of flavours you can experience in this book, comes from this old Armenian soup, where you cook onions in wine and with different spices to bring out the perfect combination.

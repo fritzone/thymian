@@ -1,0 +1,1 @@
+Only a handful of the world's kitchens depend on the heavy use of tarragon. One of them is the Transylvanian. In western parts of Europe the most common use is in sauces, but in Transylvania we use tarragon in a good portion of soups as an extra spice flavour. For this recipe you need one of our basic Ingredients I have presented in the introductory section: tarragon vinegar.

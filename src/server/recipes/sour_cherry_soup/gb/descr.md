@@ -1,0 +1,1 @@
+Strange as it may seem, you can make an exceptionally good soup from sour cherries.

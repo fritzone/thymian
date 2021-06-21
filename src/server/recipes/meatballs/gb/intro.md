@@ -1,0 +1,1 @@
+Each country has its own version of meatballs. In some they are small and round, in others they are large, fat, flat and are called burgers. In Transylvania, they are medium-sized, mildly spicy, and they should not go in between breads, because then they will be called burgers.

@@ -1,0 +1,1 @@
+Although that this in Transylvania is considered a traditional Easter and Christmas cake, there is nothing to stop you from making it, for example, halfway, why not in August.

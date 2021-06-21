@@ -1,0 +1,1 @@
+All kinds of vegetables can be filled with minced meat and then made into a soup. One of them is the kohlrabi, which in Western Europe is not used particularly, so I think this very tasty recipe will increase the curiosity of some home-cooks to try something new.

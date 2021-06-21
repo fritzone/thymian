@@ -1,0 +1,1 @@
+This is one of those foods that you would not expect to be as tasty as it is only based on the look of it. However, this food can be one of your favourites If you like celery.

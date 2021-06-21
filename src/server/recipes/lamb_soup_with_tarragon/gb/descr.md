@@ -1,0 +1,1 @@
+This soup does not require too many Ingredients, it will get its exquisite taste from the various thickeners that are added to it just before it is finished.

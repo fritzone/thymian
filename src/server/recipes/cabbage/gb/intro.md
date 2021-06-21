@@ -1,0 +1,1 @@
+Similar to a generic cabbage soup, but thicker, feel free to experiment with other spices as well, not just the ones I mentioned here. Try with tomatoes, cumin, instead of roux you use a thickening of milk and flour, etc ... I am sure that out there is a combination you will like.

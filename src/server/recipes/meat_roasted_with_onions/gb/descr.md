@@ -1,0 +1,1 @@
+If you want to make this dish, do not let the meat dry out while you are frying.

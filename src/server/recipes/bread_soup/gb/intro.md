@@ -1,0 +1,1 @@
+The ingenuity of old German housewives came up with this soup, which uses only basic Ingredients available all year round. Nothing is easier than making a tasty broth with meat, and hopefully there is some old bread around the house. Feel free to add strong chili on top if you handle the taste of it.

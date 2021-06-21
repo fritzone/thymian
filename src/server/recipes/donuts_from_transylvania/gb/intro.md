@@ -1,0 +1,1 @@
+This classic recipe for homemade donut is both simple and tasty. However, this is a basic recipe without filling, holes in the middle or other fancy things. You may want to change it according to your needs, for example by serving with jam, adding glasses, sprinkling it with sprinkles. We in Transylvania just enjoy our donut, which is not a ring, but a very airy bun.

@@ -1,0 +1,1 @@
+A typical Eastern European dish that is present in almost every country in the area, with recipes that differ from region to region, but they all somehow manage to bring out the best in plums.

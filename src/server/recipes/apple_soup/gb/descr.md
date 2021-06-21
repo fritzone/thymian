@@ -1,0 +1,1 @@
+Like all other fruit soups in this book, this one can also be enjoyed cold or hot, depending on how you like it.

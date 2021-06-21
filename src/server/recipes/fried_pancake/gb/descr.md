@@ -1,0 +1,1 @@
+Similar to the classic and world-famous Hungarian food, called “Lángos”, but not exactly like the one you would expect to buy from a street food supplier, since the Transylvanian version is filled with cheese, rolled up and then fried.

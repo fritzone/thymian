@@ -1,0 +1,1 @@
+This is not just your everyday soup, because in “ancient” times they said that this soup cures hangovers. Well, the legends may or may not be true, but this very tasty soup is how to make a proper soup using sauerkraut, that not only that is different, but also tastes very good

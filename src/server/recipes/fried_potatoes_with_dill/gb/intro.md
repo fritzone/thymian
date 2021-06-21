@@ -1,0 +1,1 @@
+Just a few ingredients, and an amazingly simple way of preparing it, but the taste is just great. If you are not careful with this recipe, it will burn very easily, so do not use high heat..

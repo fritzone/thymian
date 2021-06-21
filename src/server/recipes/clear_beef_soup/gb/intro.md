@@ -1,0 +1,1 @@
+This food is not only a very healthy and tasty soup, but sometimes it is also used as a base for other more complex dishes. The real secret is to let the soup cook for long hours, on a very low heat.

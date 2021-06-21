@@ -1,0 +1,1 @@
+Lettuce in Transylvania is frequently used in soups, and is not as often eaten raw as in the Western European taste connoisseurs are used to.

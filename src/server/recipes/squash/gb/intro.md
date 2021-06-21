@@ -1,0 +1,1 @@
+A basic recipe made from squash, which goes well with pretty much anything, from fried meat, through meatballs to a fried egg. If you cannot get your hands on squash, just use zucchini.

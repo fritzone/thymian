@@ -1,0 +1,1 @@
+This recipe gives only basic instructions on how to make a “paprikás” that does not contain any meat, because sometimes we just do not want to eat meat. But we still want to eat something tasty. Preferably made from mushrooms, chanterelles, or other solid mushrooms, not boletus and its family.

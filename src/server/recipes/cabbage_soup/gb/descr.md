@@ -1,0 +1,1 @@
+This rich-tasting soup is a hearty soup, especially if a good quantity of meat is used in it.

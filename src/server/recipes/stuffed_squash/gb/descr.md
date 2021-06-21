@@ -1,0 +1,1 @@
+Once you have searched for stuffed squash on the internet, you will get thousands of recipes with beautifully cooked squash tossed in the oven and fried until golden brown.

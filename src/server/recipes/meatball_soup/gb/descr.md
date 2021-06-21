@@ -1,0 +1,1 @@
+This is a variety of Romanian “Ciorbă”, it is a very relaxed soup, does not specify a fixed amount of Ingredients, you can easily make your own with your favourite vegetables.

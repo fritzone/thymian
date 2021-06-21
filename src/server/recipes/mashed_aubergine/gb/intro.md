@@ -1,0 +1,1 @@
+This delicacy is the best when made from fresh grilled aubergines. But do not despair if you do not find any, there are already prepared varieties of the grilled eggplant you can buy from the store and then finish it at home.

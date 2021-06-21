@@ -1,0 +1,1 @@
+This old recipe used to be made with game, but hunting is no longer a major activity in Transylvania (well, except bear hunting), so instead of deer, wild boar and wild rabbit, the more well-known varieties are beef, pork, chicken, and why not, if you can get your hands on it on, even a rabbit can be used to make this recipe.

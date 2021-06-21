@@ -1,0 +1,1 @@
+This recipe is perfect if you have some leftover bread from yesterday. The more variety of bread you have, the better the taste will be. I intentionally give no quantities below, since I do not know how many leftovers you have. Your goal is to make something like a batter that you can pour and bake in the oven.

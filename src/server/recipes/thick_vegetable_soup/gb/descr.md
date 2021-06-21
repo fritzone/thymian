@@ -1,0 +1,1 @@
+A quick to make and very consistent vegetable soup with a little fried meat from yesterday, not only helps the budget, but if you manage to get the taste right, it also lifts the mood.

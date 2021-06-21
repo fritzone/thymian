@@ -1,0 +1,1 @@
+Pretzel is a part of everyday life in Transylvania, and all ages favour it either as a small snack, as breakfast or both. You can find many varieties, some with sesame, some with salt, some with poppy seeds, some with something else. This recipe is the basic “Salt Pretzel”, from this point you can vary it as you like.

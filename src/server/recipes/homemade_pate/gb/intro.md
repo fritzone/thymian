@@ -1,0 +1,1 @@
+Preparing a homemade liver pâté is a good way to get the required amount of vitamins A and B topped with a nice amount of iron. If you make a large amount, you can store it in the fridge for quite some time, and you will always have something tasty to eat in times of need ... or when you just must hurry somewhere.

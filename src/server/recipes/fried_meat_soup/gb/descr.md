@@ -1,0 +1,1 @@
+This soup is another example of the practical ways of how ancient Saxons lived in Transylvania: let's reuse everything, nothing should be wasted.

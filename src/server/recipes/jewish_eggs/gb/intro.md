@@ -1,0 +1,1 @@
+A perfect opportunity to bring out something new from a few boring boiled eggs. Can also be stored in the refrigerator for tomorrow, or the day after. This is an ancient Ashkenazi Jewish recipe, which was traditionally eaten before lunch on the Sabbath, but has not lost its popularity even today. It is very easy to cook, but it takes mastery to make it perfect.

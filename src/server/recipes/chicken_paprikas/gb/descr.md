@@ -1,0 +1,1 @@
+This is a very classic Hungarian dish, and if you want to try it with other meats, such as veal or pork give it a try.

@@ -1,0 +1,1 @@
+The ingenuity of old German housewives came up with this soup, which uses only basic Ingredients available all year round.

@@ -1,0 +1,1 @@
+To spice up the bland taste of plain boiled potato you can use different techniques. This is possibly the simplest of all. Simple as cooking a potato. I recommend making this dish when you have a main course with a strong taste. For example, fried liver, or a steak…

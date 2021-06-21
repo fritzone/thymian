@@ -1,0 +1,1 @@
+When you make liver pate, you can save a nice slice of liver for this dish.

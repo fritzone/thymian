@@ -1,0 +1,1 @@
+An extremely easy to make and flexible food recipe, with a unique taste, which does not require a large amount of TLC, but in any case, gives a surprisingly good taste you do not expect from looking at the simple ingredients you add.

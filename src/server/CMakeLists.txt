@@ -4,10 +4,11 @@ set (PROJECT thymian)
 set (ECPPC /usr/local/bin/ecppc)
 
 set (WEB_COMPONENTS
-     root
-     filer
-     main_root_sender
-     category_root_sender
+     r                                # Recipe sender
+     root                             # Main root
+     filer                            # Just send the files
+     main_root_sender                 # The recipe root directory sender (which selects recipe categoroes)
+     category_root_sender             # Send a category 
 )
 
 include_directories(
@@ -32,12 +33,14 @@ foreach(comp ${WEB_COMPONENTS})
 endforeach()
 
 set(CPP_SOURCES
-    file_sender.cpp
-    category_sender.cpp
-    main_sender.cpp
-    web_component.cpp
-    flood_check.cpp
     config.cpp
+    category_sender.cpp
+    file_sender.cpp
+    flood_check.cpp
+    main_sender.cpp
+    r_impl.cpp
+    url_breaker.cpp
+    web_component.cpp
     web_logmachine.cpp
 )
 
@@ -48,6 +51,8 @@ set(CPP_HEADERS
     file_sender.h
     flood_check.h
     main_sender.h
+    r_impl.h
+    url_breaker.h
     web_component.h
     web_logmachine.h
 )

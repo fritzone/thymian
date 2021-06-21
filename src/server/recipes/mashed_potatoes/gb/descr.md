@@ -1,0 +1,1 @@
+The basic dish of mashed potatoes is a simple and versatile dish that can go together with many of the main courses.

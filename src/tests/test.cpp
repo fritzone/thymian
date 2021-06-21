@@ -41,6 +41,15 @@ TEST(StringTemplate,DISABLED_ErrorSetter)
     ASSERT_STREQ("Error 123 .\n", err.c_str());
 }
 
+
+TEST(StringTemplate, DISABLED_TranslateIndependentString)
+{
+	std::string s = "he<!--#translate language#-->oh";
+	std::map<std::string, std::map<std::string, std::string> > translations;
+	std::string translated = translator<void>::translate(s, "hu", translations);
+	ASSERT_STREQ("henyelvoh", translated.c_str());
+}
+
 TEST(StringTemplate, DISABLED_Translate)
 {
     STRING_TEMPLATE(ToTranslateTest, "he<!--#translate language#-->oh");
@@ -52,19 +61,19 @@ TEST(StringTemplate, DISABLED_TranslateVar)
 {
     STRING_TEMPLATE(ToTranslateVarTest, "he<!--#translate {#str}#-->oh");
     std::string translated = translator<ToTranslateVarTest>().templatize("str" <is> "language").set().translate("hu");
-    ASSERT_STREQ("henyelvoh", translated.c_str());
+	ASSERT_STREQ("he<span id='span_language'></span>oh", translated.c_str());
 }
 
 TEST(StringTemplate, DISABLED_TranslatePythonOutput)
 {
     STRING_TEMPLATE(ToTranslateVarTest, "he<!--#translate <!--#init-script python#-->print('language')<!--#endscript#-->#-->oh");
     std::string translated = translator<ToTranslateVarTest>().templatize("str" <is> "language").set().translate("hu");
-    ASSERT_STREQ("henyelvoh", translated.c_str());
+	ASSERT_STREQ("he<span id='span_language'></span>oh", translated.c_str());
 }
 
 #include <tntdb.h>
 
-TEST(StringTemplate, FoodFromDb)
+TEST(StringTemplate, DISABLED_FoodFromDb)
 {
 
 	std::vector<template_struct> structs;
@@ -310,7 +319,7 @@ TEST(StringTemplate,DISABLED_SimpleInclusionWithVariable)
     ASSERT_STREQ(tf.c_str(), "Testing Testing blabla");
 }
 
-TEST(StringTemplate,DISABLED_SimpleStruct)
+TEST(StringTemplate, DISABLED_SimpleStruct)
 {
     STRING_TEMPLATE(SimpleStructTemplate, "<!--#struct simple_pair(a,b)#-->"
                                           "<!--#parameters st:simple_pair#-->"
@@ -379,7 +388,7 @@ TEST(StringTemplate,DISABLED_SimpleStruct2)
     ASSERT_STREQ(s.c_str(), "Testing CAB");
 }
 
-TEST(StringTemplate,DISABLED_Iterator)
+TEST(StringTemplate, Iterator)
 {
     STRING_TEMPLATE(ItSimpleStructTemplate, "<!--#struct simple(c)#-->"
                                           "<!--#parameters v:simple[]#-->"
@@ -448,7 +457,7 @@ TEST(StringTemplate,DISABLED_IteratorTwoStructsIfEq)
 }
 
 
-TEST(StringTemplate,DISABLED_IteratorTwoStructs)
+TEST(StringTemplate,IteratorTwoStructs)
 {
     STRING_TEMPLATE(IteratorTwoStructs,   "<!--#struct simple(c)#-->"
                                           "<!--#struct complex(d)#-->"

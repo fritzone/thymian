@@ -6,23 +6,26 @@
 
 #include <string>
 
-static const std::string path = "/theme/current/";
-
 /* just sends a file */
 class category_sender final : public web_component
 {
 public:
 
 	category_sender(tnt::HttpRequest& request, tnt::HttpReply& reply, const std::string& what);
-
-	~category_sender() = default;
-
     unsigned send() final;
+
+private:
+
+	bool populate_short_description(const std::string& key) const;
+	std::string prepareLangTrs(const std::vector<std::string>&);
 private:
 
     std::string m_translated;
-	std::vector<template_struct> structs;
-
+	std::vector<template_struct> m_foodStructs;
+	unsigned m_status = HTTP_OK;
+	std::string m_lang = "gb";
+	std::string m_category = "";
 };
 
 #endif
+

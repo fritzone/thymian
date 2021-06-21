@@ -1,0 +1,1 @@
+Although the name does not suggest this, stuffed peppers is actually a soup… and it happens to be one of our favourite soups. In Transylvania this dish is a very thick soup, but in other parts of Romania you will be served only stuffed peppers with sour cream if you might order it in a restaurant.

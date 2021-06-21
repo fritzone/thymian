@@ -1,0 +1,1 @@
+The most misunderstood Hungarian dish that is always made thick as a stew is strangely enough, a soup. Actually, a very thick soup, but a soup anyway. This soup has nothing in common with the goulash you find in Western Europe (or Scandinavia), where in most situations it turned into a stew with a lot of vegetables and a lot of extra strong chili and minced meat.

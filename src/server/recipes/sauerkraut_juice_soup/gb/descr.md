@@ -1,0 +1,1 @@
+This is a typical Transylvanian winter soup, when fresh pork is available, and the sauerkraut is already sour enough to be used.

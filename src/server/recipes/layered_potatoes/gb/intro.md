@@ -1,0 +1,1 @@
+For this dish, you either use some leftover potatoes from yesterday, or just make a new portion and use them. Also feel relaxed about the ingredients. If you do not have white cheese, use yellow one, if you do not have sour cream, don’t use sour cream. The eggs are kind of necessary. Meat is also optional, use it if you have / like, otherwise it is okay to just skip them.

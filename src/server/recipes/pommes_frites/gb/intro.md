@@ -1,0 +1,1 @@
+I do not think I can come up with a recipe easier than this, so just for fun, let's add it here because I do not think there is anyone out there who did not start his cooking career with french fries.

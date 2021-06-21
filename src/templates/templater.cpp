@@ -415,11 +415,11 @@ templater_base &templater_base::templatize(const template_struct &s)
     std::string templatized = get(); // will initialize the parameters
     if(!m_parameters.empty())
     {
-        for(auto p : m_parameters)
+		for(const auto &p : m_parameters)
         {
             if(p.first == s.name)
             {
-                for(auto x : s.struct_members)
+				for(const auto &x : s.struct_members)
                 {
                     std::string fullname = s.name + "." + x.first;
                     kps.insert(make_pair(fullname, unafrog::utils::to_string(x.second)));
@@ -492,7 +492,7 @@ std::string templater_base::resolve_loops(std::string templatized, const templat
         if(!m_parameters.empty())
         {
             size_t c = 0;
-            for(auto ts : v.value())
+			for(const auto &ts : v.value())
             {
                 c++;
                 for(const auto& p : m_parameters)
@@ -501,7 +501,7 @@ std::string templater_base::resolve_loops(std::string templatized, const templat
                     {
                         stringholder sh(loop_content);
 
-                        for(auto x : ts.struct_members)
+						for(const auto &x : ts.struct_members)
                         {
                             //if(x.first == loop_target)
                             {
@@ -637,6 +637,7 @@ templater_base &templater_base::templatize(const template_vector_par &v)
 {
     do_not_resolve_in_get();
     std::string templatized = precalculated.empty() ? get() : precalculated;
+
     do_resolve_in_get();
 
     templatized = resolve_loops(templatized, v);

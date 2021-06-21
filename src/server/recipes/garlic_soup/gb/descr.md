@@ -1,0 +1,1 @@
+If we have managed to make a soup of onions, we can also make a soup with garlic.

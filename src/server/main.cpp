@@ -102,7 +102,7 @@ int main(int argc, char* argv[])
 
         // start the web server
         tnt::Tntnet app;
-        app.listen(8999);
+		app.listen("*", 8999);
 
         auto pngMap = app.mapUrl("^/img/(.*).png$", "filer"); // the supported images
         auto filer1 = app.mapUrl("^/img/(.*).ico$", "filer");
@@ -139,6 +139,7 @@ int main(int argc, char* argv[])
 
 		auto categoryLister = app.mapUrl("^/l/(.*)", "category_root_sender"); // / (ie: lists of various food categories)
 
+		auto recipeSender = app.mapUrl("^/r/(.*)", "r"); // / (ie: the recipes themselves)
 
 
         app.run();

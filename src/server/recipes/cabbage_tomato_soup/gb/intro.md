@@ -1,0 +1,1 @@
+A few soups are suited for vegetarians in the Transylvanian cuisine, but this easy to make soup is perfect for vegetarians and does not require much time to make.

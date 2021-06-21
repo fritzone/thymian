@@ -1,0 +1,1 @@
+Looks like a very thick soup, but also it’s not quite a soup, this is a solid dish that either goes well on its own, or accompanied by a piece of fried sausage or a nice splash of polenta.

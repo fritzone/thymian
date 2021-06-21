@@ -1,0 +1,1 @@
+If you want a warm breakfast, prepared in record time, which is good even in the afternoon (if anything remains), this is a must-try recipe.

@@ -1,0 +1,1 @@
+The simplest of the three apple cakes we present here, needs no dough kneading, just a quick mix of Ingredients, and you're ready in a minute.

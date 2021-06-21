@@ -1,0 +1,1 @@
+A standard apple cake, not too difficult to make, not too easy to store until the next day, very tasty and soft. The more apples you have, the better the taste.

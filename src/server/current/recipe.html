@@ -1,0 +1,73 @@
+<!--#struct supported_language_item(code)#-->
+<!--#parameters languages:supported_language_item[]#-->
+
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>{#title}</title>
+    <link rel="stylesheet" href="/sty.css" media="screen">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script class="u-script" type="text/javascript" src="/nicepage.js" defer=""></script>
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "WebSite312238",
+		"url": "index.html",
+		"logo": "/images/bird.png",
+		"sameAs": []
+}</script>
+    <meta property="og:title" content="Lunch">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#478ac9">
+    <link rel="canonical" href="index.html">
+    <meta property="og:url" content="index.html">
+
+    <script type="text/javascript">
+
+      function changeLang(l) {
+        var newLink = "/r/{#key}?l="+l;
+        window.location.replace(newLink);
+      }
+
+    </script>
+
+
+  </head>
+  <body class="u-body">
+    <header class="u-border-2 u-border-grey-75 u-clearfix u-header u-image u-shading u-sticky u-header" id="sec-2046" data-image-width="1920" data-image-height="1080">
+    <input type="hidden" id="lspan" value="en">
+    <div class="u-align-left u-clearfix u-sheet u-sheet-1">
+      <table>
+      <tr>
+        <td>
+        <h1 class="u-align-left u-headline u-text u-text-1">
+          <a href="/"><!--#translate Transylvanian recipes#--></a>
+        </h1>
+        </td>
+        <td width="480">
+
+          <!--#include languages#-->
+
+        </td>
+      </tr>
+      </table>
+    </div>    </header> 
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h1>{#title}</h1>
+        <div style="font-size:12px; font-style: italic;">
+           {#intro}
+        </div>
+        <div class="recipecontainer">
+          {#body}
+        </div>
+      </div>
+  <!--#include footer#-->
+  </body>
+</html>

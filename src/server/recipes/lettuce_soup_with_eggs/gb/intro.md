@@ -1,0 +1,1 @@
+A rich and tasty, but initially unusual soup due to the combination of lettuce and omelette, but you may be surprised at how tasty it can be, if done right. You can also use chanterelle vinegar instead of regular, it will make the taste even more interesting.

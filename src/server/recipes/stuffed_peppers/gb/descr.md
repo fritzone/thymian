@@ -1,0 +1,1 @@
+Although the name does not suggest this, stuffed peppers is actually a soup… and it happens to be one of our favourite soups.

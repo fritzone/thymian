@@ -1,0 +1,1 @@
+The dish called “tokány” is a typical Hungarian dish made with meat fried in oil with onions, and is the basis of this tasty soup and other dishes.

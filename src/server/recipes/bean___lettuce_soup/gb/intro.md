@@ -1,0 +1,1 @@
+You can make this unexpected soup with dry beans or tinned. If you use dry, put them in water 12 hours before you start cooking, and it will taste really good if you put bacon or smoked meat in the water.

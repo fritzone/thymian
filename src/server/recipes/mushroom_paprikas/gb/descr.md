@@ -1,0 +1,1 @@
+This recipe gives only basic instructions on how to make a “paprikás” that does not contain any meat, because sometimes we just do not want to eat meat.

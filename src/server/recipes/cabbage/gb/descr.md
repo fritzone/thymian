@@ -1,0 +1,1 @@
+Similar to a generic cabbage soup, but thicker, feel free to experiment with other spices as well, not just the ones I mentioned here.

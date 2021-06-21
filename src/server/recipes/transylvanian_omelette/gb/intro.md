@@ -1,0 +1,1 @@
+Omelette in Transylvania is made with raw eggs, and a lot of other Ingredients. It is similar to scrambled eggs, because it is not fried on both sides and it must not be dried out on the stove, but it contains a large selection of fresh half-fried vegetables. If you are not allergic, use fatty bacon, otherwise oil will be enough.

@@ -1,0 +1,1 @@
+Gipsy ratatouille is similar to the classic ratatouille, except that it has much more peppers, not so many tomatoes, a lot of other fillings (such as cabbage or mushrooms), a sharper taste if you use a little hot chili and of course it all starts with meat.

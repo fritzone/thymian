@@ -1,0 +1,1 @@
+"Mici" is a typical Romanian food you can find in a food stand at this week's farmer's market, or in a restaurant located in a big city. It is very common and very tasty, if freshly made, and the good news is that you can make it at home as well.

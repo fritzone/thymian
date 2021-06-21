@@ -1,0 +1,1 @@
+Prunes are not in the mainstream of soup production worldwide, except if you live in an area where you can get almost endless amounts of them, but not too much else. And then you must get creative. This soup comes from a region in Transylvania where the winters are long, the summers are short, they have many plum trees, and people are highly creative.

@@ -5,6 +5,10 @@
 #include <tnt/httpreply.h>
 #include <tnt/mimedb.h>
 
+#include "template_struct.h"
+
+static const std::string RECIPES_ROOT = "/recipes/";
+static const std::string path = "/theme/current/";
 
 class web_component
 {
@@ -20,13 +24,19 @@ public:
 
     static tnt::MimeDb mimeDb;
 
+	std::string prepareLangJs(const std::map<std::string, std::map<std::string, std::string> > &translations);
+
 protected:
+
+	void prepareLanguages();
 
     tnt::HttpRequest& mrequest;
     tnt::HttpReply& mreply;
 
     std::string m_sessionId;
     std::string m_originatingIp;
+
+	std::vector<template_struct> m_languageStructs;
 
 };
 

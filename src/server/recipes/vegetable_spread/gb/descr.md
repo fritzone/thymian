@@ -1,0 +1,1 @@
+This dish is known under various names in the southern parts of Europe, such as Ajvar, Lutenica, or others.

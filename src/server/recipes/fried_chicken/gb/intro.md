@@ -1,0 +1,1 @@
+We have a special recipe for chicken thighs that gives you crispy skin, soft flesh, and a mild taste. it is not done on the grill, neither with frying in oil, but slowly fried in a pan in your oven.

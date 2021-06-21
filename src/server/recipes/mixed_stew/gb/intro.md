@@ -1,0 +1,1 @@
+Well, not exactly a classic English stew, but the Transylvanian variant of it, made with the tastiest ingredients you can get your hands on. And since this is also a make your own recipe, no specific quantities are given. Only use what you like best.

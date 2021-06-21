@@ -1,0 +1,1 @@
+This rich-tasting soup is a hearty soup, especially if a good quantity of meat is used in it. You can make it thicker or thinner, it just depends on the amount of cabbage you put in, and how thick you want to make the thickening in the end. I prefer it thick, so that the spoon stays put in it, but you can feel free to experiment out the one you prefer.

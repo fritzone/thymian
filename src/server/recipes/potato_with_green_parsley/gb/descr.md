@@ -1,0 +1,1 @@
+To spice up the bland taste of plain boiled potato you can use different techniques.

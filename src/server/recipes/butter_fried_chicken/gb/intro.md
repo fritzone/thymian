@@ -1,0 +1,1 @@
+A very quick to prepare dish, just toss a few slices of chicken breast in melted butter. Perfect for those days when you do not have the time or mood to cook.

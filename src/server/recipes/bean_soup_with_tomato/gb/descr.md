@@ -1,0 +1,1 @@
+The classic haricot bean soup is such a basic recipe in Transylvanian cuisine that each family of course has its own recipe.

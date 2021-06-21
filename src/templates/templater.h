@@ -4,6 +4,7 @@
 #include <common.h>
 #include <named_operator.hpp>
 #include <json.h>
+#include "template_struct.h"
 #include <boost/noncopyable.hpp>
 
 #include <string>
@@ -206,63 +207,6 @@ private:
     std::string type;
 };
 
-/**
- * @brief The template_struct class represents a logical structure that can be inserted into the
- * template's content in order to have a logical grouping of various data.
- */
-class template_struct
-{
-public:
-
-    template_struct() = default;
-    explicit template_struct(const std::string& t) : name("name"), type(t) {}
-    template_struct(const std::string& n, const std::string& t) : name(n), type(t) {}
-
-    virtual ~template_struct() = default;
-
-    std::string& operator[] (const char* p)
-    {
-        return struct_members[std::string(p)];
-    }
-
-    const std::string& operator[] (const char* p) const
-    {
-        return struct_members.at(std::string(p));
-    }
-
-    std::string& operator[] (const std::string& p)
-    {
-        return struct_members[std::string(p)];
-    }
-
-    const std::string& operator[] (const std::string& p) const
-    {
-        return struct_members.at(std::string(p));
-    }
-
-    std::vector<std::string> keys() const
-    {
-        std::vector<std::string> v;
-        for(auto it : struct_members)
-        {
-            v.push_back(it.first);
-        }
-        return v;
-    }
-
-    bool has_key(const std::string& k)
-    {
-        for(auto it : struct_members)
-        {
-            if(it.first == k) return true;
-        }
-        return false;
-    }
-
-    std::string name;
-    std::string type;
-    std::map<std::string, std::string> struct_members;
-};
 
 /**
  * This is a wrapper class for a string that is used to do the actual replacing of strings
@@ -348,6 +292,11 @@ public:
     {
         return mname;
     }
+
+	auto begin() { return mvalue.begin(); }
+	auto end() { return mvalue.end(); }
+	std::vector<template_struct>::const_iterator begin() const { return mvalue.begin(); }
+	std::vector<template_struct>::const_iterator end() const { return mvalue.end(); }
 
 private:
     std::string mname = "";
@@ -560,6 +509,13 @@ public:
         return templatize(args...);
     }
 
+	template<typename... Args1>
+	templater& templatize(const template_vector_par& v, Args1... args)
+	{
+		dynamic_cast<templater&>(templater_base::templatize(v));
+		return templatize(args...);
+	}
+
     template<typename T1, typename... Args1>
     templater& templatize(const template_par<T1>& first, Args1... args)
     {
@@ -722,5 +678,8 @@ struct translator : public templater<T>
 
 HTML_TEMPLATE(mainpage);
 HTML_TEMPLATE(category_list);
+HTML_TEMPLATE(recipe);
+HTML_TEMPLATE(footer);
+HTML_TEMPLATE(languages);
 
 #endif // TEMPLATER_H

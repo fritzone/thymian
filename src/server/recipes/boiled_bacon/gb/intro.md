@@ -1,0 +1,1 @@
+For those who consider the fried bacon to be too hard for the stomach and cannot handle it in its raw, natural form, there is a third option: cook it. Slowly, with spices, then cool it. Then eat it.

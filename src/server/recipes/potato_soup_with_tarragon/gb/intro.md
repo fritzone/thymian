@@ -1,0 +1,1 @@
+This basic recipe introduces you to how to make classic tarragon soups with milky thickening. This recipe uses lamb, but feel free to switch it to pork. This soup also tolerates a large variety of different vegetables, but do not use other spices in it apart from tarragon.

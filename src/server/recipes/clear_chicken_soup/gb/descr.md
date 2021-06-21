@@ -1,0 +1,1 @@
+This soup is very similar to a clear broth, but due to the fact that the chicken goes into dissolution after prolonged cooking, you do not need to cook this for half a day.

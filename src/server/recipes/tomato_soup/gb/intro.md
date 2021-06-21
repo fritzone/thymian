@@ -1,0 +1,1 @@
+The tomato soup from Transylvania is different from the tomato soups you can buy ready-made in a can from your favourite store. It is thick, it has nice pieces of vegetables in it and has a natural sour taste from the tomatoes. Like all the other soups, it also has a flexible recipe. Use that ingredient if you have it, otherwise it is good without too.

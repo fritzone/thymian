@@ -1,0 +1,1 @@
+Another great example of the life of an apple after it has fallen off the tree, and ends up in your kitchen after it becomes ripe enough to be eaten. Or to have in a cake.

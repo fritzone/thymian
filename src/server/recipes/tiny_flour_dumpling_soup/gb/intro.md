@@ -1,0 +1,1 @@
+Sometimes it only takes a little effort to turn water with an existential crisis together with boiled vegetables inside into a tasty soup. This recipe is one of those that gives you some basic tips on how to get extra flavour out of almost nothing, without the use of extra spices, and at the same time how to make a soup that is very tasty.

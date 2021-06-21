@@ -1,0 +1,1 @@
+A very tasty soup to make, with the least amount of ingredients possible to make a decent soup. Takes just a few minutes to cook and it has a wonderful taste. This soup is also called onion soup, but it has nothing to do with the French onion soup which is another recipe. And not in this book.

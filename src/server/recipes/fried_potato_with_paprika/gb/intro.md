@@ -1,0 +1,1 @@
+Just a little more complicated than the previous recipe, it still delivers full flavour of potatoes with a little extra paprika and fried onions. Make this recipe if the main course is a little on the bland side of taste.

@@ -1,0 +1,1 @@
+A very traditional Jewish recipe invented to circumvent the strict rules of cooking on the Sabbath, which also managed to bring a wide variety of flavours into the Sabbath in the daily Jewish life of Transylvania or for this purpose, no matter where they live in the world.

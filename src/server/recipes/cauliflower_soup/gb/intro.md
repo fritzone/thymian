@@ -1,0 +1,1 @@
+This old recipe for cauliflower soup is my favourite way to prepare soup with cauliflower in. If you have a little fried goose liver or chicken liver to top it, then the taste is even better. This is one of the few occasions when a creamy soup sneaks into the traditional Transylvanian menu.

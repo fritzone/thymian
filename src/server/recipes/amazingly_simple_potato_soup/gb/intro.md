@@ -1,0 +1,1 @@
+Nothing is easier to make than this soup. Just throw some potatoes in a pot and you can forget about it. Well, almost. You want to make it into a soup, not just a little boiled potato broth.

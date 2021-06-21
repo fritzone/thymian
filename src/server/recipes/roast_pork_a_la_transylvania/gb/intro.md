@@ -1,0 +1,1 @@
+The fresher the meat you can get for this dish, the better the taste. Do not be afraid if there is a large piece of fat on the side, because after the fat has melted, it can be used in other recipes later, if you just store it in a cool place for a few days.

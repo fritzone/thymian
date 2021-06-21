@@ -2,6 +2,7 @@
 #include "flood_check.h"
 #include "log.h"
 #include "fake_locations.h"
+#include "dictionary.h"
 
 #include <boost/algorithm/string.hpp>
 #include <algorithm>
@@ -80,5 +81,58 @@ web_component::web_component(tnt::HttpRequest &request, tnt::HttpReply &reply, c
 
     // this will throw if sees a flooding attempt
     flood_check::attempt(originatingIp);
+
+}
+
+size_t replace(std::string& str, const std::string& from, const std::string& to, size_t pos)
+{
+	size_t start_pos = str.find(from, pos);
+	if(start_pos == std::string::npos)
+		return std::string::npos;
+	str.replace(start_pos, from.length(), to);
+	return start_pos + to.length();
+}
+
+std::string web_component::prepareLangJs(const std::map<std::string, std::map<std::string, std::string> > &translations)
+{
+	std::map<std::string, std::map<std::string, std::string>> languageToSpanIdTranslations;
+
+	for(const auto& [spanId, languageMap] : translations)
+	{
+		for(const auto& [langId, translated] : languageMap)
+		{
+			languageToSpanIdTranslations[langId][spanId] = translated;
+		}
+	}
+
+	std::string javascript = "function changeTexts(l) {";
+
+	for(const auto& [lang, langMap] : languageToSpanIdTranslations)
+	{
+		javascript += std::string("if(l == '") + lang + "') {";
+		for(const auto& [spanId, translated] : langMap)
+		{
+			std::string translated_c = translated;
+			size_t pos = 0;
+			while(pos != std::string::npos) pos = replace(translated_c, "'", "\\'", pos);
+			javascript += "$('#" + spanId + "').html('" + translated_c + "');\n";
+		}
+		javascript += "}";
+	}
+
+	javascript += "}\n";
+
+	return javascript;
+}
+
+void web_component::prepareLanguages()
+{
+	// populate the supported languages
+	for(const auto& supportedLang : dictionary::supported_languages)
+	{
+		template_struct language("supported_language", "supported_language_item");
+		language["code"] = supportedLang;
+		m_languageStructs.push_back(language);
+	}
 
 }

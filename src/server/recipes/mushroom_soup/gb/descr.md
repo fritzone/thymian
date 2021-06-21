@@ -1,0 +1,1 @@
+A classic and light mushroom soup, without too many extra ingredients, just to bring out the taste of mushrooms and nothing else.

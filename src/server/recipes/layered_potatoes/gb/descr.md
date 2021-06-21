@@ -1,0 +1,1 @@
+For this dish, you either use some leftover potatoes from yesterday, or just make a new portion and use them.

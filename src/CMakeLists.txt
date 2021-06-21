@@ -100,7 +100,7 @@ include_directories(
   ${CMAKE_CURRENT_SOURCE_DIR}/templates
   ${CMAKE_CURRENT_SOURCE_DIR}/3rdparty/compressor
   ${CMAKE_CURRENT_SOURCE_DIR}/3rdparty/tinyxml
-  ${CMAKE_CURRENT_SOURCE_DIR}/3rdparty/maddy
+  ${CMAKE_CURRENT_SOURCE_DIR}/3rdparty
   ${CMAKE_CURRENT_SOURCE_DIR}/common
   ${CMAKE_CURRENT_SOURCE_DIR}/cppdb
   ${Python3_INCLUDE_DIRS}

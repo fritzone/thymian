@@ -1,0 +1,1 @@
+All kinds of vegetables can be filled with minced meat and then made into a soup.
