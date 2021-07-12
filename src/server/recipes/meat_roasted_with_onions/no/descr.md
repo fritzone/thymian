@@ -1,0 +1,1 @@
+Hvis du vil lage denne retten må du ikke la kjøttet tørke ut mens du steker.

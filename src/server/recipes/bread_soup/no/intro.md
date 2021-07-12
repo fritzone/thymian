@@ -1,0 +1,1 @@
+Oppfinnsomheten til gamle tyske husmødre kom opp med denne suppen, som bruker bare basiske ingredienser tilgjengelige året rundt. Ingenting er lettere enn å lage en buljong med kjøtt, og forhåpentligvis er det noe gammelt brød rundt i huset. Legg gjerne sterk chili på toppen hvis du håndterer smaken på det.

@@ -1,0 +1,1 @@
+Vi har en spesiell oppskrift på kyllinglår som gir deg sprø hud, mykt kjøtt og en mild smak. det gjøres ikke på grillen, verken med steking i olje, men langsomt stekt i en panne i ovnen din.

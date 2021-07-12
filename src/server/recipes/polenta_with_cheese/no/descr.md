@@ -1,0 +1,1 @@
+Polenta er en så enkel, men allikevel allsidig mat at den har utallige preparater.

@@ -1,0 +1,1 @@
+Omelett i Transilvania er lagt med rå egger, og en masse andre ingredienser. Det ligner stort sett eggerøre, fordi den ikke er stekt på begge sider, den lar seg ikke tørke ut på komfyren, men den inneholder et stort utvalg av ferske halvstekte grønnsaker. Hvis du ikke er allergisk, bruk fett bacon, ellers vil olje være nok.

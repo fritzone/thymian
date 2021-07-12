@@ -17,4 +17,7 @@ Clean the onion and garlic and have it in a large pot have in approx. 2 litres o
 
  When you like how crunchy the salad is, the soup is done. Iceberg lettuce needs a little more time to finish cooking, little gem not so much.
 
- 
+### Tips
+
+- If you use nettle (Urtica dioica) instead of salad, you will get an exceptionally tasty and healthy soup.
+- You can make the soup with sorrel also instead of lettuce. 

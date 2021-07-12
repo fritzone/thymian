@@ -1,0 +1,1 @@
+Dette er en veldig gammel oppskrift, og ingenting beviser det mer, at det muligens er den eneste oppskriften i boka som trenger ingefær.

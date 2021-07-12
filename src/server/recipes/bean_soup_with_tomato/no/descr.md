@@ -1,0 +1,1 @@
+Den klassiske haricot-bønnesoppen er en så grunnoppskrift på det transylvaniske kjøkkenet at hver familie selvfølgelig har sin egen oppskrift.

@@ -1,0 +1,1 @@
+Den mest misforståtte ungarske retten som alltid lages tykk som en lapskaus er faktisk en suppe. Egentlig en veldig tykk suppe, men uansett en suppe. Denne suppen har ingen smak til felles med den gulasj du finner i Vest-Europa (eller Skandinavia), der den i de fleste situasjoner forvandlet seg til en lapskaus med mye grønnsaker og mye ekstra sterk chili og kjøttdeig.

@@ -1,0 +1,1 @@
+En typisk øst-europeisk rett som er til stede i nesten hvert av landene i området, med oppskrifter som skiller seg fra region til region, men de klarer alle på en eller annen måte å få frem det beste fra plommer.

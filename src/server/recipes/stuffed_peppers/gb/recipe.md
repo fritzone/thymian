@@ -21,3 +21,7 @@ Wash the rice, and put in a saucepan, cook for a few minutes. Finely chop one of
 
  Dissolve slowly the roux in the hot and boiling soup, and let it boil. When the roux is in the soup, add the parsley leaves and cook for another 30 minutes.
 
+### Tips
+
+- If you have not finished the filling make small meatballs, add them to the soup (and cook them), right before the tomato juice
+- If you add a bit of a bone or fatty pork meat the soup will have more characteristic taste

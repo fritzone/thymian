@@ -1,0 +1,1 @@
+Denne suppen med rik smak ligner litt som fårikål, bortsett fra at den er en suppe.

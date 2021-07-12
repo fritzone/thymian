@@ -1,0 +1,1 @@
+Som alle andre fruktsupper i denne boken, kan også denne nytes kald eller varm, avhengig av hvordan du liker den.

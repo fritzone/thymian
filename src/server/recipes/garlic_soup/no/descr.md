@@ -1,0 +1,1 @@
+Hvis vi har laget en suppe av løk, kan vi lage en suppe også med hvitløk.

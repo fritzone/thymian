@@ -1,0 +1,1 @@
+Jo mer ferskt kjøtt du kan få til denne retten, jo bedre blir smaken.

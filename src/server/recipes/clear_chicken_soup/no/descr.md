@@ -1,0 +1,1 @@
+Svært lik den klare kjøttsuppen, men på grunn av det faktum at kyllingkjøttet går i oppløsning etter langvarig koking, trenger du ikke koke dette i en halv dag.

@@ -1,0 +1,1 @@
+Noen ganger krever det bare en liten anstrengelse å gjøre et meningsløst vann med kokte grønnsaker inni til en smakfull suppe. Denne oppskriften er en av dem som gir deg noen grunnleggende tips for hvordan du får ekstra smak ut av nesten ingenting, uten bruk av ekstra krydder, og på samme tid hvordan du lager en suppe som er veldig velsmakende.

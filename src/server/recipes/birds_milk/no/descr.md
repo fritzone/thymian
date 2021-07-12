@@ -1,0 +1,1 @@
+Ikke at fugler kan gi melk, men denne desserten med fransk opprinnelse er så populær i Transilvania, men da den ble introdusert fra Frankrike, krevde den ingredienser så dyre at det var så sjelden som den berømte fuglemelken.

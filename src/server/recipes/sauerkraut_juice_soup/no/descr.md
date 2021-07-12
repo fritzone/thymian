@@ -1,0 +1,1 @@
+I Transilvania er dette en typisk vintersuppe (lagt ved svineslakting), når ferskt svinekjøtt er tilgjengelig, og surkålen allerede er sur nok til å kunne brukes.

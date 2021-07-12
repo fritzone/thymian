@@ -1,0 +1,1 @@
+For de som anser det stekte baconet for hardt for magen og ikke takler det rått, er det et tredje alternativ: koker det.

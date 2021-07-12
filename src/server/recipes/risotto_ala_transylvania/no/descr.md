@@ -1,0 +1,1 @@
+Vel, det er faktisk ikke risotto, men en veldig generisk orientalsk pilaf (som bare er vanlig kjøtt med ris) som du gjerne kan lage med favorittkjøttet ditt, enten det er svinekjøtt, kylling eller lam.

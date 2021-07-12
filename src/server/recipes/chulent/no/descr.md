@@ -1,0 +1,1 @@
+En veldig tradisjonell jødisk oppskrift oppfunnet for å omgå de strenge reglene for matlaging på sabbat, som også klarte å få inn et stort utvalg av smak i Shabbat i det daglige jødiske livet i Transilvania eller for dette formålet, uansett hvor de bor i verden.

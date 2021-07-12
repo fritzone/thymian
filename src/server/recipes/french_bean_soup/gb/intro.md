@@ -1,1 +1,1 @@
-A soup that is sometimes called French green bean soup, excellent in the summer when you have green beans around the store or if you are one of the luckier people, you even can grow them yourselfe.
+A soup that is sometimes called French green bean soup, excellent in the summer when you have green beans around the store or if you are one of the luckier people, you even can grow them yourself.

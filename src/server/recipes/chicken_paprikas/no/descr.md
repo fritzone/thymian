@@ -1,0 +1,1 @@
+Dette er en veldig klassisk ungarsk rett, og hvis du vil prøv det med annet kjøtt, som kalvekjøtt eller svinekjøtt.

@@ -1,0 +1,1 @@
+Den grunnleggende potetmosen er en enkel og allsidig rett som kan gå sammen med mange av hovedrettene.

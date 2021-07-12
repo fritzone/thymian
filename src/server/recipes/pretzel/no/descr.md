@@ -1,0 +1,1 @@
+Pretzel er en del av hverdagen i Transilvania, og alle aldre favoriserer det enten som en liten matbit, som frokost eller begge deler.

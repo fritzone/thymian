@@ -13,13 +13,11 @@
 - A handful of green peas
 
 ### Preparation
-If you use meat: in a saucepan put in a little oil, and fry the meat in the oil for 5 minutes. Add a little of the crushed garlic cloves and paprika cream after the 5 minutes of frying.
+If you use meat: in a saucepan put in a little oil, and fry the meat in the oil for 5 minutes. Add a little of the crushed garlic cloves and paprika cream after the 5 minutes of frying. Continue from the next step. 
 
- Continue from the next step. If you do not use meat: In a saucepan put in a little oil, half of the crushed garlic cloves and paprika cream and fry for 1 minute.
+If you do not use meat: In a saucepan put in a little oil, half of the crushed garlic cloves and paprika cream and fry for 1 minute. Continue from the next step. 
 
- Continue from the next step. Next step: Put in the raw egg now, stir very well and pour over boiling water, approx.
-
- 1 dl. Let them boil up and now is the time to fill the pot with water.
+Next step: Put in the raw egg now, stir very well and pour over boiling water, approx. 1 dl. Let them boil up and now is the time to fill the pot with water.
 
  While the soup is cooking, make a thickening with 1.5 tablespoons of flour, and milk and / or whipped cream.
 

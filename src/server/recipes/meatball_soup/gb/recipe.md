@@ -13,27 +13,22 @@
 - Salt, maybe a little vegeta
 
 ### For the meatballs:
-- Minced pork or beef or
-
-### a mixture of these two
+- Minced pork or beef or a mixture of these two
 - Rice
 - 1 small garlic, crushed
 - Salt, pepper
 
 ### If you like
+
 - Bone, marrow bone
 - Tiny amount of fatty or lean pork meat
 
 ### Preparation
  If you use pork or beef bones, in a large saucepan put in the washed bones, cover with water, and boil them approx. 45 minutes.
 
- Remove the foam that comes to the surface. If you use meat, put it in the saucepan and cook approx.
+ Remove the foam that comes to the surface. If you use meat, put it in the saucepan and cook approx. 30 minutes, remove the foam that comes up.   Put the root vegetables (carrot, parsley root, parsnip, kohlrabi, celery, kale) in the saucepan and start cooking them in water.
 
- 30 minutes, remove the foam that comes up.   Put the root vegetables (carrot, parsley root, parsnip, kohlrabi, celery, kale) in the saucepan and start cooking them in water.
-
- The water must cover the vegetables.  After approx.
-
- 30 minutes you can have in the potatoes if you use.  The rest of the vegetables should be in 10 minutes after the potatoes.
+ The water must cover the vegetables.  After approx. 30 minutes you can have in the potatoes if you use.  The rest of the vegetables should be in 10 minutes after the potatoes.
 
  In the meantime, you can make the meatballs, and have them in boiling soup. Cook everything until the vegetables are soft and the meatballs are done.
 

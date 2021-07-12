@@ -1,0 +1,1 @@
+Denne maten er ikke bare en veldig sunn og velsmakende suppe, men noen ganger brukes den også som base for andre mer komplekse retter.

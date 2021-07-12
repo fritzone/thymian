@@ -1,0 +1,1 @@
+Å tilberede en hjemmelaget leverpostei er en god måte å få den nødvendige mengden A- og B-vitaminer toppet med en fin mengde jern. Hvis du lager en stor mengde, kan du oppbevare dette i kjøleskapet i ganske lang tid, og du vil alltid ha noe velsmakende å spise i tider med behov ... eller når du bare må skynde deg et sted.

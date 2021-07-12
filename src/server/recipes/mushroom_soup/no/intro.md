@@ -1,0 +1,1 @@
+En klassisk og lett soppsuppe, uten for mye ekstra ingredienser, bare for å få frem smaken av sopp og ingenting annet. Litt rømme på toppen gjør selvfølgelig smaken mye bedre.

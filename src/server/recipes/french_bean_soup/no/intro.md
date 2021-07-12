@@ -1,0 +1,1 @@
+En suppe som noen ganger blir kalt fransk grønn bønnesuppe, utmerket om sommeren når du har grønne bønner rundt i butikken.

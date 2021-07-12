@@ -1,0 +1,1 @@
+Overraskende, men du kan lage en veldig velsmakende suppe med pepperrot og litt ekstra ingredienser. Pepperrot er også veldig bra for forkjølelse, den er lastet med vitaminer, så vi anbefaler at du bruker dem ofte, ikke bare i denne suppen, men også ved å lage en salat av den.

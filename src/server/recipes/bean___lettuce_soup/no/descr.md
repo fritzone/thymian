@@ -1,0 +1,1 @@
+Denne suppen kan du lage med tørre bønner eller fortinnet.

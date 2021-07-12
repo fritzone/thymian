@@ -17,8 +17,6 @@ Put the bacon in a saucepan, if there is not enough fat, put in a little oil as 
 
  Add the fried meat and a little water, cook together for 5 minutes. While stirring continuously add in 1 tablespoon of flour, and continuously stir, until the flour turns brown like a roux.
 
- Now pour in approx. 1 – 1.
-
-5 litres of boiling van, add the bay leaves, salt and pepper and potato and cook until the potatoes are done. Add the required amount of vinegar.
+ Now pour in approx. 1 – 1.5 litres of boiling van, add the bay leaves, salt and pepper and potato and cook until the potatoes are done. Add the required amount of vinegar.
 
  Before serving, add 2 tablespoons of sour cream.

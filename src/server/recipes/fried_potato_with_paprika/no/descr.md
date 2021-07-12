@@ -1,0 +1,1 @@
+Bare litt mer komplisert enn den forrige oppskriften, den leverer fortsatt full smak av poteter med litt ekstra paprika og stekt løk.

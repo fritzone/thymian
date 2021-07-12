@@ -1,0 +1,1 @@
+Denne suppen krever ikke for mange ingredienser, den vil få sin utsøkte smak fra de forskjellige jevningene som blir lagt til den rett før den er ferdig. Når du er ferdig, må den være kremte og myk.

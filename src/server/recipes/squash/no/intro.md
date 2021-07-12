@@ -1,0 +1,1 @@
+En generisk oppskrift laget av squash, som passer bra med stort sett alt, fra stekt kjøtt, gjennom kjøttkaker til et speilegg. Hvis du ikke kan få hånden på squash, bare bruk zucchini.

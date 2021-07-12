@@ -1,0 +1,1 @@
+Å sprite opp den blande smak av vanlig kokt potet du kan bruke forskjellige teknikker. Dette er muligens det enkleste av alt. Enkelt som en potet. Jeg anbefaler å lage denne retten når du har en hovedrett med en sterk smak. For eksempel stekt lever, eller lignende.

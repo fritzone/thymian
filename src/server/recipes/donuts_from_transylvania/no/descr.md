@@ -1,0 +1,1 @@
+Denne klassiske oppskriften på hjemmelaget smultring er både enkel og velsmakende.

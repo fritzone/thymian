@@ -1,0 +1,1 @@
+Svisker er ikke i hovedstrømmen av suppeproduksjon over hele verden, bortsett fra hvis du bor i et område hvor du kan få uendelige mengder av dem, men ikke for mye annet.

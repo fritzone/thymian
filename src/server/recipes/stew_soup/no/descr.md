@@ -1,0 +1,1 @@
+Retten som kalles «tokány» er en typisk ungarsk rett laget med kjøtt stekt i olje med løk, og er basen til denne smakfulle suppen og andre retter.

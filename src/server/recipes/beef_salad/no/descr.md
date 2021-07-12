@@ -1,0 +1,1 @@
+En tradisjonell festerett, «Salată de boeuf» betyr «biffsalat».

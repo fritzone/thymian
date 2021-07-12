@@ -1,0 +1,1 @@
+Du kan fylle alle slags blader, som salat, kål, druer, men den opprinnelige oppskriften på denne maten krever knutekålblader, så jeg vil holde meg til dem.

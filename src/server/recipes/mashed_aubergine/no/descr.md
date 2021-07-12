@@ -1,0 +1,1 @@
+Denne delikatessen er perfekt når den er laget av ferske grillede auberginer.

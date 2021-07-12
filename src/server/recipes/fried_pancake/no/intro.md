@@ -1,0 +1,1 @@
+I likhet med klassisk og verdensberømt ungarsk mat, kalt «Lángos», men ikke akkurat som den du forventer å kjøpe fra en gatemat-leverandør, siden den transilvanske versjonen er fylt med ost, rullet opp og deretter stekt.

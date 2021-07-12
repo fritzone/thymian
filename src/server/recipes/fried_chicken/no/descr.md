@@ -1,0 +1,1 @@
+Vi har en spesiell oppskrift på kyllinglår som gir deg sprø hud, mykt kjøtt og en mild smak.

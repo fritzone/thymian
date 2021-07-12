@@ -1,0 +1,1 @@
+Salat i Transilvania brukes ofte i supper, og ikke så ofte spises rå som i de klassiske «salatene» nordmenn er vant til.

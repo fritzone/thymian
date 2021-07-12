@@ -1,0 +1,1 @@
+Denne uvanlige suppen får sin karakteristiske smak fra soppblandingen du bruker, så ikke spar på dem.

@@ -1,0 +1,1 @@
+Denne oppskriften gir bare grunnleggende instruksjoner for hvordan du lager en «paprikás» som ikke inneholder noe kjøtt, fordi vi noen ganger bare ikke vil spise kjøtt.

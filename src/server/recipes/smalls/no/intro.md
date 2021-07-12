@@ -1,0 +1,1 @@
+«Mici» er en typisk rumensk mat du kan finne i en matstand i ukens bondens marked, eller i en restaurant som finner i en storby. Det er veldig utbredt og veldig velsmakende nylaget, og den gode nyheten er at du kan lage det hjemme også.

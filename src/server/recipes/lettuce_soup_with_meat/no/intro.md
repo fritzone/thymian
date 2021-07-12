@@ -1,0 +1,1 @@
+I gamle dager under kalde vinterdager var det vanlig å lage denne suppen av tilberedt salt salat som ble holdt i en krukke om vinteren. I dag er selvfølgelig fersk salat tilgjengelig hele tiden, og vi anbefaler faktisk å bruke den.

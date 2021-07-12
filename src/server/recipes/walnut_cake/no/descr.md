@@ -1,0 +1,1 @@
+Selv om dette i Transilvania regnes som en tradisjonell påske og julekake, er det ingenting som hindrer deg i å lage den for eksempel halvveis, hvorfor ikke i august.

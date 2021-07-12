@@ -1,0 +1,1 @@
+En rik og velsmakende, men uvanlig suppe på grunn av kombinasjonen salat og omelett, men du kan bli overrasket over hvor velsmakende den kan være hvis den blir gjort riktig.

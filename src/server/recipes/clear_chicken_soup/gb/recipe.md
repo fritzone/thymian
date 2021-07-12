@@ -24,9 +24,7 @@ Start by making the pasta: make a very hard dough from the egg, salt, some water
 
  The fattier the chicken is, the tastier the soup will be. Drop the chicken pieces in boiling water and cook for 1 – 2 minutes.
 
- Remove the chicken from the boiling water, wash in cold water and dry it. In a pot have in cold water (ca.
-
- 2 litres), put in the chicken pieces, and bring to a boil. Remove the foam when it rises, we want a clear soup.
+ Remove the chicken from the boiling water, wash in cold water and dry it. In a pot have in cold water (ca. 2 litres), put in the chicken pieces, and bring to a boil. Remove the foam when it rises, we want a clear soup.
 
  When there is no more foam, put on the lid and let it simmer until the meat is half done. Depending on the age of the chicken this can take up to 30 minutes.
 

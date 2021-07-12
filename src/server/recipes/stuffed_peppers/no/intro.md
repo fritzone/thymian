@@ -1,0 +1,1 @@
+Selv om navnet ikke antyder dette, fylte paprika er faktisk en suppe … og det er tilfeldigvis en av favoritt suppene våre. I Transilvania denne rett er en tykk suppe, men i andre deler av Romania du vil bli servert bare fylte paprikaer med rømme hvis du vil spise den.

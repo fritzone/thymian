@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.14.2, 2021-04-14T08:29:39. -->
+<!-- Written by QtCreator 4.14.2, 2021-07-05T09:25:16. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -70,57 +70,7 @@
     <value type="bool" key="AutoTest.Framework.QtQuickTest">true</value>
     <value type="bool" key="AutoTest.Framework.QtTest">true</value>
    </valuemap>
-   <valuemap type="QVariantMap" key="AutoTest.CheckStates">
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:B62">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:Common">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:ComponentBreaker">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:Conversion">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:Convert">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:CppDb">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_BasicOperations">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_Defines">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_Delete">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_DoubleInclusion">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_DuplicateRemover">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_ErrorSetter">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_HexStringToNr">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_IfElse">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_IfEq">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_IfTest">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_IncludeRootData">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_IncludedVariables">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_InitScript">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_InitScriptAndStandardScript">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_InitScriptSetsVariables">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_IntToHex">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_Iterator">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_IteratorTwoStructs">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_IteratorTwoStructsIfEq">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_JsonSource">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_NotSoDefines">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_RemoveIp">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_SimpleInclusion">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_SimpleInclusion2">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_SimpleInclusionErroneous">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_SimpleInclusionWithVariable">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_SimpleNumber">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_SimpleString">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_SimpleStruct">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_SimpleStruct2">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_SimpleStructAndVar">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_SimpleVariables">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_ValueDefines">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_VarAndSimpleStruct">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_args">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_b62_enc">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:DISABLED_cb1">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:StringTemplate">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:Translate">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:TranslatePythonOutput">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:TranslateVar">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:UrlMaker">Checked</value>
-    <value type="Qt::CheckState" key="/home/fld/work/p/thymian/src/tests/test.cpp:XSSSanitizer">Checked</value>
-   </valuemap>
+   <valuemap type="QVariantMap" key="AutoTest.CheckStates"/>
    <value type="int" key="AutoTest.RunAfterBuild">0</value>
    <value type="bool" key="AutoTest.UseGlobal">true</value>
    <valuelist type="QVariantList" key="ClangCodeModel.CustomCommandLineKey"/>

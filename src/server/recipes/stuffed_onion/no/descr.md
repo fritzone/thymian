@@ -1,0 +1,1 @@
+En av de rareste kombinasjonene av smakene du kan oppleve i denne boken, kommer fra denne gamle armensk suppen, hvor du koker løk i vin, og krydder med forskjellige krydder for å få frem den perfekte kombinasjonen.

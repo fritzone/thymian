@@ -1,0 +1,1 @@
+Denne grunnoppskriften introduserer deg hvordan du lager klassiske supper med estragon. Denne oppskriften bruker lammekjøtt, men bytt den gjerne til svinekjøtt. Denne suppen tåler også en stor mengde forskjellige grønnsaker, men bruk ikke annen krydder i den bortsett fra estragon.

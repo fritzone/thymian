@@ -1,0 +1,1 @@
+Når du lager leverpostei, kan du spare en fin leverskive til denne retten. Det vil ikke skuffe deg. Ikke stek for mye, ellers blir det for tørt.

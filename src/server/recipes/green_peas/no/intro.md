@@ -1,0 +1,1 @@
+Der er mer til grønne erter enn ertestuingen. For eksempel kan du lage en veldig deilig side som går bra med kjøttboller, pølse og bacon eller speilegg.

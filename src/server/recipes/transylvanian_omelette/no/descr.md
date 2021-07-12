@@ -1,0 +1,1 @@
+Omelett i Transilvania er lagt med rå egger, og en masse andre ingredienser.

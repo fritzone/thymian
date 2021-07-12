@@ -1,0 +1,1 @@
+Denne gamle oppskriften pleide å være laget med vilt, men jakt er ikke lenger en hovedaktivitet i Transilvania, så i stedet for hjort, villsvin og villkanin er de mer kjente variantene av storfekjøtt, svinekjøtt, kylling, og hvorfor ikke, hvis du kan få hendene på, kanin kan brukes til å lage denne oppskriften.

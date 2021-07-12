@@ -6,9 +6,7 @@
 - 2 – 3 cloves of garlic
 - Salt, pepper, lemon juice
 - 1 egg yolk and sour cream (or whipped cream)
-- It is perfectly fine to use
-
-### a little vegeta or a chicken broth, but be careful with the extra salt these two should bring into the soup.
+- It is perfectly fine to use a little vegeta or a chicken broth, but be careful with the extra salt these two should bring into the soup.
 
 ### Preparation
 Put all meat and bones in a large saucepan and cook approx. 30 - 45 min in water with a tiny amount of salt.

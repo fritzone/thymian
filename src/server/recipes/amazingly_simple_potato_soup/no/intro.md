@@ -1,0 +1,1 @@
+Ingenting er lettere å lage enn denne suppen. Bare kast inn noen poteter i en gryte, så kan du glemme det. Vel, nesten. Du vil faktisk lage den til en suppe, ikke bare litt kokt potetbuljong.

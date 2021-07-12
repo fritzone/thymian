@@ -1,0 +1,1 @@
+Pretzel er en del av hverdagen i Transilvania, og alle aldre favoriserer det enten som en liten matbit, som frokost eller begge deler. Du kan finne mange varianter, noen med sesam, noen med salt, noen med valmuefrø, noen med noe annet. Denne oppskriften er den grunnleggende «Salt kringlen», fra dette tidspunktet kan du variere den som du vil.

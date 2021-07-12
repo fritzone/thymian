@@ -1,0 +1,1 @@
+Denne suppen er et annet eksempel på den praktiske måten gamle tyskere bodde i Transilvania, la oss gjenbruke alt, ingenting skal gå til spille. Og de hadde rett. Denne suppen laget jeg faktisk av litt grillet ribbe jeg kjøpte for 4-5 dager siden, og som var for tørr til å spises som den er, men pusset opp i en suppe gir den en strålende smak.

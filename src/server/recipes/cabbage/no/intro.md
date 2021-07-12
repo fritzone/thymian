@@ -1,0 +1,1 @@
+Svært lik en generisk kålsuppe, men mer tykkere, gjerne eksperimentere med andre krydder også, ikke bare de jeg nevnte her. Prøv med tomater, spisskummen, i stedet for roux bruker du en jevning av melk og hvetemel, osv. ... Jeg er sikker på at det er en kombinasjon du vil like.

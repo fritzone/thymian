@@ -1,0 +1,1 @@
+Dette er en veldig gammel oppskrift, men den tar ikke bort fra at dette er en av favorittkakene våre. Husk at kremen skal være surere enn søt.

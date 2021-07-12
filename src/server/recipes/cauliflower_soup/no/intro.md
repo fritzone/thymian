@@ -1,0 +1,1 @@
+Denne gamle oppskriften på blomkålsuppe er min favoritt måte å tilberede suppe med blomkål i. Hvis du har litt stekt gåselever eller kyllinglever til å toppe den, så er smaken du får enda bedre. Dette er en av de få kremsupper du får i tradisjonelt transilvansk mat.

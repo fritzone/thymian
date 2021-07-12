@@ -1,0 +1,1 @@
+Til denne maten bruker du enten noen resterpoteter fra i går, eller bare lager en ny porsjon og bruker dem.

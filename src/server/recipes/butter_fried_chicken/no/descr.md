@@ -1,0 +1,1 @@
+En veldig rask rett, bare kaster noen skiver av kyllingbryst i smeltet smør.

@@ -1,0 +1,1 @@
+To av verdens kjøkken er avhengige av bruken av estragon. En av dem er den franske, og den andre er den transilvanske. I Norge krydres hovedsakelig fisk med den, mens i Transilvania bruker vi estragon i en god del av supper som en ekstra kryddersmak. For denne oppskriften trenger du en av våre grunnleggende ingredienser jeg har presentert i introduksjonsdelen: estragon-eddik.

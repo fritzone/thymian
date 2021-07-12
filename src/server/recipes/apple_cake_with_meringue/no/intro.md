@@ -1,0 +1,1 @@
+Et annet fint eksempel på livet til et eple etter at det har falt ned på treet, havner på kjøkkenet ditt og blir modent nok til å bli spist. Eller å ha i en kake.

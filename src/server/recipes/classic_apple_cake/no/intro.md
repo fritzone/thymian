@@ -1,0 +1,1 @@
+En standard eplekake, ikke for vanskelig å lage, ikke for lett å oppbevare til neste dag, veldig velsmakende og myk. Jo flere epler du har, jo bedre blir smaken.

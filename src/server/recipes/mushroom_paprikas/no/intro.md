@@ -1,0 +1,1 @@
+Denne oppskriften gir bare grunnleggende instruksjoner for hvordan du lager en «paprikás» som ikke inneholder noe kjøtt, fordi vi noen ganger bare ikke vil spise kjøtt. Men vi vil fortsatt spise. Fortrinnsvis laget av sjampinjong, kantarell eller annen fast sopp, ikke steinsopp.

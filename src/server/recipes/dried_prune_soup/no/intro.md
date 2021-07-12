@@ -1,0 +1,1 @@
+Svisker er ikke i hovedstrømmen av suppeproduksjon over hele verden, bortsett fra hvis du bor i et område hvor du kan få uendelige mengder av dem, men ikke for mye annet. Og så må du bli kreativ. Denne suppen kommer fra en region i Transilvania der vintrene er lange, somrene er korte (akkurat som Norge), de har mange plommetrær, og folk er veldig kreative.

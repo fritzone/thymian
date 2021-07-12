@@ -1,0 +1,1 @@
+En veldig smakfull suppe å lage, med minst mulig mengde ingredienser. Tar bare noen minutter å koke, og den har en fantastisk smak. Denne suppen kalles også løksuppe, men den har ingenting å gjøre med den franske løksuppen som er en annen oppskrift. Og ikke i denne boken.

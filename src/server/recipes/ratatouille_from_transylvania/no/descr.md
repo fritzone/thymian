@@ -1,0 +1,1 @@
+En veldig lett å lage og fleksibel matoppskrift, med en enestående smak, som ikke krever en stor mengde TLC, men uansett gir en overraskende god smak du ikke forventer fra de enkle ingrediensene du legger inn.

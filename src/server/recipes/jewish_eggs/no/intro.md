@@ -1,0 +1,1 @@
+En perfekt mulighet til å få frem noe nytt fra noen få kjedelige kokte egg. Kan også oppbevares i kjøleskapet for i morgen, eller dagen etter. Dette er en gammel ashkenazi jødisk oppskrift, som tradisjonelt ble spist før lunsj på sabbat, men har ikke mistet sin popularitet selv i dag. Det er veldig enkelt å tilberede det, men det krever mestring å gjøre den perfekt.

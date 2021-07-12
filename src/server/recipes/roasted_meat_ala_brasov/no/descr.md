@@ -1,0 +1,1 @@
+Stekt kjøtt har mange ansikter.

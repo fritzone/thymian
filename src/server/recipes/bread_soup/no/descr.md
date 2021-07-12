@@ -1,0 +1,1 @@
+Oppfinnsomheten til gamle tyske husmødre kom opp med denne suppen, som bruker bare basiske ingredienser tilgjengelige året rundt.

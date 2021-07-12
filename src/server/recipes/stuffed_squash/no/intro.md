@@ -1,0 +1,1 @@
+Når du har søkt etter fylt squash på internett, vil du få tusenvis av oppskrifter med vakkert tilberedte squash kastet i ovnen og stekt til de er gyldenbrune. Men dette er en oppskriftsbok for Transilvania. For oss er den fylte squashen en suppe. Og kan jeg si, en veldig velsmakende.

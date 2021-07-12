@@ -1,0 +1,1 @@
+Til denne maten bruker du enten noen resterpoteter fra i går, eller bare lager en ny porsjon og bruker dem. Føl deg også avslappet om ingrediensene. Hvis du ikke har hvitost, bruk gul en, hvis du ikke har rømme, bruk creme fraiche. Eggene er slags nødvendig. Kjøtt er også valgfritt, bruk det hvis du har / liker, ellers det går greit å bare hoppe de over.

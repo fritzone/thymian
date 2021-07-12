@@ -1,0 +1,1 @@
+Denne suppen med rik smak ligner litt som fårikål, bortsett fra at den er en suppe. Du kan gjøre den tykk eller mer tynn, det avhenger bare av mengden kål du legger i, og hvor tykk du vil lage jevningen til slutt. Jeg foretrekker at den er tykk, du gjør den slik du vil.

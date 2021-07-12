@@ -1,0 +1,1 @@
+Vel, ikke akkurat en lapskaus, men den transilvanske varianten av den laget med de smakigste ingrediensene du kan få hendene på.

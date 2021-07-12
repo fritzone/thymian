@@ -1,0 +1,1 @@
+En enkelt å lage suppe perfekt for vegetarianere og ikke krever mye tid å lage.

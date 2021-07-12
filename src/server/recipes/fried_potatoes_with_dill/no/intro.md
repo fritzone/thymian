@@ -1,0 +1,1 @@
+Hvis du ikke er forsiktig med denne oppskriften, vil den veldig lett brenne, så ikke bruk høy varme.

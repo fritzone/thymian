@@ -1,0 +1,1 @@
+Denne delikatessen er ideell om sommeren når du kan plukke frisk vill sopp i de endeløse skogene i Norge.

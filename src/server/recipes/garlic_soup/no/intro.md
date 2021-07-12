@@ -1,0 +1,1 @@
+Hvis vi har laget en suppe av løk, kan vi lage en suppe også med hvitløk. Det er to kjente varianter av denne suppen, og en tredje som er en kombinasjon av de to andre. Hovedforskjellen er om du spiser kjøtt eller ikke. Vennligst tem oppskriften for å passe dine behov. Den første variant er laget med egg, den andre med kyllingkjøtt, og den tredje med begge.

@@ -1,0 +1,1 @@
+Jeg tror ikke jeg kan komme med en oppskrift enklere enn dette, så bare for moro skyld, la oss legge den til her fordi jeg tror ikke det er noen der ute som ikke startet kokkekarrieren sin med pommes frites.

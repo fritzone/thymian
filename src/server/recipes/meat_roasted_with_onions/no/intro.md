@@ -1,0 +1,1 @@
+Hvis du vil lage denne retten må du ikke la kjøttet tørke ut mens du steker. Dekk ordentlig med løken og pass på at den har nok, men ikke for mye vann. Ellers vil du finne opp en suppe.

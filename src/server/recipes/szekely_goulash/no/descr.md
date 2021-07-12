@@ -1,0 +1,1 @@
+Selv om denne maten har samme navn med Sekler-folket, som bor i midten av Romania, og er den største ungarske talende minoriteten i landet, har faktisk denne maten sin opprinnelse i Budapest midt på 1800-tallet, hvorfra den spredt seg til alle ungarske talende områder, og ble lykkelig integrert i kjøkkenet til nabolandene også.

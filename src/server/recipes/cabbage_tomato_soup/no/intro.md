@@ -1,0 +1,1 @@
+En enkelt å lage suppe perfekt for vegetarianere og ikke krever mye tid å lage. Vær så snil se bort fra det halve kg. av dill kastet på tallerkenen, det var en av de første oppskriftene våre, og vi hadde ikke så mye erfaring med å lage gode bilder. Du vil absolutt hakke den i fine biter.

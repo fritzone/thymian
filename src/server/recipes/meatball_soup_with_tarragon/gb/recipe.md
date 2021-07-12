@@ -23,9 +23,7 @@ Put the bun in water until it softens and squeeze out the water very well. Mix w
 
  Finely chop half of the onion and put it in a saucepan with a little sunflower oil, sauté for a few minutes, but do not let it burn. Cut the other half of the onion and the other root vegetables into strips (do not cut very thin).
 
- Put the vegetables in the pan and fry them together for 10-15 minutes otherwise until the vegetables or almost soft, stir often. Pour ca.
-
- 1½ litres of water in the pot with the vegetables and boil it. While the water starts to boil, make the meatballs, they should not be excessively big nor too small.
+ Put the vegetables in the pan and fry them together for 10-15 minutes otherwise until the vegetables or almost soft, stir often. Pour ca. 1½ litres of water in the pot with the vegetables and boil it. While the water starts to boil, make the meatballs, they should not be excessively big nor too small.
 
    When you have finished making the meatballs, roll the meatballs in flour, and put them in the boiling water (always). If the water stops boiling after one or two meatballs just wait until it boils again.
 

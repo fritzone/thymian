@@ -1,0 +1,1 @@
+Hvis du vil ha noe varmt til frokost på rekordtid, som er bra selv på ettermiddagen (hvis noe gjenstår), er dette en måprøve oppskrift.

@@ -1,0 +1,1 @@
+Svært lik en generisk kålsuppe, men mer tykkere, gjerne eksperimentere med andre krydder også, ikke bare de jeg nevnte her.

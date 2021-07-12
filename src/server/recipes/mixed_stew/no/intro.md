@@ -1,0 +1,1 @@
+Vel, ikke akkurat en lapskaus, men den transilvanske varianten av den laget med de smakigste ingrediensene du kan få hendene på. Og siden dette også er en lage din egen oppskrift, er det ikke gitt spesifikke mengder. Bare bruk det du liker mest.

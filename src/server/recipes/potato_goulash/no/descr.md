@@ -1,0 +1,1 @@
+Så mange hus som mange vaner, og som mange oppskrift for denne tidløse rett.

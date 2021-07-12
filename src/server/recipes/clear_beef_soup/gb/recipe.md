@@ -29,8 +29,6 @@ Since the meat and bones can come frozen, thaw them first. Do not use a microwav
 
  When you do not see more foam on top, it is time to put in the vegetables. If you go for the clearest meat soup, clean the inside of the pot with a clean cloth above the water level after reducing the heat so that it does not boil so heavily but do not stop the boiling process.
 
- Peel and grate the vegetables, you can cut them into large pieces or keep them whole. From now on, just let the soup boil for approx.
-
- 4-5 hours on the lowest possible heat, so that it does not evaporate rapidly, and the bones and pieces of meat are still well cooked to extract all the flavour. Strain before serving.
+ Peel and grate the vegetables, you can cut them into large pieces or keep them whole. From now on, just let the soup boil for approx. 4-5 hours on the lowest possible heat, so that it does not evaporate rapidly, and the bones and pieces of meat are still well cooked to extract all the flavour. Strain before serving.
 
  When the soup is done, take out the vegetables and serve them with the soup, eat them as they are or make a salad (like salad de boeuf) with it.  

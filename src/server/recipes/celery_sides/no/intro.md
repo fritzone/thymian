@@ -1,0 +1,1 @@
+Dette er en av de matvarene du ikke ville forvente å være så velsmakende som faktisk er basert på utseendet på den. Imidlertid kan denne maten bli en av favorittene dine hvis du liker selleri.

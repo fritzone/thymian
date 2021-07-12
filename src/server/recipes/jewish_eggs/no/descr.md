@@ -1,0 +1,1 @@
+En perfekt mulighet til å få frem noe nytt fra noen få kjedelige kokte egg.

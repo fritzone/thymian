@@ -1,0 +1,1 @@
+Gipsy ratatouille ligner på den klassiske ratatouille, bortsett fra at den har mye mer paprika, mye mindre tomater, mye andre fyllinger (som eks. kål eller sopp), en mer skarp smak om du bruker litt hot chili og selvfølgelig begynner alt med kjøtt.

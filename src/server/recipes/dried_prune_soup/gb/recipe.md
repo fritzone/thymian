@@ -16,9 +16,7 @@ Start by dicing the meat and bacon and cook them in a casserole until the meat i
 
  While the meat is cooking, clean and cut the carrot into cubes and fry them in hot oil or lard. When the carrot is done, put them (and the oil you have fried them in) into the casserole with the meat, add 2 tablespoons of rice, add a little salt, and pepper and cook until the meat is soft.
 
- While the soup is cooking, make a hard dough from the 2 eggs, a little water and flour. Stretch it up to half a finger thickness (approx.
-
- 0.5 cm) and cut it into cubes.
+ While the soup is cooking, make a hard dough from the 2 eggs, a little water and flour. Stretch it up to half a finger thickness (approx. 0.5 cm) and cut it into cubes.
 
  In a frying pan, fry all the pieces in a small quantity of oil (fry them in small portions, so as not to have to use a lot of oil so that the soup does not become very greasy). When the meat is soft, put it in a spoonful of paprika cream into the pot, bring to the boil.
 

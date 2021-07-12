@@ -1,0 +1,1 @@
+Favoritten til alle barn (og ikke bare) er veldig lett å lage, og det krever ikke for mye arbeid.

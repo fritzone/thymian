@@ -1,0 +1,1 @@
+Jo mer ferskt kjøtt du kan få til denne retten, jo bedre blir smaken. Ikke vær redd hvis det er stor fettbit på siden, for etter at fettet har smeltet ut, kan det brukes i andre oppskrifter senere, hvis du bare lagrer det på et kjølig sted i noen dager.

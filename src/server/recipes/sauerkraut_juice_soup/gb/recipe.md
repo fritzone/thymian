@@ -16,7 +16,12 @@
 - 1 small onion
 - 1 garlic clove
 
+### For the gourmet ones
+
+- If you can get your hands on fresh pork brain, it's a real delicacy in this soup.
+
 ### Preparation
+
 In a large pot cook up 1.5 litres of cold water, put in the pork in cut in cubes, add a little salt and a peeled whole onion and cook approx.
 
  30 minutes or until the meat is tender. Remove the foam that rises on top of the soup.
@@ -25,7 +30,7 @@ In a large pot cook up 1.5 litres of cold water, put in the pork in cut in cubes
 
  Do not make them larger than a nut. Cover the meatballs with flour (put some flour in a plate, and roll te the meatballs in) so that it does not fall apart while boiling in water.
 
- Put them in the boiling water one by one. Grate a carrot on the smallest hole in the grater and put it in the soup.
+ Put them in the boiling water one by one. Grate a carrot on the smallest hole in the grater and put it in the soup. If you managed to get some fresh pork brain, put it in the sup now.
 
  Bring to the boil. Pour the sauerkraut juice into the soup, and bring again to boil.
 

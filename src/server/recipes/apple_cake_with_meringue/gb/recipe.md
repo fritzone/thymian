@@ -13,9 +13,7 @@
 ### Preparation
 The amounts are for a baking pan approx. 20x30 cm.
 
- If you have a larger one, you can increase the amount. Then you can go up to 500 gr.
-
- flour with 250 gr. with butter, by keeping everything else the same, if you need more softness after that, add an extra egg, a little extra wine until you get the consistency you can work best with.
+ If you have a larger one, you can increase the amount. Then you can go up to 500 gr. flour with 250 gr. with butter, by keeping everything else the same, if you need more softness after that, add an extra egg, a little extra wine until you get the consistency you can work best with.
 
  Start by separating 3 of the eggs and keep the egg whites in a bowl. Mix the flour with the butter.
 
@@ -35,9 +33,7 @@ The amounts are for a baking pan approx. 20x30 cm.
 
  Arrange the dry apples on the sheet in a long pan, and slowly cover the entire sheet with the squeezed, grated apples. When there are no more apples left, place the second sheet on top of the apples.
 
- Cover the sheet thinly with your favourite jam. Whip the egg whites until the mass begins to become frothy and slightly white and add 200 gr.
-
- of icing sugar. Make a firm foam, and place everything on the jam.
+ Cover the sheet thinly with your favourite jam. Whip the egg whites until the mass begins to become frothy and slightly white and add 200 gr. of icing sugar. Make a firm foam, and place everything on the jam.
 
  Put the cake back in the oven for approx. The cake is ready now, you can eat it when it gets cold.
 

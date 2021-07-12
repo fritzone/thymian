@@ -1,0 +1,1 @@
+Når du lager leverpostei, kan du spare en fin leverskive til denne retten.

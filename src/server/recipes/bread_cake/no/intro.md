@@ -1,0 +1,1 @@
+Denne oppskriften er perfekt hvis du har litt brød fra dager før. Jo mer variasjon av brød du har, jo bedre blir smaken. Jeg gir med vilje ingen mengder nedenfor, siden jeg ikke vet hvor mange brød du har. Målet ditt er å lage noe som en røre som du kan helle og bake i ovnen.

@@ -1,0 +1,1 @@
+En rask å lage og veldig konsistent grønnsaksuppe med litt stekt kjøtt fra i går, hjelper ikke bare budsjettet, men hvis du klarer å få smaken riktig, løfter du også humøret.

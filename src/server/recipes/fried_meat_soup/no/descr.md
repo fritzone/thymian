@@ -1,0 +1,1 @@
+Denne suppen er et annet eksempel på den praktiske måten gamle tyskere bodde i Transilvania, la oss gjenbruke alt, ingenting skal gå til spille.

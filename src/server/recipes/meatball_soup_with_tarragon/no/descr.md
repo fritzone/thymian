@@ -1,0 +1,1 @@
+Selv om navnet antyder at det er en kjøttbollesuppe, er forberedelsesprosessen litt annerledes, så er sluttresultatet.

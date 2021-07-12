@@ -1,0 +1,1 @@
+Som en veldig tykk suppe, men heller ikke helt en suppe, er dette en solid rett som enten går bra på egen hånd, eller ledsaget av et stykke stekt pølse eller en fin skvett polenta.

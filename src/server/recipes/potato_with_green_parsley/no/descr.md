@@ -1,0 +1,1 @@
+Å sprite opp den blande smak av vanlig kokt potet du kan bruke forskjellige teknikker.

@@ -1,0 +1,1 @@
+Dette er en rekke rumenske «Ciorbă», det er en veldig avslappet suppe, angir ikke fast mengde ingredienser, du kan enkelt lage dine egne med favorittgrønnsakene dine. På slutten skal det være litt surt, det går fint å bruke sitronsaft, men ikke eddik.

@@ -1,0 +1,1 @@
+Hvert land har sin egen versjon av kjøttboller. I noen er de små og runde, i andre er de store, fete, flate og kalles de burgere. I Transilvania er de mellomstore, milde krydret, og de skal ikke gå inn mellom brød, for da vil de bli kalt burgere.

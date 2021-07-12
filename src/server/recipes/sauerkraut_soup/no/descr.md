@@ -1,0 +1,1 @@
+Dette er ikke bare hverdagssuppen din, for i gamle tider sa de at denne suppen kurerer bakrus.
