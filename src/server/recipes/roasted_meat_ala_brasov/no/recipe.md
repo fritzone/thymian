@@ -19,4 +19,3 @@ Skjær kjøttet i skiver, for hver person en skive, og bruk en kjøttklubbe å m
 
  Kok minst 10 minutter eller til kjøttene er mykt. Ved servering ha på finhakket bladpersillene og vi anbefaler å servere med kokt nypotet.
 
-   

@@ -19,14 +19,8 @@
 ### Slik gjør du det
 Finhakk løken, og brun det inn i olje (eller svinefett) rør hele tiden slik at den ikke brenner, og når de er litt brune ha i sjampinjongene hvis du bruker. Hvis du bruker rå sjampinjong ha i litt van, og la dem koke til de er ferdig.
 
- Nå kan du ha i 1 stor skje paprika krem, de kyllingbitene og rød paprika pulver, de knuste hvitløksbåter og ½ glass av vann. Rør godt sammen, og kok ca.
-
- 30-45 minutter, til mest av vannet er fordampet. Hvis du bruker rød pepper og tomat ha de inn nå, og kok 5 minutter.
+ Nå kan du ha i 1 stor skje paprika krem, de kyllingbitene og rød paprika pulver, de knuste hvitløksbåter og ½ glass av vann. Rør godt sammen, og kok ca. 30-45 minutter, til mest av vannet er fordampet. Hvis du bruker rød pepper og tomat ha de inn nå, og kok 5 minutter.
 
  Nå kan du lag en jevning med hvetemel og melk (eller matfløte), rør det inn, og kok Servere denne rett med dumplings, kokt pasta eller potetmos og syltete agurk. Denne retten går helt fint å oppbevare til neste dag, smaken skal bli bedre.
-
- En av de viktigste sidene i Transilvania er dumplings (melboller), som vi kan sette sammen om noen få minutter, og vi kan koke dem i salt vann. Slik lager du dumpligs Kombiner eggene med mel, salt og nok vann til å få en jevn deig med middels tetthet.
-
- Ta ut biter i bittstørrelse med en skje eller kniv og kast dem i varmt kokende salt vann, og kok dem til de kommer opp til overflaten. Vannet må koke kontinuerlig, så ikke kast inn for mange samtidig.
 
   

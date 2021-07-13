@@ -1,9 +1,9 @@
 
 ### Ingredients
-- 2-3 eggs
+- 2 - 3 eggs
 - Wheat flour
-- breadcrumbs
-- boneless meat: chicken breast or pork (neck, tenderloin) or veal. The original recipe from Vienna uses veal
+- Breadcrumbs
+- Boneless meat: chicken breast or pork (neck, tenderloin) or veal. The original recipe from Vienna uses veal
 - Salt, pepper.
 - Sunflower oil, about 1/2 liter. Do not use any other oil for this recipe.
 
@@ -26,14 +26,3 @@ Take 3 flat plates. In the first one of them, you put in the flour, in the secon
 
  Experiment until you find the perfect temperature. Schnitzel goes well with french-fries and pickled cucumber, or potato salad.
 
- Breadcrumbs Use old white bread that is not mouldy yet, but you do not want to eat. Cut it up, put it in the oven at low temperature (40 - 50 degrees) for a few minutes (10 - 15).
-
- This will evaporate most of the water from the bread without burning it. Remove from oven, store in a dry place for a few days until it becomes bone dry.
-
- Use an almond / nut grinder to make sprinkles from the dried bread that was broken up into small pieces. You can also use a mixer or a rolling pin.
-
- The only bread that is good for making breadcrumbs is white bread. Do not use bread with seeds, bread with nuts, brown / dark rye bread, oat bread, bread with oil, sunflower, etc .
-
-..
-
- The natural oils and ingredients that make these breads very healthy and good to eat, do not behave well when the bread is stored for a long time in a container and tends to turn rancid after a few weeks.  

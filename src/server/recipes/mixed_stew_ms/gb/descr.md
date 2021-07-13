@@ -1,0 +1,1 @@
+A hearty stew recipe from the middle of Transylvania, full with surprises.

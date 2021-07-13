@@ -14,11 +14,7 @@ Chop the onion into very small pieces, put some oil in the pan, and add the onio
 
  At the same time cut the sausages into slices. If you use a thick and large meat sausage, cut it in half lengthwise before.
 
- Now add the ground pepper to the pot, stir well and put in the sausages. If you use meat sausage, bring it in approx.
-
- 2 - 3 minutes before the paprika sausage. Stir together, fry for approx.
-
- 10 - 15 minutes, or until you have finished peeling the first potato. While the food is cooking, peel the potatoes, cut them into cubes, and when you have finished a potato, put it in the pot, stir together.
+ Now add the ground pepper to the pot, stir well and put in the sausages. If you use meat sausage, bring it in approx. 2 - 3 minutes before the paprika sausage. Stir together, fry for approx. 10 - 15 minutes, or until you have finished peeling the first potato. While the food is cooking, peel the potatoes, cut them into cubes, and when you have finished a potato, put it in the pot, stir together.
 
  After the first potato put in some water (about ¼ dl.) And of course stir again.
 

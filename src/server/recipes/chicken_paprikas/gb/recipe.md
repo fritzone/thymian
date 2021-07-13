@@ -16,14 +16,9 @@
 ### Preparation
 Finely chop the onion, and brown it in oil (or lard) stirring constantly so that it does not burn, and when they are a little brown, but not soft yet, put in the mushrooms if you use. If you use mushrooms put in a little water and let them cook until done.
 
- Now you can have in 1 large spoon of paprika cream, the chicken pieces and red paprika powder, the crushed garlic cloves and ½ glass of water. Stir well and cook approx.
-
- 30 - 45 minutes, until most of the water has evaporated. If you use red pepper and tomato, put them in now and cook for 5 minutes.
+ Now you can have in 1 large spoon of paprika cream, the chicken pieces and red paprika powder, the crushed garlic cloves and ½ glass of water. Stir well and cook approx. 30 - 45 minutes, until most of the water has evaporated. If you use red pepper and tomato, put them in now and cook for 5 minutes.
 
  Now you can make a thickening with flour and milk (or whipped cream), stir it in, and cook for 10 - 15 minutes. Serve this dish with dumplings, cooked pasta or mashed potatoes and pickled cucumber.
 
- This dish is perfectly fine to store until the next day, the taste will be better. Dumplings One of the most important side dishes in Transylvania is dumplings, which we can put together in a few minutes, and we can boil them in salt water.
+ This dish is perfectly fine to store until the next day, the taste will be better. 
 
- Ingredients  Combine the eggs with flour, salt and enough water to get a smooth dough of medium density. Take out bite-sized pieces with a spoon or knife and throw them in hot boiling salted water, and cook them until they come to the surface.
-
- The water must boil continuously, so do not throw in too many at once.  

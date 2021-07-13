@@ -1,0 +1,4 @@
+I Transilvania er grillet kjøtt hovedsakelig laget av svinekjøtt. Oksekjøtt kom ikke inn i de kulinariske områdene, på grunn
+av at storfe var mer nyttig rundt i huset enn en gris og lam brukes mest rundt påske. Da tiden kom for en ku, var den
+allerede for gammel til å grille, så kjøttet måtte brukes på forskjellige måter, for eksempel lang og sakte koking i en
+kjøttsuppe eller andre oppskrifter hvor du kan koke kjøttene langt.

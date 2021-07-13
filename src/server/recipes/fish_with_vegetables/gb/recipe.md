@@ -13,9 +13,7 @@
 - Salt, tarragon vinegar
 
 ### Preparation
-Peel and cut the carrot and parsley lengthwise. Put in a saucepan approx.
-
- in 1 litre of clear beef soup (it is ok to use only water with salt in if you do not have it, or just throw in two cubes of beef broth) have in the carrot and parsley root, the cleaned onion and a handful of green peas. While cooking, make a light thickening (roux) with butter and flour.
+Peel and cut the carrot and parsley lengthwise. Put in a saucepan approx. in 1 litre of clear beef soup (it is ok to use only water with salt in if you do not have it, or just throw in two cubes of beef broth) have in the carrot and parsley root, the cleaned onion and a handful of green peas. While cooking, make a light thickening (roux) with butter and flour.
 
  When the vegetables are cooked and soft take the vegetables out of the water, place them on your serving plate and keep them in a warm place, and let the water still boil. When all the vegetables are removed dissolve the thickening in the vegetables' boiling water.
 

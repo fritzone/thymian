@@ -13,6 +13,7 @@
 - Makaroni, en porsjon for hver kjøttskive
 
 ### Slik gjør du det
+
 Skrell og kutte opp de grønsakene og ha de i sammen i en gryte med kjøttene du har vasket og renset. Ha i laurbærbladene, 10 - 15 svarte pepperkorn, litt salt og kok til kjøttet blir mykt.
 
  Når kjøttet er ferdig ta ut de rotgrønnsakene, sil av vannet, ikke kast, men legg den et sted for å kjøle den ned så raskt som mulig.   Nå er det tid å ha makaroniene til å koke i saltet vann.

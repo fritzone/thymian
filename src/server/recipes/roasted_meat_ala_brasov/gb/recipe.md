@@ -19,4 +19,3 @@ Cut the meat into slices, for each person a slice, and use a meat tenderizer to 
 
  Cook for at least 10 minutes or until the meat is tender. When serving, add the finely chopped parsley, serve with hard boiled new potatoes.
 
-.   

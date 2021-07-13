@@ -9,9 +9,7 @@
 - Bay leaves
 - Salt, whole black pepper
 - Lemon juice
-- Wheat flour, oil to make
-
-### a Roux
+- Wheat flour, oil to make a roux
 - Macaroni, one serving portion for each slice of meat
 
 ### Preparation

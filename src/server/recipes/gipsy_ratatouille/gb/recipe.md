@@ -23,4 +23,6 @@ Cut the bacon into small cubes and put in a pan with a little oil. Cook until th
 
  Add the cabbage and mushrooms if you use, and after 10 minutes also the tomatoes. Mix well, season with salt and pepper, chili if you like and let it cook until everything is soft, at least an extra 15 minutes.
 
- 
+### Tips
+- If you use chicken breast cut it in slices
+- This dish goes well with polenta

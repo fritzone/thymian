@@ -13,11 +13,7 @@ Hakk opp løken I veldig små biter, ha litt olje i gryta, og tilsett løken. Sn
 
  Samtidig kutt opp pølsene i skiver. Hvis du bruker en stor kjøttpølse (som Gildes Skinnfri kjøttpølse), kutt det halvt i lengden før.
 
- Nå tilsett I gryta kvernet pepperen, rør godt sammen og ha i pølsene. Hvis du bruker kjøttpølse ha det inn ca.
-
- 2-3 minutter før paprika pølsen. Rør sammen, snurr ca.
-
- 10-15 minutter, eller til når du er ferdig med den første poteten. Mens maten kokes skrell potetene, kutt dem i terninger, og når du er ferdig med en potet, legg den I gryta, rør sammen.
+ Nå tilsett I gryta kvernet pepperen, rør godt sammen og ha i pølsene. Hvis du bruker kjøttpølse ha det inn ca. 2-3 minutter før paprika pølsen. Rør sammen, snurr ca. 10-15 minutter, eller til når du er ferdig med den første poteten. Mens maten kokes skrell potetene, kutt dem i terninger, og når du er ferdig med en potet, legg den I gryta, rør sammen.
 
  Etter den første poteten ha i litt vann (ca ¼ dl.) og selvfølgelig rør igjen.
 

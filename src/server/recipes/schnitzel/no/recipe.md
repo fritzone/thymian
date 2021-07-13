@@ -1,6 +1,6 @@
 
 ### Ingredienser
-- 2-3 egg
+- 2 - 3 egg
 - Hvetemel
 - strøkavring (brødsmuler)
 - benfritt kjøtt: kyllingbryst eller svinekjøtt (nakke, ytrefilet) eller kalv. Den opprinnelige oppskriften fra Wien bruker kalv
@@ -26,16 +26,6 @@ Ta 3 flate plater. I en av dem satte du melet, i det andre satte du strøkavring
 
  Eksperiment til du finner den perfekte temperaturen. Noen kokker anbefaler at du har to eller flere panner med olje med forskjellig temperatur og flytter kjøttet fra den ene til den andre, men igjen er dette ganske mye opp til å eksperimentere det selv, siden dette er hemmelige oppskrifter i generasjoner.
 
- Schnitzel går bra med pommes frites og sylt agurk, eller potet-salat. Strøkavring Slik lager du strøkavring: Bruk gammelt hvit brød som ikke ble muggent ennå, men du ikke ønsker å spise.
+ Schnitzel går bra med pommes frites og sylt agurk, eller potet-salat. 
 
- Skjær den opp, sett den i ovnen ved lav temperatur (40 - 50 grader) i noen minutter (10 - 15). Dette vil fordampe mesteparten av vannet fra brødet uten å brenne det faktisk.
 
- Fjern fra stekeovn, lagre på et tørt sted i noen dager til det er tørt. Bruk en mandel / nøtt kvern å lage strøkavring fra tørkete brødet som ble brutt opp i små biter.
-
- Du kan også bruke en mikser eller et kjevle. Det eneste brødet som er bra å lage strøkavring, er hvit brød (loff, kneip).
-
- Ikke bruk brød med frø, brød med nøtter, brunt / mørkt rugbrød, havrebrød, brød med olje, solsikke, etc..
-
-. De naturlige oljene og ingrediensene som gjør at disse brødene er veldig sunne og gode å spise, men de oppfører seg ikke bra når brøden oppbevares lang tid i en container og har en tendens til å bli harsk etter noen uker.
-
-  

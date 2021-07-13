@@ -9,9 +9,8 @@
 - Oil and crème fraiche
 
 ### Preparation
-In a large casserole add the oil and the finely chopped onion, sauté the onion until soft. Add a little ground pepper, mix with the onion, add the pork, stir well, and let it cook for approx.
 
- 30 minutes or until the meat is almost done. Add a small amount of water if it starts to burn.
+In a large casserole add the oil and the finely chopped onion, sauté the onion until soft. Add a little ground pepper, mix with the onion, add the pork, stir well, and let it cook for approx. 30 minutes or until the meat is almost done. Add a small amount of water if it starts to burn.
 
    If the sauerkraut is very sour, strain the juice through a sieve, press all the juice out and wash the sauerkraut a few times.   It is perfectly fine to drink the natural juice from sauerkraut (has huge amounts of Vitamin C), or you can use the juice in a second recipe (only if it was not sour with vinegar) for example recipe 18.
 
