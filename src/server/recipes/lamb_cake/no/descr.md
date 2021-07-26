@@ -1,1 +1,1 @@
-I Transilvania er grillet kjøtt hovedsakelig laget av svinekjøtt.
+Tradisjonelle påskeoppskriften fra Transilvania.

@@ -9,11 +9,7 @@
 ### Slik gjør du det
 Skill eggeplommen fra eggehviten. Hell melet i en bolle, tilsett smøret og bland sammen. Hell i eggeplommen, sukker og revet sitronskall og bland sammen igjen med raske bevegelser.
 
- Fra deigen lag en stor bolle, og ha det i kjøleskapet minst 1 time. Bruk en deigpinne og strekk deigen, ca.
-
- 0.1 - 0.
-
-2 cm. tykkelse.
+ Fra deigen lag en stor bolle, og ha det i kjøleskapet minst 1 time. Bruk en deigpinne og strekk deigen, ca. 0.1 - 0.2 cm. tykkelse.
 
  Bruk en rundt, stor pepperkake form og kutt ut store sirkler fra deigen. Når du har kuttet ut alt, legg dem trygt på et flatt underlag, samlet all resten av deigen og gjenta prosedyren.
 

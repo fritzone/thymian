@@ -26,9 +26,7 @@ Make the sheets first. Mix the flour, butter, add the eggs and sugar, and mix we
 
  Add 3 tablespoons of flour to 3 dl. milk, boil it while stirring it, careful about not getting lumps.
 
- Let it cool (keep the pot in cold water if you do not have much time). Use a hand mixer and make a cream of 200 gr.
-
- butter and 200 gr. icing sugar.
+ Let it cool (keep the pot in cold water if you do not have much time). Use a hand mixer and make a cream of 200 gr. butter and 200 gr. icing sugar.
 
  Stir in the grated peel of 1 lemon. When the milk is completely cold, mix in the butter cream, and the juice from 1 or 2 lemons.
 

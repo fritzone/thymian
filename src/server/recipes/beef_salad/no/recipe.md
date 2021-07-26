@@ -10,6 +10,4 @@
 ### Slik gjør du det
 Skjær alle grønsakene og kjøttet i terninger. Lag en god mengde av majones og bland alle grønsakene og kjøttet med majonesen.
 
- Bruk syltet agurk og oliven som dekorasjon. Oppbevares i kjøleskap ca.
-
- 1 timer før du vil spise det.   
+ Bruk syltet agurk og oliven som dekorasjon. Oppbevares i kjøleskap ca. 1 timer før du vil spise det.   

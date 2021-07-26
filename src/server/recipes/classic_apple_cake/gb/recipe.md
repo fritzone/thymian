@@ -16,9 +16,7 @@ Take the apples and clean them, and if they are old peel them, cut out brown bum
 
  Leave the mixture until the yeast begins to foam vigorously (5 – 10 minutes). Meanwhile, mix the butter with the flour.
 
- Mix milk with yeast with the flour and eggs, and make a dough. Divide the dough into 2, and using a dough stick, stretch the first part of the dough into a sheet, approx.
-
- 2 mm. thickness.
+ Mix milk with yeast with the flour and eggs, and make a dough. Divide the dough into 2, and using a dough stick, stretch the first part of the dough into a sheet, approx. 2 mm. thickness.
 
  Grease with a little butter the bottom of a baking pan, sprinkle approx. 1 tablespoon of flour and cover the bottom of the pan with a very thin layer of flour by moving the pan around.
 

@@ -20,10 +20,10 @@ Skjær brødet i små terninger. Pisk opp eggene, og legg brødterningene i, bla
 
  Når alt er blandet sammen godt, ha i melk, akkurat riktig mengde som du kan helle ut røren, ikke gjør den veldig tynn ellers vil den ikke bake, den vil koke i melk..
 
- I en panne (liten langpanne eller rundpanne avhengig av mengden du har laget) legg baconskiver på bunnen, hell røren på toppen. Dekk med gulostskiver, og det er flott om du kan pynte med paprikaskiver, oliven, gressløk, osv.
+ I en panne (liten langpanne eller rundpanne avhengig av mengden du har laget) legg baconskiver på bunnen, hell røren på toppen. Dekk med gulostskiver, og det er flott om du kan pynte med paprikaskiver, oliven, gressløk, osv... (Varm ovnen på forhånd) Sett den i ovnen ved 190C og stek i ca. 45 minutter. Ferdig.  
 
-..
-
- (varm ovnen på forhånd) Sett den i ovnen ved 190C og stek i ca. 45 minutter.
-
- Ferdig.  
+### Tips
+- Hvis du har en muffinsform, kan du gjerne lage flere
+brødkakemuffinser, i stedet for en stor kake.
+- Hvis du har en baguette fra i går, kutt den i tynne skiver, ikke
+terninger, ha dem i eggene og legg dem i lag i pannen.

@@ -20,6 +20,4 @@ In a frying pan, put a thick slice of bacon cut like a cockscomb (or oil or lard
 
  Put the pan back on the stove and mix thoroughly so that it does not burn on either side and does not dry out. Put in some grated cheese, and fry, but be careful that the original omelette from Transylvania should not be completely fried, dry or burnt on one side or the other, should be always a little runny.
 
- Decorate with some spring onions. When the omelette is done, eat it with some salad, tomatoes, cucumbers, etc.
-
-…  
+ Decorate with some spring onions. When the omelette is done, eat it with some salad, tomatoes, cucumbers, etc...

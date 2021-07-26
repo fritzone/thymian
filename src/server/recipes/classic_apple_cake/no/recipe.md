@@ -16,9 +16,7 @@ Ta eplene og rengjør dem, og hvis de er gamle, skrell dem, kutt ut brune ujevnh
 
  La blandingen stå til gjæret begynner å skumme kraftig (5 - 10 minutter). I mellomtiden bland smøret med hvetemel.
 
- Bland gjær-melk sammen med hvetemel og eggene, og lag end deig. Del deigen i 2, og ved å bruke en deigpinne strekk den første delen av deigen i en ark, ca.
-
- 2 mm. tykkelse.
+ Bland gjær-melk sammen med hvetemel og eggene, og lag end deig. Del deigen i 2, og ved å bruke en deigpinne strekk den første delen av deigen i en ark, ca. 2 mm. tykkelse.
 
  Smør med litt smør på bunnen av en stekepanne, ha i ca. 1 suppeskje hvetemel og dekk bunnen med et veldig tynt lag hvetemel.
 

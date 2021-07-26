@@ -11,6 +11,4 @@ Melt the butter in a pan and have in the garlic and spring onions cut into thin 
 
  Feel free to remove the garlic after a few minutes. Put in the mushroom slices and stir continuously.
 
- Do not have in too many mushrooms at once, because they will release water and you will get a stew instead of fried mushrooms. Season with salt, pepper and fry the mushrooms until they are done (only taste if you are not sure when they are done.
-
- If you like the taste, they are done). 
+ Do not have in too many mushrooms at once, because they will release water and you will get a stew instead of fried mushrooms. Season with salt, pepper and fry the mushrooms until they are done (only taste if you are not sure when they are done. If you like the taste, they are done). 

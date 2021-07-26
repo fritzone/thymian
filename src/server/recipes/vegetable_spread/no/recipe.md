@@ -28,4 +28,10 @@ Ikke få panikk hvis du ikke kan måle opp alle ingrediensene i gram, de er mer 
 
  La det koke, fortsatt på liten varme i 30 minutter eller til og med 1 time, og du må røre ofte, ellers brenner det. Når du er ferdig, anbefaler jeg å vente litt på at den skal kjøle seg ned før du faktisk spiser den, avhengig av magen, kan det ikke være bra å spise varm «Zacuscă».
 
- 
+### Tips
+- Denne retten kan også lages med auberginer. Hvis du planlegger å gjøre dette, må du bytte ut bønnene med grillede auberginer, ikke skiv paprikaen, men bruk en kjøttkvern og kvern paprikaen før du steker den, og ikke bruk laurbærblad 
+- Du kan lage denne retten med sopp i stedet for bønner. Skjær soppen, og legg dem i fatet ditt med ekstra vann, siden de ferske soppene vil suge opp alt vannet fra grønnsakene.
+- Bruk gjerne stekt paprika i stedet for rå. Maten din vil være mye mer kremete.
+- I stedet for bønner kan du også bruke squash. Rens, skjær det i terninger, kok i vann, og ha det sammen med grønnsakene.
+- Noen familieoppskrifter bruker også en revet gulrot og hvitløk. Vi etterlater det til deg å prøve ut disse ingrediensene.
+- Og sist, men ikke minst for de virkelig modige ... Alle disse grønsakene fra ovenfor sammen... med ekstra sterk chili

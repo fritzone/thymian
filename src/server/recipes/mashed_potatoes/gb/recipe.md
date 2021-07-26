@@ -12,4 +12,4 @@ Peel and dice the potatoes. Put the potatoes in a pot (and vegeta / olive oil if
 
  Use one or two forks to mash the potatoes. Add a little milk, mash more, and repeat with the milk, until you like the taste and consistence.
 
- This site goes very well with everything that is made from meat.
+ This side goes very well with everything that is made from meat, and we recommend a good selection of pickles to be served with them.

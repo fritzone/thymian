@@ -17,9 +17,7 @@ Vask plommene. Hvis de er store skjærer du dem i halv, fjern frøet. På hver a
 
  Ta potetene ut av vannet, hvis de er i terninger mos dem med en gaffel, ellers skrell dem og bruk potetpressene å mose dem. Potetene må bli varmt når du gjør det, og du må jobber veldig raskt fra nå av.
 
- Bland sammen potetene med hvetemel å få en deig som er ikke myk, heller harde. Bruk en deigpinne og strekk deigen, ca.
-
- 0.5 cm.
+ Bland sammen potetene med hvetemel å få en deig som er ikke myk, heller harde. Bruk en deigpinne og strekk deigen, ca. 0.5 cm.
 
  tykkelse. Skjær deigen i firkanter så stor at du kan sette en plomme i midten, sette en plomme i midten, og brette sidene opp og lag en kule, vær forsiktig så du ikke har hull i dumpingen, ellers vil sukkeret renne ut.
 

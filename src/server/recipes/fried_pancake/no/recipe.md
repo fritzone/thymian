@@ -12,15 +12,7 @@
 ### Slik gjør du det
 Varme opp 1 dl. melk, tilsett en teskje sukker og smuldre inn gjæren. Mens du venter på gjæren å stige opp bland sammen hvetemel, litt salt og eggeplommen.
 
- Når gjæren er ferdig bland det sammen med hvetemel, og nok melk å ha en mellomhard deig. Dekk til med en ren duk og la stå på et varmt sted i ca.
-
- 30 minutter ellers til den nesten har dobbelt størrelsen, men ikke mer enn 1 time. Bruke en deigpinne og strekk deigen i en ark, ca.
-
- 2mm. - 5mm.
-
- tykkelse. Bruk en rundt pepperkakeform (ca.
-
- 20 cm i diameter) og kutte ut runde pannekaker. Bruk den resterende deigen til å lage mer pannekaker.
+ Når gjæren er ferdig bland det sammen med hvetemel, og nok melk å ha en mellomhard deig. Dekk til med en ren duk og la stå på et varmt sted i ca. 30 minutter ellers til den nesten har dobbelt størrelsen, men ikke mer enn 1 time. Bruke en deigpinne og strekk deigen i en ark, ca. 2mm. - 5mm. tykkelse. Bruk en rundt pepperkakeform (ca. 20 cm i diameter) og kutte ut runde pannekaker. Bruk den resterende deigen til å lage mer pannekaker.
 
  Mose sammen 250 gr. cottage cheese med 2 suppeskjeer rømme, litt salt og finhakket dill.
 

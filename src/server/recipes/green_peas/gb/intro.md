@@ -1,1 +1,1 @@
-There is more to green peas than mased peas. For example, you can make a very delicious side that goes well with meatballs, sausage and bacon or fried eggs.
+There is so much more to green peas than mashed peas. For example, you can make a very delicious side that goes well with meatballs, sausage and bacon or fried eggs.

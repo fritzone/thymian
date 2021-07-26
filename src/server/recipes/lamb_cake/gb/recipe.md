@@ -17,9 +17,7 @@
 - peritoneum of lamb
 
 ### Preparation
-Use a meat grinder and grind up everything that comes from the lambs, e.g.
-
- meat and liver (and the other Ingredients if you have found them in one store), along with the onion and all the herbs. Lastly, use a small slice of bread to clean the meat grinder and squeeze the meat out of it.
+Use a meat grinder and grind up everything that comes from the lambs, e.g. meat and liver (and the other ingredients if you have found them in one store), along with the onion and all the herbs. Lastly, use a small slice of bread to clean the meat grinder and squeeze the meat out of it.
 
  Mix together what you have grounded with the crushed garlic, the 2 eggs and the larger slice of bread from the milk, 1 tablespoon of sour cream and season with salt and pepper. Mix for at least 30 minutes to bring the flavours together and let it rest for 10 minutes.
 

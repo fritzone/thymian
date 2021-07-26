@@ -19,9 +19,7 @@ Varme opp 2 dl. melk (bare litt, ikke koke), tilsett en teskje sukker og smuldre
 
  Når gjærene er ferdig bland in, ha i sukkeret og bruk den andre 2 dl. melk å gjøre en god deig.
 
- Elt deigen godt. Hvis den skiller seg fra hånden din den er ferdig, form den til en bolle, dekk den og hev i ca.
-
- 40 minutter.   Mens deigen hviler lag valnøtt kremen.
+ Elt deigen godt. Hvis den skiller seg fra hånden din den er ferdig, form den til en bolle, dekk den og hev i ca. 40 minutter.   Mens deigen hviler lag valnøtt kremen.
 
  Kverne valnøttene hvis du ikke har kjøpt kvernet valnøtter. Hvis du ikke har valnøtt kvern bruk en mixer.
 
@@ -29,9 +27,7 @@ Varme opp 2 dl. melk (bare litt, ikke koke), tilsett en teskje sukker og smuldre
 
  Lag en stiv skum. Bland de kvernet valnøttene inn i skumm og bland godt sammen.
 
-   Når deigen har nesten dobbelt på størrelse, elt den igjen, og etterpå bruk en deigpinne og strekk deigen på en melet overflate ca. 0.
-
-5 cm tykk. Påfør valnøtt kremen på deigarken, og rull det opp.
+   Når deigen har nesten dobbelt på størrelse, elt den igjen, og etterpå bruk en deigpinne og strekk deigen på en melet overflate ca. 0.5 cm tykk. Påfør valnøtt kremen på deigarken, og rull det opp.
 
  Ha det i en lange brødform panne, visp den siste eggeplomme, og smør toppen med eggeplommen. Sett i en varm ovn og stek til den blir fin brun på 170 grader på omtrent 35 minutter.
 

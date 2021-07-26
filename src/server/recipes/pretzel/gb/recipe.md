@@ -22,9 +22,7 @@
 ### Preparation
 Put the yeast in warm milk and a spoonful of sugar, stir well, let it rest until it starts to rise. Mix the yeast (with milk) together with wheat flour and oil and make a hard but flexible dough.
 
- Let it rest for 10 minutes, and afterwards divide into as many parts, as many pretzels as you want to make. Roll them out for approx.
-
- 60 cm long rods, and then fold them into pretzel form. In a large pot, add water and baking soda and bring to the boil.
+ Let it rest for 10 minutes, and afterwards divide into as many parts, as many pretzels as you want to make. Roll them out for approx. 60 cm long rods, and then fold them into pretzel form. In a large pot, add water and baking soda and bring to the boil.
 
  Put in the pretzels, one at a time and cook each for 30 seconds. Take them out of the water and let them rest for 15 minutes.
 

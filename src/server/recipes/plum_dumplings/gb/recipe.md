@@ -19,9 +19,7 @@ Wash the plums. If they are large, cut them in half, remove the pit.
 
  The potatoes need to get hot when you do, and you need to work very fast from now on. Mix the potatoes with the flour to get a dough that is not soft, neither hard.
 
- Use a dough stick and stretch the dough, approx. 0.
-
-5 cm. thickness.
+ Use a dough stick and stretch the dough, approx. 0.5 cm. thickness.
 
  Cut the dough into squares so large that you can put a plum in the middle, put a plum in the middle, and fold the sides up and make a ball, being careful not to have holes in the dumpling, otherwise the sugar will leak out. When the dumpling is done, put it in the boiling water.
 

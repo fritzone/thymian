@@ -22,9 +22,7 @@
 ### Slik gjør du det
 Ha gjæren i varm melk og en skje sukker, rør godt, la den hvile til den begynner å stige. Bland gjæren (med melk) sammen med hvetemel og olje, og lag en hard, men fleksibel deig.
 
- La det hvile 10 minutter, og etterpå del i så mange deler, så mange pretzler du vil lage. Kjevle dem ut i ca.
-
- 60 cm lange stenger, og brett dem deretter inn i pretzelform. I en stor gryte ha i vann og natron, og kok de opp.
+ La det hvile 10 minutter, og etterpå del i så mange deler, så mange pretzler du vil lage. Kjevle dem ut i ca. 60 cm lange stenger, og brett dem deretter inn i pretzelform. I en stor gryte ha i vann og natron, og kok de opp.
 
  Ha i pretzelne, en om gangen og koke hver i 30 sekunder. Ta de ut fra vannet og la dem hvile hvetemel med 2 ss salt, og nok van o få en krem som er tykk som rømme.
 

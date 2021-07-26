@@ -14,7 +14,7 @@ Peel the potatoes and cut them into thin sticks. Or cut them into flat round sli
 
  If you see it burning the potato, or starting to smell, just lower the heat. You can use any pot, casserole dish, frying pan, because in time you will know the difference.
 
- I personally like to use my half a hundredyear-old iron, 1 litre pot. Find your favourite casserole, and use it to fry potatoes, and for nothing else.
+ I personally like to use my half a century old iron, 1 litre pot. Find your favourite casserole, and use it to fry potatoes, and for nothing else.
 
  You can actually keep the oil between two or three sessions of frying, and change it only when it gets smelly. Put the potatoes in the oil.
 
