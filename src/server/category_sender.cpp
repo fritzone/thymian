@@ -13,7 +13,6 @@ category_sender::category_sender(tnt::HttpRequest &request, tnt::HttpReply &repl
 
 	// identify the category
 	static std::map<std::string, std::string> name_to_dbtype = { {"soups", "0"}, {"sides", "2"}, {"mains", "3"}, {"sweets", "4"}, {"starters", "1"} };
-	static std::map<std::string, std::string> ctg_to_name = { {"0", "Soups"}, {"2", "Side Dishes"}, {"3", "Main Courses"}, {"4", "Sweets"}, {"1", "Appetizers"} };
 
 	url_breaker r("l/category", boost::to_lower_copy(what));
 	std::string food_type = r["category"];

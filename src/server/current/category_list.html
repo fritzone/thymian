@@ -37,6 +37,8 @@
 
       function changeDivs(l) {
         $('#lspan').val(l);
+        $('#main_redirect').attr('href', '/' + l);
+
       }
 
       function changeLang(l) {
@@ -57,7 +59,7 @@
         <tr>
           <td>
           <h1 class="u-align-left u-headline u-text u-text-1">
-            <a href="/"><!--#translate Transylvanian recipes#--> / <!--#translate {#category}#--></a>
+            <a id="main_redirect" href="/"><!--#translate Transylvanian recipes#--> / <!--#translate {#category}#--></a>
         </h1>
         </td>
         <td width="480">

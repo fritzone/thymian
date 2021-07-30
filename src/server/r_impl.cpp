@@ -91,17 +91,53 @@ r_impl::r_impl(tnt::HttpRequest &request, tnt::HttpReply &reply, const std::stri
 	sh.replace_all("//", "/");
 	m_body = sh.get();
 
-	m_body = "<img src='" + RECIPES_ROOT + m_key + SLASH + "img/main.png'>" + m_body;
+	m_body = "<img src='" + RECIPES_ROOT + m_key + SLASH + "img/main.jpg'>" + m_body;
 
 }
 
 unsigned r_impl::send()
 {
+	std::string stype = "";
+	try {
+
+		tntdb::Connection conn = tntdb::connect("sqlite:lang.db");
+
+		std::string v = std::string("select type from food where food_key='") + m_key + "'";
+		tntdb::Result result = conn.select(v);
+		for (tntdb::Result::const_iterator it = result.begin(); it != result.end(); ++it)
+		{
+			std::string type;
+			std::string key;
+			tntdb::Row row = *it;
+
+			row[0].get(type);
+
+			if(ctg_to_name.count(type))
+			{
+				stype = ctg_to_name[type];
+			}
+			else
+			{
+				return HTTP_NOT_FOUND;
+			}
+		}
+	}
+	catch (std::exception& ex)
+	{
+		log_critical() << ex.what();
+		return HTTP_NOT_FOUND;
+	}
+
 	prepareLanguages();
 	template_vector_par tvp_languages("languages", m_languageStructs);
 
 	std::string title = dictionary::translate(m_key + "_name", m_lang);
-	std::string rply = templater<recipe>().templatize("intro" <is> m_intro, "body" <is> m_body, "title" <is> title, "key" <is> m_key).templatize(tvp_languages).get();
+	std::string rply = templater<recipe>().templatize("intro" <is> m_intro,
+													  "body" <is> m_body,
+													  "title" <is> title,
+													  "key" <is> m_key,
+													  "lng" <is> m_lang,
+													  "category" <is> stype).templatize(tvp_languages).get();
 
 	std::map<std::string, std::map<std::string, std::string> > translations;
 	mreply.out() << translator<void>::translate(rply, m_lang, translations);

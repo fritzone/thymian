@@ -9,6 +9,7 @@
 
 static const std::string RECIPES_ROOT = "/recipes/";
 static const std::string path = "/theme/current/";
+static std::map<std::string, std::string> ctg_to_name = { {"0", "Soups"}, {"2", "Side Dishes"}, {"3", "Main Courses"}, {"4", "Sweets"}, {"1", "Appetizers"} };
 
 class web_component
 {

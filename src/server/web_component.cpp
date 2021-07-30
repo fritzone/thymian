@@ -120,6 +120,7 @@ std::string web_component::prepareLangJs(const std::map<std::string, std::map<st
 		javascript += "}";
 	}
 
+
 	javascript += "}\n";
 
 	return javascript;
