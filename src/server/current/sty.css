@@ -3652,3 +3652,9 @@ html {
     margin: 0 calc(25%);
     width: 50%;
 }
+
+
+.titletext {
+color: #FFFFFF;
+text-shadow: 2px 3px 0 #1A1A1A;
+}

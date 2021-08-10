@@ -109,6 +109,7 @@ int main(int argc, char* argv[])
         auto filer2 = app.mapUrl("^/img/(.*).gif$", "filer");
         auto filer3 = app.mapUrl("^/img/(.*).jpg$", "filer");
         auto filer10Global = app.mapUrl("/(.*).js$", "filer");    // javascript handler
+		auto filerPdf = app.mapUrl("^/pdfs/(.*).pdf$", "filer"); // the PDF downloader
 
         auto pngMapCurrentTheme = app.mapUrl("^/theme/current/img/(.*).png$", "filer"); // the supported images from the current theme
         auto filer1CurrentTheme = app.mapUrl("^/theme/current/img/(.*).ico$", "filer");

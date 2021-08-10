@@ -16,6 +16,33 @@ category_sender::category_sender(tnt::HttpRequest &request, tnt::HttpReply &repl
 
 	url_breaker r("l/category", boost::to_lower_copy(what));
 	std::string food_type = r["category"];
+	// identify the language
+	auto pars = request.getQueryParams();
+	m_lang = pars.arg<std::string>("l");
+
+	if(food_type == "about")
+	{
+		char cCurrentPath[FILENAME_MAX] = {0};
+
+		if (!getcwd(cCurrentPath, sizeof(cCurrentPath)))
+		{
+			log_err() << "Cannot get working path";
+			m_translated = "Internal server error";
+			return;
+		}
+
+		std::string filename(cCurrentPath);
+
+		std::ifstream fin(filename + "/theme/current/About.html", std::ios::in | std::ios::binary);
+		if(fin)
+		{
+			std::ostringstream oss;
+			oss << fin.rdbuf();
+			m_translated = oss.str();
+		}
+
+	}
+
 	if(name_to_dbtype.find(food_type) == name_to_dbtype.end())
 	{
 		log_critical() << "Not found:" << what;
@@ -26,9 +53,6 @@ category_sender::category_sender(tnt::HttpRequest &request, tnt::HttpReply &repl
 	food_type = name_to_dbtype[food_type];
 
 
-	// identify the language
-	auto pars = request.getQueryParams();
-	m_lang = pars.arg<std::string>("l");
 
 	// generate the page elements as translateable
 	try {
