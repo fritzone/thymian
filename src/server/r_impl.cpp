@@ -42,6 +42,7 @@ r_impl::r_impl(tnt::HttpRequest &request, tnt::HttpReply &reply, const std::stri
 	// identify the language
 	auto pars = request.getQueryParams();
 	m_lang = pars.arg<std::string>("l");
+	m_lang = dictionary::valid_supported_language(m_lang);
 
 	char cCurrentPath[FILENAME_MAX] = {0};
 

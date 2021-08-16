@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<logging>
+  <rootlogger>TRACE</rootlogger>
+
+  <loggers>
+
+    <logger>
+      <category>cxxtools</category>
+      <level>INFO</level>
+    </logger>
+
+    <logger>
+      <category>tntnet</category>
+      <level>INFO</level>
+    </logger>
+
+    <logger>
+      <category>tntdb</category>
+      <level>INFO</level>
+    </logger>
+
+    <logger>
+      <category>component</category>
+      <level>INFO</level>
+    </logger>
+
+  </loggers>
+
+  <file>app.log</file>
+  <maxfilesize>1MB</maxfilesize>
+  <maxbackupindex>2</maxbackupindex>
+</logging>

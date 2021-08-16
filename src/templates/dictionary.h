@@ -11,6 +11,8 @@ public:
 	static std::string translate(const std::string& what, const std::string& target_language, bool other_languages_too, std::map<std::string, std::string>& translations);
 	static std::string translate(const std::string& what, const std::string& target_language);
 
+	static std::string valid_supported_language(const std::string& in_language);
+
 	static void add_translation(const std::string& key, const std::string& language, const std::string& translated);
 
     static const std::vector<std::string> supported_languages;

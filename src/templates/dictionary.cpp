@@ -91,6 +91,24 @@ std::string dictionary::translate(const std::string &what, const std::string &ta
 	return translate(what, target_language, false, translations);
 }
 
+std::string dictionary::valid_supported_language(const std::string &in_language)
+{
+	for(const auto& l : supported_languages)
+	{
+		if(l == in_language)
+		{
+			return in_language;
+		}
+	}
+	if(supported_languages.size() > 0)
+	{
+		return supported_languages[0];
+	}
+
+	// if all else fails
+	return "gb";
+}
+
 void dictionary::add_translation(const std::string &key, const std::string &language, const std::string &translated)
 {
 	m_inMemoryTranslations[key][language] = translated;

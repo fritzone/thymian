@@ -19,6 +19,7 @@ category_sender::category_sender(tnt::HttpRequest &request, tnt::HttpReply &repl
 	// identify the language
 	auto pars = request.getQueryParams();
 	m_lang = pars.arg<std::string>("l");
+	m_lang = dictionary::valid_supported_language(m_lang);
 
 	if(food_type == "about")
 	{

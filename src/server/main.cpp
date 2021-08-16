@@ -135,12 +135,11 @@ int main(int argc, char* argv[])
 
         auto langNo = app.mapUrl("^/no$", "main_root_sender"); // / (ie: homepage in norwegian)
         auto langGb = app.mapUrl("^/gb$", "main_root_sender"); // / (ie: homepage in english)
-        auto langRo = app.mapUrl("^/ro$", "main_root_sender"); // / (ie: homepage in romanian)
-        auto langHu = app.mapUrl("^/hu$", "main_root_sender"); // / (ie: homepage in hungarian)
 
 		auto categoryLister = app.mapUrl("^/l/(.*)", "category_root_sender"); // / (ie: lists of various food categories)
 
 		auto recipeSender = app.mapUrl("^/r/(.*)", "r"); // / (ie: the recipes themselves)
+		auto otherRoot = app.mapUrl("^/(.*)", "root"); // / (ie: stopping wannabe hackers to try to download stuff they are not supposed)
 
 
         app.run();
